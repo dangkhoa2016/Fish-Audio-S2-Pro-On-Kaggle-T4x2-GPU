@@ -1,0 +1,1 @@
+Fish Audio S2 Pro đang được kiểm thử trên hai GPU NVIDIA T4 với một cấu hình nền có thể tái lập.

@@ -1,0 +1,1 @@
+Fish Audio S2 Pro is being qualified on two NVIDIA T4 GPUs with a reproducible baseline.

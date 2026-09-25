@@ -1,0 +1,23 @@
+# Python/runtime
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.pid
+
+# Secrets
+.env
+.env.*
+*_token
+*token.txt
+
+# Model weights
+*.safetensors
+*.pth
+*.pt
+*.bin
+
+# Local/editor noise
+.DS_Store
+.idea/
+.vscode/
