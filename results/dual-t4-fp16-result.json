@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "file": "/kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/dual-t4-fp16/sample.wav",
+  "bytes": 258092,
+  "sha256": "44e2b2beb4f2a930aba3e5647d1272a1844bd4fec17d27dd87b668e6d1e9e422",
+  "samplerate": 44100,
+  "channels": 1,
+  "frames": 129024,
+  "duration_s": 2.9257142857142857,
+  "format": "WAV",
+  "subtype": "PCM_16",
+  "semantic_device": "cuda:0",
+  "decoder_device": "cuda:1",
+  "precision": "FP16",
+  "max_seq_len": 4096
+}
