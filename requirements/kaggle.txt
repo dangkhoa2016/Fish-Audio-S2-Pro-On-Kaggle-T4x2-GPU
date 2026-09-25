@@ -1,0 +1,2 @@
+# Keep this minimal until the first clean T4x2 qualification passes.
+# The Fish Speech upstream environment will be pinned after compatibility is verified.
