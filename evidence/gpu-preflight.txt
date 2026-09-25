@@ -1,0 +1,12 @@
+python= 3.12.13
+torch= 2.10.0+cu128
+torch_cuda_runtime= 12.8
+cuda_available= True
+device_count= 2
+cuda:0 name=Tesla T4 cc=7.5 total_memory=15636037632
+cuda:0 fp16_matmul_s=0.001118 finite=True peak_alloc_bytes=63045632
+cuda:1 name=Tesla T4 cc=7.5 total_memory=15636037632
+cuda:1 fp16_matmul_s=0.000900 finite=True peak_alloc_bytes=63045632
+driver_info= NVRM version: NVIDIA UNIX Open Kernel Module for x86_64  580.159.04  Release Build  (builder@96696ec3920b)  Sat May 30 16:27:41 UTC 2026
+GCC version:  Selected multilib: .;@m64
+GPU_PREFLIGHT=PASS

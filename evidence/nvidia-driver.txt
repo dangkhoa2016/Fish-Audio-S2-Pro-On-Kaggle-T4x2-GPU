@@ -1,0 +1,2 @@
+NVRM version: NVIDIA UNIX Open Kernel Module for x86_64  580.159.04  Release Build  (builder@96696ec3920b)  Sat May 30 16:27:41 UTC 2026
+GCC version:  Selected multilib: .;@m64

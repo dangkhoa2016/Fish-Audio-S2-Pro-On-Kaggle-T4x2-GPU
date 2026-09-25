@@ -1,0 +1,7 @@
+---DISK---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/loop2       20G  364K   20G   1% /kaggle/working
+---RAM---
+               total        used        free      shared  buff/cache   available
+Mem:            31Gi       1.4Gi        19Gi       1.0Mi        10Gi        29Gi
+Swap:             0B          0B          0B
