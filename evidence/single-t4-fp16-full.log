@@ -1,0 +1,143 @@
+2026-09-29 09:59:44.722 | INFO     | __main__:main:897 - Loading model ...
+2026-09-29 09:59:45.577 | INFO     | fish_speech.models.text2semantic.llama:from_pretrained:524 - Injected Semantic IDs into Config: 151678-155773
+2026-09-29 09:59:45.577 | INFO     | fish_speech.models.text2semantic.llama:from_pretrained:540 - Loading model from /kaggle/input/models/dangkhoa2016/fishaudio-s2-pro/pytorch/default/1, config: DualARModelArgs(model_type='dual_ar', vocab_size=155776, n_layer=36, n_head=32, dim=2560, intermediate_size=9728, n_local_heads=8, head_dim=128, rope_base=1000000, norm_eps=1e-06, max_seq_len=32768, dropout=0.0, tie_word_embeddings=True, attention_qkv_bias=False, attention_o_bias=False, attention_qk_norm=True, codebook_size=4096, num_codebooks=10, semantic_begin_id=151678, semantic_end_id=155773, use_gradient_checkpointing=True, initializer_range=0.01976423537605237, is_reward_model=False, scale_codebook_embeddings=True, audio_embed_dim=2560, n_fast_layer=4, fast_dim=2560, fast_n_head=32, fast_n_local_heads=8, fast_head_dim=128, fast_intermediate_size=9728, fast_attention_qkv_bias=False, fast_attention_qk_norm=False, fast_attention_o_bias=False, norm_fastlayer_input=True)
+2026-09-29 10:00:46.527 | INFO     | fish_speech.models.text2semantic.llama:from_pretrained:572 - Loading sharded safetensors weights
+2026-09-29 10:00:48.934 | INFO     | fish_speech.models.text2semantic.llama:from_pretrained:608 - Model weights loaded - Status: <All keys matched successfully>
+2026-09-29 10:01:03.700 | INFO     | __main__:init_model:387 - Restored model from checkpoint
+2026-09-29 10:01:03.700 | INFO     | __main__:init_model:392 - Using DualARTransformer
+2026-09-29 10:01:03.741 | INFO     | __main__:main:911 - Time to load model: 79.02 seconds
+2026-09-29 10:01:03.744 | INFO     | __main__:generate_long:631 - Split into 0 turns, grouped into 1 batches
+2026-09-29 10:01:03.745 | INFO     | __main__:generate_long:643 - --- Sample 0, Batch 0 (29 bytes) ---
+2026-09-29 10:01:03.745 | INFO     | __main__:generate_long:647 - Batch text: Hello from Fish Audio S2 Pro.
+2026-09-29 10:01:03.745 | INFO     | __main__:generate_long:673 - Visualizing prompt structure:
+2026-09-29 10:01:03.755 | INFO     | __main__:generate_long:684 - Encoded prompt shape: torch.Size([11, 28])
+[92m<|im_start|>[0m[32msystem[0m[92m
+[0m[32mconvert[0m[92m the[0m[32m provided[0m[92m text[0m[32m to[0m[92m speech[0m[32m<|im_end|>[0m[92m
+[0m[32m<|im_start|>[0m[92muser[0m[32m
+[0m[92mHello[0m[32m from[0m[92m Fish[0m[32m Audio[0m[92m S[0m[32m2[0m[92m Pro[0m[32m.[0m[92m<|im_end|>[0m[32m
+[0m[92m<|im_start|>[0m[32massistant[0m[92m
+[0m[32m<|voice|>[0m
+
+  0%|          | 0/63 [00:00<?, ?it/s]
+  2%|▏         | 1/63 [00:00<00:09,  6.61it/s]
+  3%|▎         | 2/63 [00:00<00:07,  7.71it/s]
+  5%|▍         | 3/63 [00:00<00:07,  8.09it/s]
+  6%|▋         | 4/63 [00:00<00:07,  8.31it/s]
+  8%|▊         | 5/63 [00:00<00:06,  8.43it/s]
+ 10%|▉         | 6/63 [00:00<00:06,  8.56it/s]
+ 11%|█         | 7/63 [00:00<00:06,  8.56it/s]
+ 13%|█▎        | 8/63 [00:00<00:06,  8.60it/s]
+ 14%|█▍        | 9/63 [00:01<00:06,  8.64it/s]
+ 16%|█▌        | 10/63 [00:01<00:06,  8.66it/s]
+ 17%|█▋        | 11/63 [00:01<00:05,  8.68it/s]
+ 19%|█▉        | 12/63 [00:01<00:05,  8.63it/s]
+ 21%|██        | 13/63 [00:01<00:05,  8.63it/s]
+ 22%|██▏       | 14/63 [00:01<00:05,  8.68it/s]
+ 24%|██▍       | 15/63 [00:01<00:05,  8.72it/s]
+ 25%|██▌       | 16/63 [00:01<00:05,  8.77it/s]
+ 27%|██▋       | 17/63 [00:01<00:05,  8.78it/s]
+ 29%|██▊       | 18/63 [00:02<00:05,  8.78it/s]
+ 30%|███       | 19/63 [00:02<00:05,  8.77it/s]
+ 32%|███▏      | 20/63 [00:02<00:04,  8.79it/s]
+ 33%|███▎      | 21/63 [00:02<00:04,  8.75it/s]
+ 35%|███▍      | 22/63 [00:02<00:04,  8.45it/s]
+ 37%|███▋      | 23/63 [00:02<00:04,  8.60it/s]
+ 38%|███▊      | 24/63 [00:02<00:04,  8.65it/s]
+ 40%|███▉      | 25/63 [00:02<00:04,  8.70it/s]
+ 41%|████▏     | 26/63 [00:03<00:04,  8.66it/s]
+ 43%|████▎     | 27/63 [00:03<00:04,  8.59it/s]
+ 44%|████▍     | 28/63 [00:03<00:04,  8.65it/s]
+ 46%|████▌     | 29/63 [00:03<00:03,  8.70it/s]
+ 48%|████▊     | 30/63 [00:03<00:03,  8.67it/s]
+ 49%|████▉     | 31/63 [00:03<00:03,  8.47it/s]
+ 51%|█████     | 32/63 [00:03<00:03,  8.48it/s]
+ 52%|█████▏    | 33/63 [00:03<00:03,  8.56it/s]
+ 54%|█████▍    | 34/63 [00:03<00:03,  8.64it/s]
+ 56%|█████▌    | 35/63 [00:04<00:03,  8.68it/s]
+ 57%|█████▋    | 36/63 [00:04<00:03,  8.66it/s]
+ 59%|█████▊    | 37/63 [00:04<00:03,  8.61it/s]
+ 60%|██████    | 38/63 [00:04<00:02,  8.65it/s]
+ 62%|██████▏   | 39/63 [00:04<00:02,  8.61it/s]
+ 63%|██████▎   | 40/63 [00:04<00:02,  8.62it/s]
+ 65%|██████▌   | 41/63 [00:04<00:02,  8.67it/s]
+ 67%|██████▋   | 42/63 [00:04<00:02,  8.69it/s]
+ 68%|██████▊   | 43/63 [00:04<00:02,  8.71it/s]
+ 70%|██████▉   | 44/63 [00:05<00:02,  8.70it/s]
+ 71%|███████▏  | 45/63 [00:05<00:02,  8.44it/s]
+ 73%|███████▎  | 46/63 [00:05<00:02,  8.38it/s]
+ 75%|███████▍  | 47/63 [00:05<00:01,  8.49it/s]
+ 76%|███████▌  | 48/63 [00:05<00:01,  8.53it/s]
+ 78%|███████▊  | 49/63 [00:05<00:01,  8.62it/s]
+ 79%|███████▉  | 50/63 [00:05<00:01,  8.70it/s]
+ 81%|████████  | 51/63 [00:05<00:01,  8.74it/s]
+ 83%|████████▎ | 52/63 [00:06<00:01,  8.79it/s]
+ 84%|████████▍ | 53/63 [00:06<00:01,  8.79it/s]
+ 86%|████████▌ | 54/63 [00:06<00:01,  8.76it/s]
+ 87%|████████▋ | 55/63 [00:06<00:00,  8.67it/s]
+ 89%|████████▉ | 56/63 [00:06<00:00,  8.59it/s]
+ 90%|█████████ | 57/63 [00:06<00:00,  8.58it/s]
+ 92%|█████████▏| 58/63 [00:06<00:00,  8.62it/s]
+ 94%|█████████▎| 59/63 [00:06<00:00,  8.67it/s]
+ 95%|█████████▌| 60/63 [00:06<00:00,  8.62it/s]
+ 97%|█████████▋| 61/63 [00:07<00:00,  8.63it/s]
+ 98%|█████████▊| 62/63 [00:07<00:00,  8.57it/s]
+100%|██████████| 63/63 [00:07<00:00,  8.57it/s]
+100%|██████████| 63/63 [00:07<00:00,  8.60it/s]
+2026-09-29 10:01:11.818 | INFO     | __main__:generate_long:721 - Batch 0: Generated 64 tokens in 8.07 seconds, 7.93 tokens/sec
+2026-09-29 10:01:11.818 | INFO     | __main__:generate_long:725 - Bandwidth achieved: 36.16 GB/s
+2026-09-29 10:01:11.818 | INFO     | __main__:main:956 - Sampled text: Hello from Fish Audio S2 Pro.
+2026-09-29 10:01:11.818 | INFO     | __main__:generate_long:751 - GPU Memory used: 15.14 GB
+2026-09-29 10:01:11.819 | INFO     | __main__:main:962 - Saved codes to /kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/single-t4-fp16-full/codes_0.npy
+2026-09-29 10:01:11.819 | INFO     | __main__:main:967 - Loading codec model for audio decoding...
+/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/audiotools/core/audio_signal.py:44: SyntaxWarning: invalid escape sequence '\_'
+  Type of window to use, by default ``sqrt\_hann``.
+/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/audiotools/core/audio_signal.py:1014: SyntaxWarning: invalid escape sequence '\_'
+  using functools.lru\_cache.
+/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/audiotools/core/audio_signal.py:1092: SyntaxWarning: invalid escape sequence '\_'
+  """Compute how the STFT should be padded, based on match\_stride.
+/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/audiotools/core/audio_signal.py:1141: SyntaxWarning: invalid escape sequence '\_'
+  Type of window to use, by default ``sqrt\_hann``.
+/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/audiotools/core/audio_signal.py:1222: SyntaxWarning: invalid escape sequence '\_'
+  """Computes inverse STFT and sets it to audio\_data.
+/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+Traceback (most recent call last):
+  File "/kaggle/working/fish-speech-upstream/fish_speech/models/text2semantic/inference.py", line 988, in <module>
+    main()
+  File "/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/click/core.py", line 1442, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/click/core.py", line 1363, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/click/core.py", line 1226, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/click/core.py", line 794, in invoke
+    return callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/fish-speech-upstream/fish_speech/models/text2semantic/inference.py", line 968, in main
+    codec = load_codec_model(codec_checkpoint, device, precision)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/fish-speech-upstream/fish_speech/models/text2semantic/inference.py", line 438, in load_codec_model
+    codec.to(device=device, dtype=precision)
+  File "/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1369, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 928, in _apply
+    module._apply(fn)
+  File "/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 928, in _apply
+    module._apply(fn)
+  File "/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 928, in _apply
+    module._apply(fn)
+  [Previous line repeated 2 more times]
+  File "/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1020, in _apply
+    self._buffers[key] = fn(buf)
+                         ^^^^^^^
+  File "/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1355, in convert
+    return t.to(
+           ^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1024.00 MiB. GPU 0 has a total capacity of 14.56 GiB of which 158.81 MiB is free. Including non-PyTorch memory, this process has 14.40 GiB memory in use. Of the allocated memory 14.25 GiB is allocated by PyTorch, and 27.31 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
