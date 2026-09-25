@@ -1,0 +1,78 @@
+diff --git a/fish_speech/models/text2semantic/inference.py b/fish_speech/models/text2semantic/inference.py
+index 9fb82b0..f0743f2 100644
+--- a/fish_speech/models/text2semantic/inference.py
++++ b/fish_speech/models/text2semantic/inference.py
+@@ -380,9 +380,13 @@ def generate(
+     return seq
+ 
+ 
+-def init_model(checkpoint_path, device, precision, compile=False):
++def init_model(checkpoint_path, device, precision, compile=False, max_seq_len=None):
+     model = DualARTransformer.from_pretrained(checkpoint_path, load_weights=True)
+ 
++    if max_seq_len is not None:
++        logger.info(f"Overriding max_seq_len: {model.config.max_seq_len} -> {max_seq_len}")
++        model.config.max_seq_len = max_seq_len
++
+     model = model.to(device=device, dtype=precision)
+     logger.info(f"Restored model from checkpoint")
+ 
+@@ -852,6 +856,8 @@ def launch_thread_safe_queue(
+     default="checkpoints/s2-pro",
+ )
+ @click.option("--device", type=str, default="cuda")
++@click.option("--decoder-device", type=str, default=None)
++@click.option("--max-seq-len", type=int, default=None)
+ @click.option("--compile/--no-compile", default=False)
+ @click.option("--seed", type=int, default=42)
+ @click.option("--half/--no-half", default=False)
+@@ -871,6 +877,8 @@ def main(
+     temperature: float,
+     checkpoint_path: Path,
+     device: str,
++    decoder_device: Optional[str],
++    max_seq_len: Optional[int],
+     compile: bool,
+     seed: int,
+     half: bool,
+@@ -880,6 +888,8 @@ def main(
+ ) -> None:
+     os.makedirs(output_dir, exist_ok=True)
+     precision = torch.half if half else torch.bfloat16
++    decoder_device = decoder_device or device
++    logger.info(f"Device topology: semantic={device}, decoder={decoder_device}")
+ 
+     if prompt_text and not prompt_audio and not prompt_tokens:
+         raise ValueError(
+@@ -897,7 +907,7 @@ def main(
+     logger.info("Loading model ...")
+     t0 = time.time()
+     model, decode_one_token = init_model(
+-        checkpoint_path, device, precision, compile=compile
++        checkpoint_path, device, precision, compile=compile, max_seq_len=max_seq_len
+     )
+     with torch.device(device):
+         model.setup_caches(
+@@ -917,9 +927,9 @@ def main(
+     prompt_tokens_list = None
+     if prompt_audio:
+         logger.info("Loading codec model for audio encoding...")
+-        codec = load_codec_model(codec_checkpoint, device, precision)
++        codec = load_codec_model(codec_checkpoint, decoder_device, precision)
+         prompt_tokens_list = [
+-            encode_audio(p, codec, device).cpu() for p in prompt_audio
++            encode_audio(p, codec, decoder_device).cpu() for p in prompt_audio
+         ]
+         logger.info(f"Encoded {len(prompt_audio)} audio file(s) to VQ codes")
+     elif prompt_tokens is not None:
+@@ -965,8 +975,8 @@ def main(
+                 if output:
+                     if codec is None:
+                         logger.info("Loading codec model for audio decoding...")
+-                        codec = load_codec_model(codec_checkpoint, device, precision)
+-                    audio = decode_to_audio(merged_codes.to(device), codec)
++                        codec = load_codec_model(codec_checkpoint, decoder_device, precision)
++                    audio = decode_to_audio(merged_codes.to(decoder_device), codec)
+                     import soundfile as sf
+ 
+                     out_path = (
