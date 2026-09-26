@@ -1,0 +1,257 @@
+diff --git a/fish_speech/inference_engine/__init__.py b/fish_speech/inference_engine/__init__.py
+index 9aa6f58..b4573e0 100644
+--- a/fish_speech/inference_engine/__init__.py
++++ b/fish_speech/inference_engine/__init__.py
+@@ -27,6 +27,7 @@ class TTSInferenceEngine(ReferenceLoader, VQManager):
+         decoder_model: DAC,
+         precision: torch.dtype,
+         compile: bool,
++        semantic_device: str = "cuda",
+     ) -> None:
+ 
+         super().__init__()
+@@ -35,6 +36,7 @@ class TTSInferenceEngine(ReferenceLoader, VQManager):
+         self.decoder_model = decoder_model
+         self.precision = precision
+         self.compile = compile
++        self.semantic_device = semantic_device
+ 
+     @torch.inference_mode()
+     def inference(self, req: ServeTTSRequest) -> Generator[InferenceResult, None, None]:
+@@ -150,7 +152,7 @@ class TTSInferenceEngine(ReferenceLoader, VQManager):
+ 
+         # Prepare the request
+         request = dict(
+-            device=self.decoder_model.device,
++            device=self.semantic_device,
+             max_new_tokens=req.max_new_tokens,
+             text=req.text,
+             top_p=req.top_p,
+diff --git a/fish_speech/inference_engine/vq_manager.py b/fish_speech/inference_engine/vq_manager.py
+index 4481580..fcc1db6 100644
+--- a/fish_speech/inference_engine/vq_manager.py
++++ b/fish_speech/inference_engine/vq_manager.py
+@@ -17,6 +17,7 @@ class VQManager:
+         logger.info(f"VQ features: {codes.shape}")
+ 
+         if isinstance(self.decoder_model, DAC):
++            codes = codes.to(self.decoder_model.device)
+             return self.decoder_model.from_indices(codes[None])[0].squeeze()
+ 
+         raise ValueError(f"Unknown model type: {type(self.decoder_model)}")
+@@ -30,8 +31,9 @@ class VQManager:
+                 sample_rate = self.decoder_model.sample_rate
+             reference_audio_content = self.load_audio(reference_audio, sample_rate)
+ 
++            model_dtype = next(self.decoder_model.parameters()).dtype
+             audios = torch.from_numpy(reference_audio_content).to(
+-                self.decoder_model.device
++                device=self.decoder_model.device, dtype=model_dtype
+             )[None, None, :]
+             audio_lengths = torch.tensor(
+                 [audios.shape[2]], device=self.decoder_model.device, dtype=torch.long
+diff --git a/fish_speech/models/text2semantic/inference.py b/fish_speech/models/text2semantic/inference.py
+index 9fb82b0..2e9c478 100644
+--- a/fish_speech/models/text2semantic/inference.py
++++ b/fish_speech/models/text2semantic/inference.py
+@@ -380,9 +380,13 @@ def generate(
+     return seq
+ 
+ 
+-def init_model(checkpoint_path, device, precision, compile=False):
++def init_model(checkpoint_path, device, precision, compile=False, max_seq_len=None):
+     model = DualARTransformer.from_pretrained(checkpoint_path, load_weights=True)
+ 
++    if max_seq_len is not None:
++        logger.info(f"Overriding max_seq_len: {model.config.max_seq_len} -> {max_seq_len}")
++        model.config.max_seq_len = max_seq_len
++
+     model = model.to(device=device, dtype=precision)
+     logger.info(f"Restored model from checkpoint")
+ 
+@@ -772,13 +776,14 @@ def launch_thread_safe_queue(
+     device,
+     precision,
+     compile: bool = False,
++    max_seq_len: Optional[int] = None,
+ ):
+     input_queue = queue.Queue()
+     init_event = threading.Event()
+ 
+     def worker():
+         model, decode_one_token = init_model(
+-            checkpoint_path, device, precision, compile=compile
++            checkpoint_path, device, precision, compile=compile, max_seq_len=max_seq_len
+         )
+         with torch.device(device):
+             model.setup_caches(
+@@ -852,6 +857,8 @@ def launch_thread_safe_queue(
+     default="checkpoints/s2-pro",
+ )
+ @click.option("--device", type=str, default="cuda")
++@click.option("--decoder-device", type=str, default=None)
++@click.option("--max-seq-len", type=int, default=None)
+ @click.option("--compile/--no-compile", default=False)
+ @click.option("--seed", type=int, default=42)
+ @click.option("--half/--no-half", default=False)
+@@ -871,6 +878,8 @@ def main(
+     temperature: float,
+     checkpoint_path: Path,
+     device: str,
++    decoder_device: Optional[str],
++    max_seq_len: Optional[int],
+     compile: bool,
+     seed: int,
+     half: bool,
+@@ -880,6 +889,8 @@ def main(
+ ) -> None:
+     os.makedirs(output_dir, exist_ok=True)
+     precision = torch.half if half else torch.bfloat16
++    decoder_device = decoder_device or device
++    logger.info(f"Device topology: semantic={device}, decoder={decoder_device}")
+ 
+     if prompt_text and not prompt_audio and not prompt_tokens:
+         raise ValueError(
+@@ -897,7 +908,7 @@ def main(
+     logger.info("Loading model ...")
+     t0 = time.time()
+     model, decode_one_token = init_model(
+-        checkpoint_path, device, precision, compile=compile
++        checkpoint_path, device, precision, compile=compile, max_seq_len=max_seq_len
+     )
+     with torch.device(device):
+         model.setup_caches(
+@@ -917,9 +928,9 @@ def main(
+     prompt_tokens_list = None
+     if prompt_audio:
+         logger.info("Loading codec model for audio encoding...")
+-        codec = load_codec_model(codec_checkpoint, device, precision)
++        codec = load_codec_model(codec_checkpoint, decoder_device, precision)
+         prompt_tokens_list = [
+-            encode_audio(p, codec, device).cpu() for p in prompt_audio
++            encode_audio(p, codec, decoder_device).cpu() for p in prompt_audio
+         ]
+         logger.info(f"Encoded {len(prompt_audio)} audio file(s) to VQ codes")
+     elif prompt_tokens is not None:
+@@ -965,8 +976,8 @@ def main(
+                 if output:
+                     if codec is None:
+                         logger.info("Loading codec model for audio decoding...")
+-                        codec = load_codec_model(codec_checkpoint, device, precision)
+-                    audio = decode_to_audio(merged_codes.to(device), codec)
++                        codec = load_codec_model(codec_checkpoint, decoder_device, precision)
++                    audio = decode_to_audio(merged_codes.to(decoder_device), codec)
+                     import soundfile as sf
+ 
+                     out_path = (
+diff --git a/tools/api_server.py b/tools/api_server.py
+index f30f1c7..67ac22e 100644
+--- a/tools/api_server.py
++++ b/tools/api_server.py
+@@ -89,6 +89,8 @@ class API(ExceptionHandler):
+         app.state.model_manager = ModelManager(
+             mode=self.args.mode,
+             device=self.args.device,
++            decoder_device=self.args.decoder_device,
++            max_seq_len=self.args.max_seq_len,
+             half=self.args.half,
+             compile=self.args.compile,
+             llama_checkpoint_path=self.args.llama_checkpoint_path,
+diff --git a/tools/server/api_utils.py b/tools/server/api_utils.py
+index 803bbbb..79aa0ad 100644
+--- a/tools/server/api_utils.py
++++ b/tools/server/api_utils.py
+@@ -33,6 +33,8 @@ def parse_args():
+     )
+     parser.add_argument("--decoder-config-name", type=str, default="modded_dac_vq")
+     parser.add_argument("--device", type=str, default="cuda")
++    parser.add_argument("--decoder-device", type=str, default=None)
++    parser.add_argument("--max-seq-len", type=int, default=None)
+     parser.add_argument("--half", action="store_true")
+     parser.add_argument("--compile", action="store_true")
+     parser.add_argument("--max-text-length", type=int, default=0)
+diff --git a/tools/server/model_manager.py b/tools/server/model_manager.py
+index 4ec4bdf..f20e42c 100644
+--- a/tools/server/model_manager.py
++++ b/tools/server/model_manager.py
+@@ -13,6 +13,8 @@ class ModelManager:
+         self,
+         mode: str,
+         device: str,
++        decoder_device: str | None,
++        max_seq_len: int | None,
+         half: bool,
+         compile: bool,
+         llama_checkpoint_path: str,
+@@ -22,6 +24,9 @@ class ModelManager:
+ 
+         self.mode = mode
+         self.device = device
++        self.semantic_device = device
++        self.decoder_device = decoder_device or device
++        self.max_seq_len = max_seq_len
+         self.half = half
+         self.compile = compile
+ 
+@@ -36,17 +41,19 @@ class ModelManager:
+             logger.info("CUDA is not available, running on CPU.")
+ 
+         # Load the TTS models
++        logger.info(f"Device topology: semantic={self.semantic_device}, decoder={self.decoder_device}")
+         self.load_llama_model(
+-            llama_checkpoint_path, self.device, self.precision, self.compile, self.mode
++            llama_checkpoint_path, self.semantic_device, self.precision, self.compile, self.mode, self.max_seq_len
+         )
+         self.load_decoder_model(
+-            decoder_config_name, decoder_checkpoint_path, self.device
++            decoder_config_name, decoder_checkpoint_path, self.decoder_device, self.precision
+         )
+         self.tts_inference_engine = TTSInferenceEngine(
+             llama_queue=self.llama_queue,
+             decoder_model=self.decoder_model,
+             precision=self.precision,
+             compile=self.compile,
++            semantic_device=self.semantic_device,
+         )
+ 
+         # Warm up the models
+@@ -54,7 +61,7 @@ class ModelManager:
+             self.warm_up(self.tts_inference_engine)
+ 
+     def load_llama_model(
+-        self, checkpoint_path, device, precision, compile, mode
++        self, checkpoint_path, device, precision, compile, mode, max_seq_len=None
+     ) -> None:
+ 
+         if mode == "tts":
+@@ -63,18 +70,20 @@ class ModelManager:
+                 device=device,
+                 precision=precision,
+                 compile=compile,
++                max_seq_len=max_seq_len,
+             )
+         else:
+             raise ValueError(f"Invalid mode: {mode}")
+ 
+         logger.info("LLAMA model loaded.")
+ 
+-    def load_decoder_model(self, config_name, checkpoint_path, device) -> None:
++    def load_decoder_model(self, config_name, checkpoint_path, device, precision) -> None:
+         self.decoder_model = load_decoder_model(
+             config_name=config_name,
+             checkpoint_path=checkpoint_path,
+             device=device,
+         )
++        self.decoder_model.to(dtype=precision)
+         logger.info("Decoder model loaded.")
+ 
+     def warm_up(self, tts_inference_engine) -> None:
+@@ -82,7 +91,7 @@ class ModelManager:
+             text="Hello world.",
+             references=[],
+             reference_id=None,
+-            max_new_tokens=1024,
++            max_new_tokens=64,
+             chunk_length=200,
+             top_p=0.7,
+             repetition_penalty=1.2,
