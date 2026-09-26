@@ -1,0 +1,44 @@
+{
+  "id": "C01-en-to-en",
+  "ref": "en",
+  "target": "en",
+  "text": "This is a new English sentence generated from the reference voice. The purpose is to verify speaker conditioning on the dual GPU pipeline.",
+  "status": "PASS",
+  "seed": 100,
+  "reference": {
+    "audio": "/kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/bilingual-text-synthesis/T03-en-medium.wav",
+    "text": "Today we are validating a reproducible dual GPU inference pipeline. The semantic model runs on the first NVIDIA T4, while the audio decoder runs on the second T4. The goal is stable, clear speech without running out of GPU memory.",
+    "duration_s": 14.814331065759637,
+    "sample_rate": 44100,
+    "sha256": "14a0c1b1dfdb2b77fcfb306fd1462f400f7f437fdcb718ca52ab56338d19a87b",
+    "vq_shape": [
+      10,
+      319
+    ],
+    "encode_s": 1.8986714370003028
+  },
+  "precision": "FP16",
+  "max_seq_len": 4096,
+  "semantic_device": "cuda:0",
+  "decoder_device": "cuda:1",
+  "codes_shape": [
+    10,
+    178
+  ],
+  "semantic_time_s": 21.558791466999992,
+  "decode_time_s": 0.7020758049998221,
+  "total_inference_s": 22.260867271999814,
+  "rtf": 2.6929650376777334,
+  "wav": "/kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/technical-voice-cloning/C01-en-to-en.wav",
+  "wav_bytes": 729132,
+  "wav_sha256": "6d7000c1a268428a5ceeb559476e9fd7dcd1036800ebe0e2bebca270ac17d18a",
+  "gpu0_peak_allocated_bytes": 10945470976,
+  "gpu1_peak_allocated_bytes": 4635339264,
+  "sample_rate": 44100,
+  "frames": 364544,
+  "duration_s": 8.266303854875284,
+  "peak_abs": 0.9033203125,
+  "rms": 0.14394184947013855,
+  "silence_ratio_lt_1e-4": 0.013814518960674158,
+  "clipping_ratio_ge_0_999": 0.0
+}

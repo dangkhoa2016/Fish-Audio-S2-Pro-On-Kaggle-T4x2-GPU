@@ -1,0 +1,44 @@
+{
+  "id": "C03-vi-to-vi",
+  "ref": "vi",
+  "target": "vi",
+  "text": "Đây là một câu tiếng Việt mới được tạo từ giọng tham chiếu tiếng Việt. Mục tiêu là xác nhận quy trình sao chép giọng hoạt động ổn định trên hai GPU.",
+  "status": "PASS",
+  "seed": 102,
+  "reference": {
+    "audio": "/kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/bilingual-text-synthesis/T04-vi-medium.wav",
+    "text": "Hôm nay chúng tôi kiểm thử một quy trình suy luận hai GPU có thể tái lập. Mô hình sinh mã ngữ nghĩa chạy trên GPU NVIDIA T4 thứ nhất, còn bộ giải mã âm thanh chạy trên GPU T4 thứ hai. Mục tiêu là tạo giọng nói rõ ràng, ổn định và không bị hết bộ nhớ GPU.",
+    "duration_s": 14.814331065759637,
+    "sample_rate": 44100,
+    "sha256": "728d3ab82bbc0614a24ed5f1e4aa17f3f6bba10dda49dad2e4e5ea2f4921ef1b",
+    "vq_shape": [
+      10,
+      319
+    ],
+    "encode_s": 0.21617976300012742
+  },
+  "precision": "FP16",
+  "max_seq_len": 4096,
+  "semantic_device": "cuda:0",
+  "decoder_device": "cuda:1",
+  "codes_shape": [
+    10,
+    171
+  ],
+  "semantic_time_s": 21.112124895000306,
+  "decode_time_s": 0.6785247800003162,
+  "total_inference_s": 21.790649675000623,
+  "rtf": 2.743991144312887,
+  "wav": "/kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/technical-voice-cloning/C03-vi-to-vi.wav",
+  "wav_bytes": 700460,
+  "wav_sha256": "bfb274663844b46edbdf9914f6b22c8f51974ee1d12ffaf4f19b7ade489f4412",
+  "gpu0_peak_allocated_bytes": 10949048832,
+  "gpu1_peak_allocated_bytes": 4617008640,
+  "sample_rate": 44100,
+  "frames": 350208,
+  "duration_s": 7.9412244897959186,
+  "peak_abs": 0.60302734375,
+  "rms": 0.07716580480337143,
+  "silence_ratio_lt_1e-4": 0.010442365679824562,
+  "clipping_ratio_ge_0_999": 0.0
+}

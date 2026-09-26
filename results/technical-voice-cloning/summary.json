@@ -1,0 +1,211 @@
+{
+  "status": "PASS",
+  "qualification_type": "synthetic-reference technical qualification",
+  "semantic_load_s": 94.41615648099969,
+  "codec_load_s": 13.249513596999805,
+  "case_count": 4,
+  "references": {
+    "en": {
+      "audio": "/kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/bilingual-text-synthesis/T03-en-medium.wav",
+      "text": "Today we are validating a reproducible dual GPU inference pipeline. The semantic model runs on the first NVIDIA T4, while the audio decoder runs on the second T4. The goal is stable, clear speech without running out of GPU memory.",
+      "duration_s": 14.814331065759637,
+      "sample_rate": 44100,
+      "sha256": "14a0c1b1dfdb2b77fcfb306fd1462f400f7f437fdcb718ca52ab56338d19a87b",
+      "vq_shape": [
+        10,
+        319
+      ],
+      "encode_s": 1.8986714370003028
+    },
+    "vi": {
+      "audio": "/kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/bilingual-text-synthesis/T04-vi-medium.wav",
+      "text": "Hôm nay chúng tôi kiểm thử một quy trình suy luận hai GPU có thể tái lập. Mô hình sinh mã ngữ nghĩa chạy trên GPU NVIDIA T4 thứ nhất, còn bộ giải mã âm thanh chạy trên GPU T4 thứ hai. Mục tiêu là tạo giọng nói rõ ràng, ổn định và không bị hết bộ nhớ GPU.",
+      "duration_s": 14.814331065759637,
+      "sample_rate": 44100,
+      "sha256": "728d3ab82bbc0614a24ed5f1e4aa17f3f6bba10dda49dad2e4e5ea2f4921ef1b",
+      "vq_shape": [
+        10,
+        319
+      ],
+      "encode_s": 0.21617976300012742
+    }
+  },
+  "cases": [
+    {
+      "id": "C01-en-to-en",
+      "ref": "en",
+      "target": "en",
+      "text": "This is a new English sentence generated from the reference voice. The purpose is to verify speaker conditioning on the dual GPU pipeline.",
+      "status": "PASS",
+      "seed": 100,
+      "reference": {
+        "audio": "/kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/bilingual-text-synthesis/T03-en-medium.wav",
+        "text": "Today we are validating a reproducible dual GPU inference pipeline. The semantic model runs on the first NVIDIA T4, while the audio decoder runs on the second T4. The goal is stable, clear speech without running out of GPU memory.",
+        "duration_s": 14.814331065759637,
+        "sample_rate": 44100,
+        "sha256": "14a0c1b1dfdb2b77fcfb306fd1462f400f7f437fdcb718ca52ab56338d19a87b",
+        "vq_shape": [
+          10,
+          319
+        ],
+        "encode_s": 1.8986714370003028
+      },
+      "precision": "FP16",
+      "max_seq_len": 4096,
+      "semantic_device": "cuda:0",
+      "decoder_device": "cuda:1",
+      "codes_shape": [
+        10,
+        178
+      ],
+      "semantic_time_s": 21.558791466999992,
+      "decode_time_s": 0.7020758049998221,
+      "total_inference_s": 22.260867271999814,
+      "rtf": 2.6929650376777334,
+      "wav": "/kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/technical-voice-cloning/C01-en-to-en.wav",
+      "wav_bytes": 729132,
+      "wav_sha256": "6d7000c1a268428a5ceeb559476e9fd7dcd1036800ebe0e2bebca270ac17d18a",
+      "gpu0_peak_allocated_bytes": 10945470976,
+      "gpu1_peak_allocated_bytes": 4635339264,
+      "sample_rate": 44100,
+      "frames": 364544,
+      "duration_s": 8.266303854875284,
+      "peak_abs": 0.9033203125,
+      "rms": 0.14394184947013855,
+      "silence_ratio_lt_1e-4": 0.013814518960674158,
+      "clipping_ratio_ge_0_999": 0.0
+    },
+    {
+      "id": "C02-en-to-vi",
+      "ref": "en",
+      "target": "vi",
+      "text": "Đây là một câu tiếng Việt mới được tạo từ giọng tham chiếu tiếng Anh. Mục tiêu là kiểm tra khả năng giữ đặc trưng giọng khi đổi ngôn ngữ.",
+      "status": "PASS",
+      "seed": 101,
+      "reference": {
+        "audio": "/kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/bilingual-text-synthesis/T03-en-medium.wav",
+        "text": "Today we are validating a reproducible dual GPU inference pipeline. The semantic model runs on the first NVIDIA T4, while the audio decoder runs on the second T4. The goal is stable, clear speech without running out of GPU memory.",
+        "duration_s": 14.814331065759637,
+        "sample_rate": 44100,
+        "sha256": "14a0c1b1dfdb2b77fcfb306fd1462f400f7f437fdcb718ca52ab56338d19a87b",
+        "vq_shape": [
+          10,
+          319
+        ],
+        "encode_s": 1.8986714370003028
+      },
+      "precision": "FP16",
+      "max_seq_len": 4096,
+      "semantic_device": "cuda:0",
+      "decoder_device": "cuda:1",
+      "codes_shape": [
+        10,
+        178
+      ],
+      "semantic_time_s": 21.610003621000033,
+      "decode_time_s": 0.20762066800034518,
+      "total_inference_s": 21.817624289000378,
+      "rtf": 2.6393445815729146,
+      "wav": "/kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/technical-voice-cloning/C02-en-to-vi.wav",
+      "wav_bytes": 729132,
+      "wav_sha256": "d971ba3acc822778e3c5d91f06abd3c02ed36bbd92ec5b0ce838672df6233294",
+      "gpu0_peak_allocated_bytes": 10946287104,
+      "gpu1_peak_allocated_bytes": 4636068352,
+      "sample_rate": 44100,
+      "frames": 364544,
+      "duration_s": 8.266303854875284,
+      "peak_abs": 0.93994140625,
+      "rms": 0.14958621561527252,
+      "silence_ratio_lt_1e-4": 0.020732751053370788,
+      "clipping_ratio_ge_0_999": 0.0
+    },
+    {
+      "id": "C03-vi-to-vi",
+      "ref": "vi",
+      "target": "vi",
+      "text": "Đây là một câu tiếng Việt mới được tạo từ giọng tham chiếu tiếng Việt. Mục tiêu là xác nhận quy trình sao chép giọng hoạt động ổn định trên hai GPU.",
+      "status": "PASS",
+      "seed": 102,
+      "reference": {
+        "audio": "/kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/bilingual-text-synthesis/T04-vi-medium.wav",
+        "text": "Hôm nay chúng tôi kiểm thử một quy trình suy luận hai GPU có thể tái lập. Mô hình sinh mã ngữ nghĩa chạy trên GPU NVIDIA T4 thứ nhất, còn bộ giải mã âm thanh chạy trên GPU T4 thứ hai. Mục tiêu là tạo giọng nói rõ ràng, ổn định và không bị hết bộ nhớ GPU.",
+        "duration_s": 14.814331065759637,
+        "sample_rate": 44100,
+        "sha256": "728d3ab82bbc0614a24ed5f1e4aa17f3f6bba10dda49dad2e4e5ea2f4921ef1b",
+        "vq_shape": [
+          10,
+          319
+        ],
+        "encode_s": 0.21617976300012742
+      },
+      "precision": "FP16",
+      "max_seq_len": 4096,
+      "semantic_device": "cuda:0",
+      "decoder_device": "cuda:1",
+      "codes_shape": [
+        10,
+        171
+      ],
+      "semantic_time_s": 21.112124895000306,
+      "decode_time_s": 0.6785247800003162,
+      "total_inference_s": 21.790649675000623,
+      "rtf": 2.743991144312887,
+      "wav": "/kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/technical-voice-cloning/C03-vi-to-vi.wav",
+      "wav_bytes": 700460,
+      "wav_sha256": "bfb274663844b46edbdf9914f6b22c8f51974ee1d12ffaf4f19b7ade489f4412",
+      "gpu0_peak_allocated_bytes": 10949048832,
+      "gpu1_peak_allocated_bytes": 4617008640,
+      "sample_rate": 44100,
+      "frames": 350208,
+      "duration_s": 7.9412244897959186,
+      "peak_abs": 0.60302734375,
+      "rms": 0.07716580480337143,
+      "silence_ratio_lt_1e-4": 0.010442365679824562,
+      "clipping_ratio_ge_0_999": 0.0
+    },
+    {
+      "id": "C04-vi-to-en",
+      "ref": "vi",
+      "target": "en",
+      "text": "This is a new English sentence generated from the Vietnamese reference voice. The goal is to verify cross language speaker conditioning.",
+      "status": "PASS",
+      "seed": 103,
+      "reference": {
+        "audio": "/kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/bilingual-text-synthesis/T04-vi-medium.wav",
+        "text": "Hôm nay chúng tôi kiểm thử một quy trình suy luận hai GPU có thể tái lập. Mô hình sinh mã ngữ nghĩa chạy trên GPU NVIDIA T4 thứ nhất, còn bộ giải mã âm thanh chạy trên GPU T4 thứ hai. Mục tiêu là tạo giọng nói rõ ràng, ổn định và không bị hết bộ nhớ GPU.",
+        "duration_s": 14.814331065759637,
+        "sample_rate": 44100,
+        "sha256": "728d3ab82bbc0614a24ed5f1e4aa17f3f6bba10dda49dad2e4e5ea2f4921ef1b",
+        "vq_shape": [
+          10,
+          319
+        ],
+        "encode_s": 0.21617976300012742
+      },
+      "precision": "FP16",
+      "max_seq_len": 4096,
+      "semantic_device": "cuda:0",
+      "decoder_device": "cuda:1",
+      "codes_shape": [
+        10,
+        163
+      ],
+      "semantic_time_s": 19.684008794999954,
+      "decode_time_s": 0.6872205909999138,
+      "total_inference_s": 20.371229385999868,
+      "rtf": 2.691152271623952,
+      "wav": "/kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/technical-voice-cloning/C04-vi-to-en.wav",
+      "wav_bytes": 667692,
+      "wav_sha256": "18bb61b38202b602c5bb5cfafb00ad846e047181d7a8fba15bc7aadaf5bdd93a",
+      "gpu0_peak_allocated_bytes": 10947372032,
+      "gpu1_peak_allocated_bytes": 4595606528,
+      "sample_rate": 44100,
+      "frames": 333824,
+      "duration_s": 7.569705215419501,
+      "peak_abs": 0.7763671875,
+      "rms": 0.1173979863524437,
+      "silence_ratio_lt_1e-4": 0.00618888995398773,
+      "clipping_ratio_ge_0_999": 0.0
+    }
+  ]
+}
