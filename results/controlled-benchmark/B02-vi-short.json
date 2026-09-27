@@ -1,0 +1,168 @@
+{
+  "id": "B02-vi-short",
+  "language": "vi",
+  "kind": "text-only",
+  "length": "short",
+  "reference_language": null,
+  "text": "Xin chào. Đây là bài benchmark tiếng Việt ngắn cho Fish Audio S2 Pro.",
+  "max_new_tokens": 160,
+  "run_count": 5,
+  "sample_output": {
+    "path": "/kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/controlled-benchmark/B02-vi-short-sample.wav",
+    "bytes": 483372,
+    "sha256": "c62da364089b40280d2c7131452992aa91dcbc045a14bbbc0217b15cfb844a99"
+  },
+  "wall_time_s": {
+    "min": 12.214166160999866,
+    "median": 12.868886303000181,
+    "max": 14.838727927000036,
+    "mean": 13.50030501859992,
+    "std": 1.1002393321996335
+  },
+  "semantic_time_s": {
+    "min": 12.079878730000019,
+    "median": 12.257965298999807,
+    "max": 14.210438731000067,
+    "mean": 12.977055626400034,
+    "std": 0.9929373028374132
+  },
+  "decode_time_s": {
+    "min": 0.13422538899976644,
+    "median": 0.614370364000024,
+    "max": 0.6282320139998774,
+    "mean": 0.5231731269998818,
+    "std": 0.19460198898532968
+  },
+  "audio_duration_s": {
+    "min": 4.690430839002268,
+    "median": 4.73687074829932,
+    "max": 5.572789115646258,
+    "mean": 5.034086167800454,
+    "std": 0.4033594189319376
+  },
+  "rtf": {
+    "min": 2.6040606034387284,
+    "median": 2.6979297850987134,
+    "max": 2.7436469579706255,
+    "mean": 2.6818246335665057,
+    "std": 0.0465897979584528
+  },
+  "semantic_tokens_per_s": {
+    "min": 8.239540375288966,
+    "median": 8.361011087732985,
+    "max": 8.444496491035146,
+    "mean": 8.351202829893216,
+    "std": 0.06781534392095026
+  },
+  "gpu0_peak_allocated_gb": {
+    "min": 10.892356608,
+    "median": 10.892389888,
+    "max": 10.892991488,
+    "mean": 10.8926038016,
+    "std": 0.0002901939759053047
+  },
+  "gpu1_peak_allocated_gb": {
+    "min": 4.42273792,
+    "median": 4.425498624,
+    "max": 4.475192832,
+    "mean": 4.443167744,
+    "std": 0.023979176524086473
+  },
+  "runs": [
+    {
+      "seed": 1100,
+      "semantic_time_s": 14.171760150999944,
+      "decode_time_s": 0.6281789820000085,
+      "wall_time_s": 14.80000002199995,
+      "semantic_frames": 118,
+      "semantic_tokens_per_s": 8.326418083760332,
+      "rtf": 2.700774633251944,
+      "gpu0_peak_allocated_bytes": 10892924416,
+      "gpu0_peak_reserved_bytes": 11045699584,
+      "gpu1_peak_allocated_bytes": 4469671424,
+      "gpu1_peak_reserved_bytes": 5018484736,
+      "duration_s": 5.479909297052155,
+      "sample_rate": 44100,
+      "peak_abs": 0.80908203125,
+      "rms": 0.14823059737682343,
+      "silence_ratio_lt_1e-4": 0.022125761387711863,
+      "clipping_ratio_ge_0_999": 0.0
+    },
+    {
+      "seed": 1101,
+      "semantic_time_s": 14.210438731000067,
+      "decode_time_s": 0.6282320139998774,
+      "wall_time_s": 14.838727927000036,
+      "semantic_frames": 120,
+      "semantic_tokens_per_s": 8.444496491035146,
+      "rtf": 2.6627111880725165,
+      "gpu0_peak_allocated_bytes": 10892991488,
+      "gpu0_peak_reserved_bytes": 11045699584,
+      "gpu1_peak_allocated_bytes": 4475192832,
+      "gpu1_peak_reserved_bytes": 5018484736,
+      "duration_s": 5.572789115646258,
+      "sample_rate": 44100,
+      "peak_abs": 0.9443359375,
+      "rms": 0.149735689163208,
+      "silence_ratio_lt_1e-4": 0.06815999348958333,
+      "clipping_ratio_ge_0_999": 0.0
+    },
+    {
+      "seed": 1102,
+      "semantic_time_s": 12.257965298999807,
+      "decode_time_s": 0.6108588859997326,
+      "wall_time_s": 12.868886303000181,
+      "semantic_frames": 101,
+      "semantic_tokens_per_s": 8.239540375288966,
+      "rtf": 2.7436469579706255,
+      "gpu0_peak_allocated_bytes": 10892356608,
+      "gpu0_peak_reserved_bytes": 11045699584,
+      "gpu1_peak_allocated_bytes": 4422737920,
+      "gpu1_peak_reserved_bytes": 5018484736,
+      "duration_s": 4.690430839002268,
+      "sample_rate": 44100,
+      "peak_abs": 0.9501953125,
+      "rms": 0.2153770625591278,
+      "silence_ratio_lt_1e-4": 0.004070621905940594,
+      "clipping_ratio_ge_0_999": 0.0
+    },
+    {
+      "seed": 1103,
+      "semantic_time_s": 12.079878730000019,
+      "decode_time_s": 0.13422538899976644,
+      "wall_time_s": 12.214166160999866,
+      "semantic_frames": 101,
+      "semantic_tokens_per_s": 8.361011087732985,
+      "rtf": 2.6040606034387284,
+      "gpu0_peak_allocated_bytes": 10892356608,
+      "gpu0_peak_reserved_bytes": 11045699584,
+      "gpu1_peak_allocated_bytes": 4422737920,
+      "gpu1_peak_reserved_bytes": 5018484736,
+      "duration_s": 4.690430839002268,
+      "sample_rate": 44100,
+      "peak_abs": 0.939453125,
+      "rms": 0.15432558953762054,
+      "silence_ratio_lt_1e-4": 0.0206431775990099,
+      "clipping_ratio_ge_0_999": 0.0
+    },
+    {
+      "seed": 1104,
+      "semantic_time_s": 12.16523522100033,
+      "decode_time_s": 0.614370364000024,
+      "wall_time_s": 12.779744679999567,
+      "semantic_frames": 102,
+      "semantic_tokens_per_s": 8.384548111648654,
+      "rtf": 2.6979297850987134,
+      "gpu0_peak_allocated_bytes": 10892389888,
+      "gpu0_peak_reserved_bytes": 11045699584,
+      "gpu1_peak_allocated_bytes": 4425498624,
+      "gpu1_peak_reserved_bytes": 5018484736,
+      "duration_s": 4.73687074829932,
+      "sample_rate": 44100,
+      "peak_abs": 0.75537109375,
+      "rms": 0.0927899107336998,
+      "silence_ratio_lt_1e-4": 0.06435259650735294,
+      "clipping_ratio_ge_0_999": 0.0
+    }
+  ]
+}

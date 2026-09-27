@@ -1,0 +1,168 @@
+{
+  "id": "B01-en-short",
+  "language": "en",
+  "kind": "text-only",
+  "length": "short",
+  "reference_language": null,
+  "text": "Hello. This is the short English benchmark for Fish Audio S2 Pro.",
+  "max_new_tokens": 160,
+  "run_count": 5,
+  "sample_output": {
+    "path": "/kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/controlled-benchmark/B01-en-short-sample.wav",
+    "bytes": 466988,
+    "sha256": "90f090f839b036abe375e7e0edf84a4c7286d6a334a73e4fa2104e5ba81df4b6"
+  },
+  "wall_time_s": {
+    "min": 12.12937330900013,
+    "median": 13.194334995999725,
+    "max": 14.399475918000007,
+    "mean": 13.332079712999985,
+    "std": 0.8156814146646276
+  },
+  "semantic_time_s": {
+    "min": 11.512090786000044,
+    "median": 12.808893493999676,
+    "max": 13.778316026000084,
+    "mean": 12.849078098200062,
+    "std": 0.7710150538467168
+  },
+  "decode_time_s": {
+    "min": 0.14162300199996025,
+    "median": 0.6172115690001192,
+    "max": 0.6493784720000804,
+    "mean": 0.4829370503999598,
+    "std": 0.19536193790644177
+  },
+  "audio_duration_s": {
+    "min": 4.4117913832199545,
+    "median": 4.922630385487528,
+    "max": 5.294149659863946,
+    "mean": 4.941206349206349,
+    "std": 0.30039119651496315
+  },
+  "rtf": {
+    "min": 2.617207908394359,
+    "median": 2.719884559963509,
+    "max": 2.749307992017402,
+    "mean": 2.6986106819514655,
+    "std": 0.0463685635842698
+  },
+  "semantic_tokens_per_s": {
+    "min": 8.252193434361232,
+    "median": 8.2755001475854,
+    "max": 8.319035887052983,
+    "mean": 8.280313678601,
+    "std": 0.021703794459093022
+  },
+  "gpu0_peak_allocated_gb": {
+    "min": 10.8920576,
+    "median": 10.892425216,
+    "max": 10.89269248,
+    "mean": 10.892438528,
+    "std": 0.00021612271429732562
+  },
+  "gpu1_peak_allocated_gb": {
+    "min": 4.406173184,
+    "median": 4.437964288,
+    "max": 4.458628096,
+    "mean": 4.438215168,
+    "std": 0.017836249306197184
+  },
+  "runs": [
+    {
+      "seed": 1000,
+      "semantic_time_s": 13.778316026000084,
+      "decode_time_s": 0.6210912229998939,
+      "wall_time_s": 14.399475918000007,
+      "semantic_frames": 114,
+      "semantic_tokens_per_s": 8.273870318032964,
+      "rtf": 2.719884559963509,
+      "gpu0_peak_allocated_bytes": 10892692480,
+      "gpu0_peak_reserved_bytes": 11045699584,
+      "gpu1_peak_allocated_bytes": 4458628096,
+      "gpu1_peak_reserved_bytes": 5018484736,
+      "duration_s": 5.294149659863946,
+      "sample_rate": 44100,
+      "peak_abs": 0.95068359375,
+      "rms": 0.26464879512786865,
+      "silence_ratio_lt_1e-4": 0.04705917626096491,
+      "clipping_ratio_ge_0_999": 0.0
+    },
+    {
+      "seed": 1001,
+      "semantic_time_s": 13.404229056000077,
+      "decode_time_s": 0.6493784720000804,
+      "wall_time_s": 14.05366716699973,
+      "semantic_frames": 111,
+      "semantic_tokens_per_s": 8.280968605972422,
+      "rtf": 2.726310538361698,
+      "gpu0_peak_allocated_bytes": 10892592128,
+      "gpu0_peak_reserved_bytes": 11045699584,
+      "gpu1_peak_allocated_bytes": 4450345984,
+      "gpu1_peak_reserved_bytes": 5018484736,
+      "duration_s": 5.154829931972789,
+      "sample_rate": 44100,
+      "peak_abs": 0.7294921875,
+      "rms": 0.06469614803791046,
+      "silence_ratio_lt_1e-4": 0.06212169200450451,
+      "clipping_ratio_ge_0_999": 0.0
+    },
+    {
+      "seed": 1002,
+      "semantic_time_s": 12.808893493999676,
+      "decode_time_s": 0.38538098599974546,
+      "wall_time_s": 13.194334995999725,
+      "semantic_frames": 106,
+      "semantic_tokens_per_s": 8.2755001475854,
+      "rtf": 2.68034241102036,
+      "gpu0_peak_allocated_bytes": 10892425216,
+      "gpu0_peak_reserved_bytes": 11045699584,
+      "gpu1_peak_allocated_bytes": 4437964288,
+      "gpu1_peak_reserved_bytes": 5018484736,
+      "duration_s": 4.922630385487528,
+      "sample_rate": 44100,
+      "peak_abs": 0.94775390625,
+      "rms": 0.2177947759628296,
+      "silence_ratio_lt_1e-4": 0.008812094634433961,
+      "clipping_ratio_ge_0_999": 0.0
+    },
+    {
+      "seed": 1003,
+      "semantic_time_s": 12.741861129000426,
+      "decode_time_s": 0.14162300199996025,
+      "wall_time_s": 12.88354717500033,
+      "semantic_frames": 106,
+      "semantic_tokens_per_s": 8.319035887052983,
+      "rtf": 2.617207908394359,
+      "gpu0_peak_allocated_bytes": 10892425216,
+      "gpu0_peak_reserved_bytes": 11045699584,
+      "gpu1_peak_allocated_bytes": 4437964288,
+      "gpu1_peak_reserved_bytes": 5018484736,
+      "duration_s": 4.922630385487528,
+      "sample_rate": 44100,
+      "peak_abs": 0.91259765625,
+      "rms": 0.16921529173851013,
+      "silence_ratio_lt_1e-4": 0.05253169221698113,
+      "clipping_ratio_ge_0_999": 0.0
+    },
+    {
+      "seed": 1004,
+      "semantic_time_s": 11.512090786000044,
+      "decode_time_s": 0.6172115690001192,
+      "wall_time_s": 12.12937330900013,
+      "semantic_frames": 95,
+      "semantic_tokens_per_s": 8.252193434361232,
+      "rtf": 2.749307992017402,
+      "gpu0_peak_allocated_bytes": 10892057600,
+      "gpu0_peak_reserved_bytes": 11045699584,
+      "gpu1_peak_allocated_bytes": 4406173184,
+      "gpu1_peak_reserved_bytes": 5018484736,
+      "duration_s": 4.4117913832199545,
+      "sample_rate": 44100,
+      "peak_abs": 0.92822265625,
+      "rms": 0.09859377145767212,
+      "silence_ratio_lt_1e-4": 0.05005139802631579,
+      "clipping_ratio_ge_0_999": 0.0
+    }
+  ]
+}

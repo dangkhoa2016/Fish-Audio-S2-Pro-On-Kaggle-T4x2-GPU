@@ -1,0 +1,168 @@
+{
+  "id": "B03-en-medium",
+  "language": "en",
+  "kind": "text-only",
+  "length": "medium",
+  "reference_language": null,
+  "text": "This controlled benchmark measures warm inference latency, real time factor, and GPU memory on the dual NVIDIA T4 pipeline. The semantic model runs on the first GPU and the codec decoder runs on the second GPU.",
+  "max_new_tokens": 320,
+  "run_count": 5,
+  "sample_output": {
+    "path": "/kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/controlled-benchmark/B03-en-medium-sample.wav",
+    "bytes": 1183788,
+    "sha256": "5ca1046039805dfc3b8fbf85349fd0e36bcf061eb7a53c76dc3befeb8f942f75"
+  },
+  "wall_time_s": {
+    "min": 34.50044927499994,
+    "median": 36.011008648999905,
+    "max": 38.43129355799965,
+    "mean": 36.32747839539998,
+    "std": 1.3482101745048838
+  },
+  "semantic_time_s": {
+    "min": 33.712229302000196,
+    "median": 35.20820998699992,
+    "max": 37.59861116299999,
+    "mean": 35.52818382940004,
+    "std": 1.3354299957775697
+  },
+  "decode_time_s": {
+    "min": 0.784812356999737,
+    "median": 0.7881605630000195,
+    "max": 0.8326195779995942,
+    "mean": 0.7992268327998318,
+    "std": 0.017821936243584895
+  },
+  "audio_duration_s": {
+    "min": 13.049614512471654,
+    "median": 13.653333333333334,
+    "max": 14.535691609977324,
+    "mean": 13.746213151927437,
+    "std": 0.5154620738947443
+  },
+  "rtf": {
+    "min": 2.6375250475341727,
+    "median": 2.6437906837805434,
+    "max": 2.649942077460858,
+    "mean": 2.6427695747133644,
+    "std": 0.004431376254583037
+  },
+  "semantic_tokens_per_s": {
+    "min": 8.31000399561012,
+    "median": 8.335254173871197,
+    "max": 8.350325111914378,
+    "mean": 8.331448827416915,
+    "std": 0.013451861012251976
+  },
+  "gpu0_peak_allocated_gb": {
+    "min": 10.904833024,
+    "median": 10.905693184,
+    "max": 10.90795008,
+    "mean": 10.906025472,
+    "std": 0.0010719461683440863
+  },
+  "gpu1_peak_allocated_gb": {
+    "min": 4.919678976,
+    "median": 4.955569152,
+    "max": 5.008024064,
+    "mean": 4.9610908672,
+    "std": 0.03064344724683931
+  },
+  "runs": [
+    {
+      "seed": 1200,
+      "semantic_time_s": 34.77735993299984,
+      "decode_time_s": 0.7878044979997867,
+      "wall_time_s": 35.56522714900029,
+      "semantic_frames": 289,
+      "semantic_tokens_per_s": 8.31000399561012,
+      "rtf": 2.649942077460858,
+      "gpu0_peak_allocated_bytes": 10905362432,
+      "gpu0_peak_reserved_bytes": 11070865408,
+      "gpu1_peak_allocated_bytes": 4941765632,
+      "gpu1_peak_reserved_bytes": 5651824640,
+      "duration_s": 13.421133786848072,
+      "sample_rate": 44100,
+      "peak_abs": 0.95166015625,
+      "rms": 0.2131185382604599,
+      "silence_ratio_lt_1e-4": 0.016258582936851212,
+      "clipping_ratio_ge_0_999": 0.0
+    },
+    {
+      "seed": 1201,
+      "semantic_time_s": 36.34450876200026,
+      "decode_time_s": 0.784812356999737,
+      "wall_time_s": 37.12941334600009,
+      "semantic_frames": 303,
+      "semantic_tokens_per_s": 8.336885277062803,
+      "rtf": 2.638664024724442,
+      "gpu0_peak_allocated_bytes": 10906288640,
+      "gpu0_peak_reserved_bytes": 11070865408,
+      "gpu1_peak_allocated_bytes": 4980416512,
+      "gpu1_peak_reserved_bytes": 5892997120,
+      "duration_s": 14.071292517006803,
+      "sample_rate": 44100,
+      "peak_abs": 0.343505859375,
+      "rms": 0.05071000009775162,
+      "silence_ratio_lt_1e-4": 0.03407332920792079,
+      "clipping_ratio_ge_0_999": 0.0
+    },
+    {
+      "seed": 1202,
+      "semantic_time_s": 35.20820998699992,
+      "decode_time_s": 0.8027371680000215,
+      "wall_time_s": 36.011008648999905,
+      "semantic_frames": 294,
+      "semantic_tokens_per_s": 8.350325111914378,
+      "rtf": 2.6375250475341727,
+      "gpu0_peak_allocated_bytes": 10905693184,
+      "gpu0_peak_reserved_bytes": 11070865408,
+      "gpu1_peak_allocated_bytes": 4955569152,
+      "gpu1_peak_reserved_bytes": 5892997120,
+      "duration_s": 13.653333333333334,
+      "sample_rate": 44100,
+      "peak_abs": 0.65673828125,
+      "rms": 0.08379530906677246,
+      "silence_ratio_lt_1e-4": 0.00629617081207483,
+      "clipping_ratio_ge_0_999": 0.0
+    },
+    {
+      "seed": 1203,
+      "semantic_time_s": 33.712229302000196,
+      "decode_time_s": 0.7881605630000195,
+      "wall_time_s": 34.50044927499994,
+      "semantic_frames": 281,
+      "semantic_tokens_per_s": 8.335254173871197,
+      "rtf": 2.6437906837805434,
+      "gpu0_peak_allocated_bytes": 10904833024,
+      "gpu0_peak_reserved_bytes": 11070865408,
+      "gpu1_peak_allocated_bytes": 4919678976,
+      "gpu1_peak_reserved_bytes": 5892997120,
+      "duration_s": 13.049614512471654,
+      "sample_rate": 44100,
+      "peak_abs": 0.85888671875,
+      "rms": 0.11615445464849472,
+      "silence_ratio_lt_1e-4": 0.019755407584519574,
+      "clipping_ratio_ge_0_999": 0.0
+    },
+    {
+      "seed": 1204,
+      "semantic_time_s": 37.59861116299999,
+      "decode_time_s": 0.8326195779995942,
+      "wall_time_s": 38.43129355799965,
+      "semantic_frames": 313,
+      "semantic_tokens_per_s": 8.324775578626074,
+      "rtf": 2.6439260400668068,
+      "gpu0_peak_allocated_bytes": 10907950080,
+      "gpu0_peak_reserved_bytes": 11070865408,
+      "gpu1_peak_allocated_bytes": 5008024064,
+      "gpu1_peak_reserved_bytes": 6142558208,
+      "duration_s": 14.535691609977324,
+      "sample_rate": 44100,
+      "peak_abs": 0.7734375,
+      "rms": 0.13049601018428802,
+      "silence_ratio_lt_1e-4": 0.01986977086661342,
+      "clipping_ratio_ge_0_999": 0.0
+    }
+  ]
+}
