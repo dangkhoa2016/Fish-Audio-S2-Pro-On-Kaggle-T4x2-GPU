@@ -1,0 +1,1 @@
+{"error":"WebUI not built. Run: cd awesome_webui && npm run build"}

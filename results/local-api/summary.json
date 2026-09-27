@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "scope": "local HTTP API",
+  "listen": "127.0.0.1:8080",
+  "precision": "FP16",
+  "semantic_device": "cuda:0",
+  "decoder_device": "cuda:1",
+  "max_seq_len": 4096,
+  "checks": {
+    "health_http": 200,
+    "text_en_http": 200,
+    "text_vi_http": 200,
+    "reference_add_http": 200,
+    "reference_list_http": 200,
+    "reference_tts_http": 200,
+    "too_long_http": 400,
+    "bad_stream_http": 400,
+    "ui_http": 404
+  },
+  "outputs": {
+    "text-en.wav": {
+      "bytes": 348204,
+      "sample_rate": 44100,
+      "duration_s": 3.947392290249433,
+      "sha256": "3f8c4571b25d2ddfbbad70698f7ceddaab682fb7830b191ba98a28600c24bc5f"
+    },
+    "text-vi.wav": {
+      "bytes": 479276,
+      "sample_rate": 44100,
+      "duration_s": 5.433469387755102,
+      "sha256": "5e8b10fb457d071ef498facc222aae2a427f5977e60c1b712be66f6c50fc1ce9"
+    },
+    "reference-en.wav": {
+      "bytes": 483372,
+      "sample_rate": 44100,
+      "duration_s": 5.479909297052155,
+      "sha256": "a4bad2ee30b7ea86b7c92d31351632c80ecc4f30560a702c2c5544bdea32f6ef"
+    }
+  },
+  "webui": "NOT_BUILT"
+}
