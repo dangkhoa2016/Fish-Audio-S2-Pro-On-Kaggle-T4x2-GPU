@@ -1,5 +1,7 @@
 # Benchmark methodology
 
+> 🌐 Language / Ngôn ngữ: **English** | [Tiếng Việt](benchmark-methodology.vi.md)
+
 Correctness is qualified before performance measurement.
 
 Baseline dimensions:
