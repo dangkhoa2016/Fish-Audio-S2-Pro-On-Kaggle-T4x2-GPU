@@ -1,0 +1,168 @@
+{
+  "id": "B06-vi-long",
+  "language": "vi",
+  "kind": "text-only",
+  "length": "long",
+  "reference_language": null,
+  "text": "Fish Audio S2 Pro đang được đánh giá trong một môi trường Kaggle có thể tái lập với hai GPU NVIDIA T4. Mục tiêu của trường hợp tiếng Việt dài hơn này là duy trì quá trình sinh mã ngữ nghĩa trong một khoảng thời gian đủ lớn, đồng thời giữ nguyên độ chính xác số, độ dài ngữ cảnh, tham số lấy mẫu và cấu trúc bộ giải mã đã dùng trong các giai đoạn kiểm thử trước. Chúng tôi đo thời gian suy luận, thời lượng âm thanh, hệ số thời gian thực, thông lượng sinh mã và mức sử dụng bộ nhớ cao nhất trên cả hai GPU.",
+  "max_new_tokens": 480,
+  "run_count": 5,
+  "sample_output": {
+    "path": "/kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/controlled-benchmark/B06-vi-long-sample.wav",
+    "bytes": 1962028,
+    "sha256": "880baf7e61dbd8bce7d26916bfb29e6629a7c136b80f71a637856a0db33ef842"
+  },
+  "wall_time_s": {
+    "min": 57.5682591169998,
+    "median": 57.92107004299942,
+    "max": 58.21579994900003,
+    "mean": 57.91836530419969,
+    "std": 0.2112701148823346
+  },
+  "semantic_time_s": {
+    "min": 57.094780317000186,
+    "median": 57.447786419000295,
+    "max": 57.73050477099969,
+    "mean": 57.439011160799964,
+    "std": 0.2061354925548606
+  },
+  "decode_time_s": {
+    "min": 0.47160210099991673,
+    "median": 0.4734152080000058,
+    "max": 0.49298382599954493,
+    "mean": 0.4792911937998724,
+    "std": 0.008405199267013332
+  },
+  "audio_duration_s": {
+    "min": 22.244716553287983,
+    "median": 22.244716553287983,
+    "max": 22.244716553287983,
+    "mean": 22.244716553287983,
+    "std": 0.0
+  },
+  "rtf": {
+    "min": 2.587952019037557,
+    "median": 2.603812456061083,
+    "max": 2.6170618901590443,
+    "mean": 2.6036908658941216,
+    "std": 0.00949754133194865
+  },
+  "semantic_tokens_per_s": {
+    "min": 8.297173251819904,
+    "median": 8.338006211525244,
+    "max": 8.389558508510031,
+    "mean": 8.339387595762254,
+    "std": 0.029966874118542184
+  },
+  "gpu0_peak_allocated_gb": {
+    "min": 10.9245184,
+    "median": 10.9245184,
+    "max": 10.9245184,
+    "mean": 10.9245184,
+    "std": 0.0
+  },
+  "gpu1_peak_allocated_gb": {
+    "min": 5.46684672,
+    "median": 5.46684672,
+    "max": 5.46684672,
+    "mean": 5.46684672,
+    "std": 0.0
+  },
+  "runs": [
+    {
+      "seed": 1500,
+      "semantic_time_s": 57.52404956299961,
+      "decode_time_s": 0.49298382599954493,
+      "wall_time_s": 58.01709808099986,
+      "semantic_frames": 479,
+      "semantic_tokens_per_s": 8.326952007706018,
+      "rtf": 2.6081293480192436,
+      "gpu0_peak_allocated_bytes": 10924518400,
+      "gpu0_peak_reserved_bytes": 11098128384,
+      "gpu1_peak_allocated_bytes": 5466846720,
+      "gpu1_peak_reserved_bytes": 7073693696,
+      "duration_s": 22.244716553287983,
+      "sample_rate": 44100,
+      "peak_abs": 0.91650390625,
+      "rms": 0.15069469809532166,
+      "silence_ratio_lt_1e-4": 0.024323338008872653,
+      "clipping_ratio_ge_0_999": 0.0
+    },
+    {
+      "seed": 1501,
+      "semantic_time_s": 57.73050477099969,
+      "decode_time_s": 0.485231216000102,
+      "wall_time_s": 58.21579994900003,
+      "semantic_frames": 479,
+      "semantic_tokens_per_s": 8.297173251819904,
+      "rtf": 2.6170618901590443,
+      "gpu0_peak_allocated_bytes": 10924518400,
+      "gpu0_peak_reserved_bytes": 11098128384,
+      "gpu1_peak_allocated_bytes": 5466846720,
+      "gpu1_peak_reserved_bytes": 7073693696,
+      "duration_s": 22.244716553287983,
+      "sample_rate": 44100,
+      "peak_abs": 0.68115234375,
+      "rms": 0.07061900198459625,
+      "silence_ratio_lt_1e-4": 0.022904366192588725,
+      "clipping_ratio_ge_0_999": 0.0
+    },
+    {
+      "seed": 1502,
+      "semantic_time_s": 57.397934734000046,
+      "decode_time_s": 0.47160210099991673,
+      "wall_time_s": 57.869599330999336,
+      "semantic_frames": 479,
+      "semantic_tokens_per_s": 8.34524799925007,
+      "rtf": 2.60149861619368,
+      "gpu0_peak_allocated_bytes": 10924518400,
+      "gpu0_peak_reserved_bytes": 11098128384,
+      "gpu1_peak_allocated_bytes": 5466846720,
+      "gpu1_peak_reserved_bytes": 7073693696,
+      "duration_s": 22.244716553287983,
+      "sample_rate": 44100,
+      "peak_abs": 0.9580078125,
+      "rms": 0.22999855875968933,
+      "silence_ratio_lt_1e-4": 0.004814514287578288,
+      "clipping_ratio_ge_0_999": 0.0
+    },
+    {
+      "seed": 1503,
+      "semantic_time_s": 57.094780317000186,
+      "decode_time_s": 0.4734152080000058,
+      "wall_time_s": 57.5682591169998,
+      "semantic_frames": 479,
+      "semantic_tokens_per_s": 8.389558508510031,
+      "rtf": 2.587952019037557,
+      "gpu0_peak_allocated_bytes": 10924518400,
+      "gpu0_peak_reserved_bytes": 11098128384,
+      "gpu1_peak_allocated_bytes": 5466846720,
+      "gpu1_peak_reserved_bytes": 7073693696,
+      "duration_s": 22.244716553287983,
+      "sample_rate": 44100,
+      "peak_abs": 0.916015625,
+      "rms": 0.21319399774074554,
+      "silence_ratio_lt_1e-4": 0.013015396659707724,
+      "clipping_ratio_ge_0_999": 0.0
+    },
+    {
+      "seed": 1504,
+      "semantic_time_s": 57.447786419000295,
+      "decode_time_s": 0.4732236179997926,
+      "wall_time_s": 57.92107004299942,
+      "semantic_frames": 479,
+      "semantic_tokens_per_s": 8.338006211525244,
+      "rtf": 2.603812456061083,
+      "gpu0_peak_allocated_bytes": 10924518400,
+      "gpu0_peak_reserved_bytes": 11098128384,
+      "gpu1_peak_allocated_bytes": 5466846720,
+      "gpu1_peak_reserved_bytes": 7073693696,
+      "duration_s": 22.244716553287983,
+      "sample_rate": 44100,
+      "peak_abs": 0.5908203125,
+      "rms": 0.09397166222333908,
+      "silence_ratio_lt_1e-4": 0.011971555323590814,
+      "clipping_ratio_ge_0_999": 0.0
+    }
+  ]
+}
