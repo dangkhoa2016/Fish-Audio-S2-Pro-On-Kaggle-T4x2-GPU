@@ -1,2 +1,4 @@
-# Keep this minimal until the first clean T4x2 qualification passes.
-# The Fish Speech upstream environment will be pinned after compatibility is verified.
+# Runtime dependencies are owned by the pinned fishaudio/fish-speech checkout.
+# scripts/bootstrap_kaggle.sh checks out references/upstream.lock exactly.
+# scripts/setup_runtime.sh installs that upstream revision's uv-locked CUDA 12.8 environment.
+# Keep this file intentionally empty of duplicate package pins to avoid dependency drift.
