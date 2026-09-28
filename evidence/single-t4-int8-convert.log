@@ -1,0 +1,15 @@
+SINGLE_T4_INT8_CONVERT_START
+2026-09-30 00:29:49.401 | INFO     | fish_speech.models.text2semantic.llama:from_pretrained:524 - Injected Semantic IDs into Config: 151678-155773
+2026-09-30 00:29:49.401 | INFO     | fish_speech.models.text2semantic.llama:from_pretrained:540 - Loading model from /kaggle/input/models/dangkhoa2016/fishaudio-s2-pro/pytorch/default/1, config: DualARModelArgs(model_type='dual_ar', vocab_size=155776, n_layer=36, n_head=32, dim=2560, intermediate_size=9728, n_local_heads=8, head_dim=128, rope_base=1000000, norm_eps=1e-06, max_seq_len=32768, dropout=0.0, tie_word_embeddings=True, attention_qkv_bias=False, attention_o_bias=False, attention_qk_norm=True, codebook_size=4096, num_codebooks=10, semantic_begin_id=151678, semantic_end_id=155773, use_gradient_checkpointing=True, initializer_range=0.01976423537605237, is_reward_model=False, scale_codebook_embeddings=True, audio_embed_dim=2560, n_fast_layer=4, fast_dim=2560, fast_n_head=32, fast_n_local_heads=8, fast_head_dim=128, fast_intermediate_size=9728, fast_attention_qkv_bias=False, fast_attention_qk_norm=False, fast_attention_o_bias=False, norm_fastlayer_input=True)
+2026-09-30 00:30:54.923 | INFO     | fish_speech.models.text2semantic.llama:from_pretrained:572 - Loading sharded safetensors weights
+2026-09-30 00:30:58.422 | INFO     | fish_speech.models.text2semantic.llama:from_pretrained:608 - Model weights loaded - Status: <All keys matched successfully>
+2026-09-30 00:30:58.423 | INFO     | fish_speech.models.text2semantic.inference:init_model:387 - Overriding max_seq_len: 32768 -> 4096
+2026-09-30 00:30:58.427 | INFO     | fish_speech.models.text2semantic.inference:init_model:391 - Restored model from checkpoint
+2026-09-30 00:30:58.427 | INFO     | fish_speech.models.text2semantic.inference:init_model:396 - Using DualARTransformer
+SOURCE_MODEL_LOADED_S 69.975
+STATE_TENSORS 559 INT8 201 BF16 358 OTHER 0
+MODEL_PTH_BYTES 5078844907
+DST /tmp/fish-s2-pro-int8
+HAS_SAFETENSORS_INDEX False
+CODEC_SYMLINK True
+TOTAL_S 208.239

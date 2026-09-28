@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "phase": 10,
+  "mode": "weight-only-int8-semantic-plus-fp16-codec",
+  "gpu": "NVIDIA Tesla T4 16 GB",
+  "gpu_count_used": 1,
+  "precision_runtime": "FP16",
+  "max_seq_len": 4096,
+  "torch_compile": false,
+  "quantized_checkpoint": {
+    "runtime_path": "/tmp/fish-s2-pro-int8",
+    "model_pth_bytes": 5078844907,
+    "state_tensors": 559,
+    "int8_tensors": 201,
+    "bf16_tensors": 358,
+    "source_model_load_s": 69.975,
+    "conversion_total_s": 208.239,
+    "committed_to_git": false
+  },
+  "semantic_only": {
+    "tokens": 64,
+    "generation_s": 17.55,
+    "tokens_per_s": 3.65,
+    "gpu_memory_gb_reported": 7.09,
+    "result": "PASS"
+  },
+  "english_full_tts": {
+    "tokens": 64,
+    "generation_s": 17.05,
+    "tokens_per_s": 3.75,
+    "sample_rate": 44100,
+    "channels": 1,
+    "duration_s": 2.9257142857142857,
+    "bytes": 258092,
+    "clipping_ratio": 0.0,
+    "sha256": "20848a0a713626fa583cab005dabec0d9b07f6b808ab1865be4c6196a9765722",
+    "result": "PASS"
+  },
+  "vietnamese_full_tts": {
+    "tokens": 96,
+    "generation_s": 25.75,
+    "tokens_per_s": 3.73,
+    "sample_rate": 44100,
+    "channels": 1,
+    "duration_s": 4.4117913832199545,
+    "bytes": 389164,
+    "clipping_ratio": 0.0,
+    "sha256": "b441b43413d7b52767d1d707f128e65a805ccdff2ff58c1726b6d57f660b0a2a",
+    "result": "PASS"
+  },
+  "memory": {
+    "semantic_only_gb_reported": 7.09,
+    "full_pipeline_allocated_gb": 10.983,
+    "full_pipeline_reserved_gb": 11.494,
+    "full_pipeline_peak_allocated_gb": 11.246,
+    "full_pipeline_peak_reserved_gb": 11.494
+  },
+  "baseline_comparison": {
+    "fp16_single_t4_full_tts": "OOM",
+    "fp16_semantic_memory_gb_reported": 15.14,
+    "fp16_semantic_tokens_per_s": 8.18,
+    "int8_single_t4_full_tts": "PASS"
+  },
+  "limitations": [
+    "No subjective listening-quality equivalence claim versus FP16 baseline.",
+    "Quantized checkpoint is a runtime artifact and is not committed.",
+    "INT8 semantic throughput is substantially lower than FP16."
+  ]
+}
