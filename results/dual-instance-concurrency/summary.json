@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "topology": {
+    "gpu0": "INT8 semantic + FP16 codec instance A",
+    "gpu1": "INT8 semantic + FP16 codec instance B",
+    "max_seq_len": 4096,
+    "compile": false
+  },
+  "short_single": {
+    "a_s": 18.412264,
+    "b_s": 17.707857,
+    "mean_s": 18.0600605
+  },
+  "short_concurrent": {
+    "a_s": 18.696609,
+    "b_s": 17.521255,
+    "wall_s": 18.696609,
+    "aggregate_req_per_s": 0.10697126949598187,
+    "throughput_speedup_vs_two_sequential_single_runs": 1.931907598859237
+  },
+  "long_concurrent": {
+    "a_s": 76.984251,
+    "b_s": 73.728557,
+    "wall_s": 76.984251
+  },
+  "peak_vram_mib": [
+    11092.875,
+    11092.875
+  ],
+  "outputs": {
+    "single-a.wav": {
+      "sample_rate": 44100,
+      "channels": 1,
+      "duration_s": 2.9257142857142857,
+      "bytes": 258092,
+      "sha256": "cbdecdec91a4d39dd0ff535c964273f9f8e46d66d25db49b87b3767adb8ae968"
+    },
+    "single-b.wav": {
+      "sample_rate": 44100,
+      "channels": 1,
+      "duration_s": 2.9257142857142857,
+      "bytes": 258092,
+      "sha256": "cbdecdec91a4d39dd0ff535c964273f9f8e46d66d25db49b87b3767adb8ae968"
+    },
+    "parallel-a.wav": {
+      "sample_rate": 44100,
+      "channels": 1,
+      "duration_s": 2.9257142857142857,
+      "bytes": 258092,
+      "sha256": "cbdecdec91a4d39dd0ff535c964273f9f8e46d66d25db49b87b3767adb8ae968"
+    },
+    "parallel-b.wav": {
+      "sample_rate": 44100,
+      "channels": 1,
+      "duration_s": 2.9257142857142857,
+      "bytes": 258092,
+      "sha256": "cbdecdec91a4d39dd0ff535c964273f9f8e46d66d25db49b87b3767adb8ae968"
+    },
+    "long-a.wav": {
+      "sample_rate": 44100,
+      "channels": 1,
+      "duration_s": 11.842176870748299,
+      "bytes": 1044524,
+      "sha256": "6b43eb738e41d2e645892344dc390fa12b44bf522b916503ee958c3cfdca2931"
+    },
+    "long-b.wav": {
+      "sample_rate": 44100,
+      "channels": 1,
+      "duration_s": 11.842176870748299,
+      "bytes": 1044524,
+      "sha256": "6b43eb738e41d2e645892344dc390fa12b44bf522b916503ee958c3cfdca2931"
+    }
+  }
+}
