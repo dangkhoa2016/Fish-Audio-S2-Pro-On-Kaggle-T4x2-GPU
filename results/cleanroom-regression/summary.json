@@ -1,0 +1,123 @@
+{
+  "status": "PASS",
+  "phase": 13,
+  "clean_room": true,
+  "repository_baseline": "1bb0e4b8832f6563f17bd743ff94b21b0128d49c",
+  "upstream_commit": "214da3cd841bda85da2496b96cd3c4d7edb1337e",
+  "hardware": {
+    "gpu_count": 2,
+    "gpu_name": "Tesla T4",
+    "torch_cuda_visible": true
+  },
+  "fp16_dual_gpu": {
+    "status": "PASS",
+    "english": {
+      "bytes": 344108,
+      "sample_rate": 44100,
+      "channels": 1,
+      "duration_s": 3.900952380952381,
+      "sha256": "68d309f68e32053f9465c18098a7a2f0426a34830cacfd3836d1655d6f9b6b09"
+    },
+    "vietnamese": {
+      "bytes": 274476,
+      "sample_rate": 44100,
+      "channels": 1,
+      "duration_s": 3.111473922902494,
+      "sha256": "7c56608bad7b81c16b6a663f2150b5f9d14f0f4cbbfdd10370ddfde54b1a78fb"
+    },
+    "local_api": {
+      "status": "PASS",
+      "output": {
+        "bytes": 180268,
+        "sample_rate": 44100,
+        "channels": 1,
+        "duration_s": 2.043356009070295,
+        "sha256": "88aa4ce1e91300276a85b4b03288128bbf7306a0d32700d419585cdd6a345436"
+      }
+    }
+  },
+  "int8_single_t4": {
+    "status": "PASS",
+    "checkpoint": {
+      "model_pth_bytes": 5078844907,
+      "state_tensors": 559,
+      "int8_tensors": 201,
+      "bf16_tensors": 358,
+      "safetensors_index_present": false,
+      "fp16_semantic_shards_present": false
+    },
+    "english": {
+      "bytes": 258092,
+      "sample_rate": 44100,
+      "channels": 1,
+      "duration_s": 2.9257142857142857,
+      "sha256": "20848a0a713626fa583cab005dabec0d9b07f6b808ab1865be4c6196a9765722"
+    },
+    "vietnamese": {
+      "bytes": 389164,
+      "sample_rate": 44100,
+      "channels": 1,
+      "duration_s": 4.4117913832199545,
+      "sha256": "b441b43413d7b52767d1d707f128e65a805ccdff2ff58c1726b6d57f660b0a2a"
+    }
+  },
+  "parallel_int8": {
+    "status": "PASS",
+    "health": {
+      "instance_a": 200,
+      "instance_b": 200
+    },
+    "single_s": {
+      "a": 20.167195,
+      "b": 18.079215
+    },
+    "concurrent_s": {
+      "a": 19.00335,
+      "b": 17.926436,
+      "wall": 19.00335
+    },
+    "sequential_sum_s": 38.24641,
+    "aggregate_speedup_vs_two_sequential": 2.0126140917259323,
+    "aggregate_req_per_s": 0.10524460160971617,
+    "peak_vram_mib": [
+      11092.875,
+      11092.875
+    ],
+    "outputs": {
+      "single-a.wav": {
+        "bytes": 258092,
+        "sample_rate": 44100,
+        "channels": 1,
+        "duration_s": 2.9257142857142857,
+        "sha256": "cbdecdec91a4d39dd0ff535c964273f9f8e46d66d25db49b87b3767adb8ae968"
+      },
+      "single-b.wav": {
+        "bytes": 258092,
+        "sample_rate": 44100,
+        "channels": 1,
+        "duration_s": 2.9257142857142857,
+        "sha256": "cbdecdec91a4d39dd0ff535c964273f9f8e46d66d25db49b87b3767adb8ae968"
+      },
+      "parallel-a.wav": {
+        "bytes": 258092,
+        "sample_rate": 44100,
+        "channels": 1,
+        "duration_s": 2.9257142857142857,
+        "sha256": "cbdecdec91a4d39dd0ff535c964273f9f8e46d66d25db49b87b3767adb8ae968"
+      },
+      "parallel-b.wav": {
+        "bytes": 258092,
+        "sample_rate": 44100,
+        "channels": 1,
+        "duration_s": 2.9257142857142857,
+        "sha256": "cbdecdec91a4d39dd0ff535c964273f9f8e46d66d25db49b87b3767adb8ae968"
+      }
+    }
+  },
+  "correctives": [
+    "Use the cumulative API dual-GPU patch in scripts/apply_upstream_patch.sh.",
+    "Resolve relative output paths before changing into the upstream checkout.",
+    "Require non-empty output WAVs before CLI runners report PASS."
+  ],
+  "remaining_release_gate": "Real-human EN/VI voice-similarity listening review remains pending."
+}
