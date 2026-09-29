@@ -1,0 +1,130 @@
+2026-09-30 03:18:43.199 | INFO     | __main__:main:892 - Device topology: semantic=cuda:0, decoder=cuda:0
+2026-09-30 03:18:43.200 | INFO     | __main__:main:907 - Loading model ...
+2026-09-30 03:18:44.162 | INFO     | fish_speech.models.text2semantic.llama:from_pretrained:524 - Injected Semantic IDs into Config: 151678-155773
+2026-09-30 03:18:44.162 | INFO     | fish_speech.models.text2semantic.llama:from_pretrained:540 - Loading model from /tmp/fish-s2-pro-int8-cleanroom-regression, config: DualARModelArgs(model_type='dual_ar', vocab_size=155776, n_layer=36, n_head=32, dim=2560, intermediate_size=9728, n_local_heads=8, head_dim=128, rope_base=1000000, norm_eps=1e-06, max_seq_len=32768, dropout=0.0, tie_word_embeddings=True, attention_qkv_bias=False, attention_o_bias=False, attention_qk_norm=True, codebook_size=4096, num_codebooks=10, semantic_begin_id=151678, semantic_end_id=155773, use_gradient_checkpointing=True, initializer_range=0.01976423537605237, is_reward_model=False, scale_codebook_embeddings=True, audio_embed_dim=2560, n_fast_layer=4, fast_dim=2560, fast_n_head=32, fast_n_local_heads=8, fast_head_dim=128, fast_intermediate_size=9728, fast_attention_qkv_bias=False, fast_attention_qk_norm=False, fast_attention_o_bias=False, norm_fastlayer_input=True)
+2026-09-30 03:19:49.477 | INFO     | fish_speech.models.text2semantic.llama:from_pretrained:550 - Using int8 weight-only quantization!
+2026-09-30 03:19:50.946 | INFO     | fish_speech.models.text2semantic.llama:from_pretrained:608 - Model weights loaded - Status: <All keys matched successfully>
+2026-09-30 03:19:50.946 | INFO     | __main__:init_model:387 - Overriding max_seq_len: 32768 -> 4096
+2026-09-30 03:19:54.509 | INFO     | __main__:init_model:391 - Restored model from checkpoint
+2026-09-30 03:19:54.509 | INFO     | __main__:init_model:396 - Using DualARTransformer
+2026-09-30 03:19:54.550 | INFO     | __main__:main:921 - Time to load model: 71.35 seconds
+2026-09-30 03:19:54.554 | INFO     | __main__:generate_long:635 - Split into 0 turns, grouped into 1 batches
+2026-09-30 03:19:54.555 | INFO     | __main__:generate_long:647 - --- Sample 0, Batch 0 (57 bytes) ---
+2026-09-30 03:19:54.555 | INFO     | __main__:generate_long:651 - Batch text: Đây là bài kiểm tra INT8 clean room tiếng Việt.
+2026-09-30 03:19:54.555 | INFO     | __main__:generate_long:677 - Visualizing prompt structure:
+2026-09-30 03:19:54.570 | INFO     | __main__:generate_long:688 - Encoded prompt shape: torch.Size([11, 33])
+[92m<|im_start|>[0m[32msystem[0m[92m
+[0m[32mconvert[0m[92m the[0m[32m provided[0m[92m text[0m[32m to[0m[92m speech[0m[32m<|im_end|>[0m[92m
+[0m[32m<|im_start|>[0m[92muser[0m[32m
+[0m[92mĐ[0m[32mây[0m[92m là[0m[32m bài[0m[92m kiểm[0m[32m tra[0m[92m INT[0m[32m8[0m[92m clean[0m[32m room[0m[92m tiếng[0m[32m Việt[0m[92m.[0m[32m<|im_end|>[0m[92m
+[0m[32m<|im_start|>[0m[92massistant[0m[32m
+[0m[92m<|voice|>[0m
+
+  0%|          | 0/95 [00:00<?, ?it/s]
+  1%|          | 1/95 [00:00<00:30,  3.06it/s]
+  2%|▏         | 2/95 [00:00<00:26,  3.51it/s]
+  3%|▎         | 3/95 [00:00<00:24,  3.68it/s]
+  4%|▍         | 4/95 [00:01<00:24,  3.77it/s]
+  5%|▌         | 5/95 [00:01<00:23,  3.82it/s]
+  6%|▋         | 6/95 [00:01<00:23,  3.82it/s]
+  7%|▋         | 7/95 [00:01<00:23,  3.82it/s]
+  8%|▊         | 8/95 [00:02<00:22,  3.83it/s]
+  9%|▉         | 9/95 [00:02<00:22,  3.85it/s]
+ 11%|█         | 10/95 [00:02<00:22,  3.86it/s]
+ 12%|█▏        | 11/95 [00:02<00:21,  3.87it/s]
+ 13%|█▎        | 12/95 [00:03<00:21,  3.87it/s]
+ 14%|█▎        | 13/95 [00:03<00:21,  3.88it/s]
+ 15%|█▍        | 14/95 [00:03<00:20,  3.87it/s]
+ 16%|█▌        | 15/95 [00:03<00:20,  3.84it/s]
+ 17%|█▋        | 16/95 [00:04<00:20,  3.83it/s]
+ 18%|█▊        | 17/95 [00:04<00:20,  3.84it/s]
+ 19%|█▉        | 18/95 [00:04<00:20,  3.84it/s]
+ 20%|██        | 19/95 [00:04<00:19,  3.85it/s]
+ 21%|██        | 20/95 [00:05<00:19,  3.84it/s]
+ 22%|██▏       | 21/95 [00:05<00:19,  3.84it/s]
+ 23%|██▎       | 22/95 [00:05<00:18,  3.85it/s]
+ 24%|██▍       | 23/95 [00:06<00:18,  3.83it/s]
+ 25%|██▌       | 24/95 [00:06<00:18,  3.82it/s]
+ 26%|██▋       | 25/95 [00:06<00:18,  3.81it/s]
+ 27%|██▋       | 26/95 [00:06<00:18,  3.83it/s]
+ 28%|██▊       | 27/95 [00:07<00:17,  3.84it/s]
+ 29%|██▉       | 28/95 [00:07<00:17,  3.85it/s]
+ 31%|███       | 29/95 [00:07<00:17,  3.84it/s]
+ 32%|███▏      | 30/95 [00:07<00:16,  3.85it/s]
+ 33%|███▎      | 31/95 [00:08<00:16,  3.85it/s]
+ 34%|███▎      | 32/95 [00:08<00:16,  3.83it/s]
+ 35%|███▍      | 33/95 [00:08<00:16,  3.81it/s]
+ 36%|███▌      | 34/95 [00:08<00:15,  3.82it/s]
+ 37%|███▋      | 35/95 [00:09<00:15,  3.83it/s]
+ 38%|███▊      | 36/95 [00:09<00:15,  3.83it/s]
+ 39%|███▉      | 37/95 [00:09<00:15,  3.84it/s]
+ 40%|████      | 38/95 [00:09<00:14,  3.85it/s]
+ 41%|████      | 39/95 [00:10<00:14,  3.85it/s]
+ 42%|████▏     | 40/95 [00:10<00:14,  3.82it/s]
+ 43%|████▎     | 41/95 [00:10<00:14,  3.81it/s]
+ 44%|████▍     | 42/95 [00:10<00:13,  3.80it/s]
+ 45%|████▌     | 43/95 [00:11<00:13,  3.81it/s]
+ 46%|████▋     | 44/95 [00:11<00:13,  3.81it/s]
+ 47%|████▋     | 45/95 [00:11<00:13,  3.82it/s]
+ 48%|████▊     | 46/95 [00:12<00:12,  3.82it/s]
+ 49%|████▉     | 47/95 [00:12<00:12,  3.81it/s]
+ 51%|█████     | 48/95 [00:12<00:12,  3.81it/s]
+ 52%|█████▏    | 49/95 [00:12<00:12,  3.80it/s]
+ 53%|█████▎    | 50/95 [00:13<00:11,  3.79it/s]
+ 54%|█████▎    | 51/95 [00:13<00:11,  3.79it/s]
+ 55%|█████▍    | 52/95 [00:13<00:11,  3.79it/s]
+ 56%|█████▌    | 53/95 [00:13<00:11,  3.80it/s]
+ 57%|█████▋    | 54/95 [00:14<00:10,  3.80it/s]
+ 58%|█████▊    | 55/95 [00:14<00:10,  3.80it/s]
+ 59%|█████▉    | 56/95 [00:14<00:10,  3.80it/s]
+ 60%|██████    | 57/95 [00:14<00:10,  3.78it/s]
+ 61%|██████    | 58/95 [00:15<00:09,  3.77it/s]
+ 62%|██████▏   | 59/95 [00:15<00:09,  3.77it/s]
+ 63%|██████▎   | 60/95 [00:15<00:09,  3.78it/s]
+ 64%|██████▍   | 61/95 [00:16<00:08,  3.80it/s]
+ 65%|██████▌   | 62/95 [00:16<00:08,  3.80it/s]
+ 66%|██████▋   | 63/95 [00:16<00:08,  3.80it/s]
+ 67%|██████▋   | 64/95 [00:16<00:08,  3.80it/s]
+ 68%|██████▊   | 65/95 [00:17<00:07,  3.79it/s]
+ 69%|██████▉   | 66/95 [00:17<00:07,  3.76it/s]
+ 71%|███████   | 67/95 [00:17<00:07,  3.76it/s]
+ 72%|███████▏  | 68/95 [00:17<00:07,  3.76it/s]
+ 73%|███████▎  | 69/95 [00:18<00:06,  3.77it/s]
+ 74%|███████▎  | 70/95 [00:18<00:06,  3.77it/s]
+ 75%|███████▍  | 71/95 [00:18<00:06,  3.78it/s]
+ 76%|███████▌  | 72/95 [00:18<00:06,  3.78it/s]
+ 77%|███████▋  | 73/95 [00:19<00:05,  3.79it/s]
+ 78%|███████▊  | 74/95 [00:19<00:05,  3.76it/s]
+ 79%|███████▉  | 75/95 [00:19<00:05,  3.75it/s]
+ 80%|████████  | 76/95 [00:19<00:05,  3.75it/s]
+ 81%|████████  | 77/95 [00:20<00:04,  3.75it/s]
+ 82%|████████▏ | 78/95 [00:20<00:04,  3.76it/s]
+ 83%|████████▎ | 79/95 [00:20<00:04,  3.76it/s]
+ 84%|████████▍ | 80/95 [00:21<00:03,  3.77it/s]
+ 85%|████████▌ | 81/95 [00:21<00:03,  3.77it/s]
+ 86%|████████▋ | 82/95 [00:21<00:03,  3.74it/s]
+ 87%|████████▋ | 83/95 [00:21<00:03,  3.73it/s]
+ 88%|████████▊ | 84/95 [00:22<00:02,  3.73it/s]
+ 89%|████████▉ | 85/95 [00:22<00:02,  3.75it/s]
+ 91%|█████████ | 86/95 [00:22<00:02,  3.75it/s]
+ 92%|█████████▏| 87/95 [00:22<00:02,  3.76it/s]
+ 93%|█████████▎| 88/95 [00:23<00:01,  3.76it/s]
+ 94%|█████████▎| 89/95 [00:23<00:01,  3.75it/s]
+ 95%|█████████▍| 90/95 [00:23<00:01,  3.74it/s]
+ 96%|█████████▌| 91/95 [00:23<00:01,  3.73it/s]
+ 97%|█████████▋| 92/95 [00:24<00:00,  3.74it/s]
+ 98%|█████████▊| 93/95 [00:24<00:00,  3.74it/s]
+ 99%|█████████▉| 94/95 [00:24<00:00,  3.74it/s]
+100%|██████████| 95/95 [00:25<00:00,  3.75it/s]
+100%|██████████| 95/95 [00:25<00:00,  3.79it/s]
+2026-09-30 03:20:20.961 | INFO     | __main__:generate_long:725 - Batch 0: Generated 96 tokens in 26.41 seconds, 3.64 tokens/sec
+2026-09-30 03:20:20.961 | INFO     | __main__:generate_long:729 - Bandwidth achieved: 1.87 GB/s
+2026-09-30 03:20:20.961 | INFO     | __main__:main:966 - Sampled text: Đây là bài kiểm tra INT8 clean room tiếng Việt.
+2026-09-30 03:20:20.962 | INFO     | __main__:generate_long:755 - GPU Memory used: 7.09 GB
+2026-09-30 03:20:20.962 | INFO     | __main__:main:972 - Saved codes to /kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/cleanroom-regression/codes_0.npy
+2026-09-30 03:20:20.963 | INFO     | __main__:main:977 - Loading codec model for audio decoding...
+/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+2026-09-30 03:20:41.571 | INFO     | __main__:main:988 - Saved audio to /kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/cleanroom-regression/int8-vi.wav
+2026-09-30 03:20:41.571 | INFO     | __main__:main:990 - Next sample
+SINGLE_T4_INT8=PASS
