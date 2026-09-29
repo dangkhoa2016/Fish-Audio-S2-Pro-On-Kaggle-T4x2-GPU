@@ -1,0 +1,130 @@
+INFO:     Started server process [8391]
+INFO:     Waiting for application startup.
+2026-09-30 03:22:52.597 | INFO     | tools.server.model_manager:__init__:44 - Device topology: semantic=cuda:0, decoder=cuda:1
+2026-09-30 03:22:53.603 | INFO     | fish_speech.models.text2semantic.llama:from_pretrained:524 - Injected Semantic IDs into Config: 151678-155773
+2026-09-30 03:22:53.603 | INFO     | fish_speech.models.text2semantic.llama:from_pretrained:540 - Loading model from /kaggle/input/models/dangkhoa2016/fishaudio-s2-pro/pytorch/default/1, config: DualARModelArgs(model_type='dual_ar', vocab_size=155776, n_layer=36, n_head=32, dim=2560, intermediate_size=9728, n_local_heads=8, head_dim=128, rope_base=1000000, norm_eps=1e-06, max_seq_len=32768, dropout=0.0, tie_word_embeddings=True, attention_qkv_bias=False, attention_o_bias=False, attention_qk_norm=True, codebook_size=4096, num_codebooks=10, semantic_begin_id=151678, semantic_end_id=155773, use_gradient_checkpointing=True, initializer_range=0.01976423537605237, is_reward_model=False, scale_codebook_embeddings=True, audio_embed_dim=2560, n_fast_layer=4, fast_dim=2560, fast_n_head=32, fast_n_local_heads=8, fast_head_dim=128, fast_intermediate_size=9728, fast_attention_qkv_bias=False, fast_attention_qk_norm=False, fast_attention_o_bias=False, norm_fastlayer_input=True)
+2026-09-30 03:23:57.878 | INFO     | fish_speech.models.text2semantic.llama:from_pretrained:572 - Loading sharded safetensors weights
+2026-09-30 03:23:59.936 | INFO     | fish_speech.models.text2semantic.llama:from_pretrained:608 - Model weights loaded - Status: <All keys matched successfully>
+2026-09-30 03:23:59.937 | INFO     | fish_speech.models.text2semantic.inference:init_model:387 - Overriding max_seq_len: 32768 -> 4096
+2026-09-30 03:24:44.506 | INFO     | fish_speech.models.text2semantic.inference:init_model:391 - Restored model from checkpoint
+2026-09-30 03:24:44.507 | INFO     | fish_speech.models.text2semantic.inference:init_model:396 - Using DualARTransformer
+2026-09-30 03:24:44.527 | INFO     | tools.server.model_manager:load_llama_model:78 - LLAMA model loaded.
+/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+2026-09-30 03:25:01.868 | INFO     | fish_speech.models.dac.inference:load_model:46 - Loaded model: _IncompatibleKeys(missing_keys=[], unexpected_keys=['encoder.block.4.block.5.freqs_cis', 'encoder.block.4.block.5.causal_mask', 'quantizer.pre_module.freqs_cis', 'quantizer.pre_module.causal_mask', 'quantizer.post_module.freqs_cis', 'quantizer.post_module.causal_mask'])
+2026-09-30 03:25:01.889 | INFO     | tools.server.model_manager:load_decoder_model:87 - Decoder model loaded.
+/kaggle/working/fish-speech-upstream/fish_speech/inference_engine/reference_loader.py:39: UserWarning: torchaudio._backend.list_audio_backends has been deprecated. This deprecation is part of a large refactoring effort to transition TorchAudio into a maintenance phase. The decoding and encoding capabilities of PyTorch for both audio and video are being consolidated into TorchCodec. Please see https://github.com/pytorch/audio/issues/3902 for more information. It will be removed from the 2.9 release.
+  backends = torchaudio.list_audio_backends()
+2026-09-30 03:25:01.892 | INFO     | fish_speech.models.text2semantic.inference:generate_long:635 - Split into 0 turns, grouped into 1 batches
+2026-09-30 03:25:01.893 | INFO     | fish_speech.models.text2semantic.inference:generate_long:647 - --- Sample 0, Batch 0 (12 bytes) ---
+2026-09-30 03:25:01.893 | INFO     | fish_speech.models.text2semantic.inference:generate_long:651 - Batch text: Hello world.
+2026-09-30 03:25:01.893 | INFO     | fish_speech.models.text2semantic.inference:generate_long:677 - Visualizing prompt structure:
+2026-09-30 03:25:01.897 | INFO     | fish_speech.models.text2semantic.inference:generate_long:688 - Encoded prompt shape: torch.Size([11, 23])
+[92m<|im_start|>[0m[32msystem[0m[92m
+[0m[32mconvert[0m[92m the[0m[32m provided[0m[92m text[0m[32m to[0m[92m speech[0m[32m<|im_end|>[0m[92m
+[0m[32m<|im_start|>[0m[92muser[0m[32m
+[0m[92mHello[0m[32m world[0m[92m.[0m[32m<|im_end|>[0m[92m
+[0m[32m<|im_start|>[0m[92massistant[0m[32m
+[0m[92m<|voice|>[0m
+
+  0%|          | 0/63 [00:00<?, ?it/s]
+  2%|▏         | 1/63 [00:00<00:11,  5.49it/s]
+  3%|▎         | 2/63 [00:00<00:08,  6.84it/s]
+  5%|▍         | 3/63 [00:00<00:07,  7.58it/s]
+  6%|▋         | 4/63 [00:00<00:07,  7.97it/s]
+  8%|▊         | 5/63 [00:00<00:07,  8.20it/s]
+ 10%|▉         | 6/63 [00:00<00:06,  8.36it/s]
+ 11%|█         | 7/63 [00:00<00:06,  8.46it/s]
+ 13%|█▎        | 8/63 [00:00<00:06,  8.47it/s]
+ 14%|█▍        | 9/63 [00:01<00:06,  8.44it/s]
+ 16%|█▌        | 10/63 [00:01<00:06,  8.44it/s]
+ 17%|█▋        | 11/63 [00:01<00:06,  8.51it/s]
+ 19%|█▉        | 12/63 [00:01<00:05,  8.55it/s]
+ 21%|██        | 13/63 [00:01<00:05,  8.58it/s]
+ 22%|██▏       | 14/63 [00:01<00:05,  8.59it/s]
+ 24%|██▍       | 15/63 [00:01<00:05,  8.58it/s]
+ 25%|██▌       | 16/63 [00:01<00:05,  8.53it/s]
+ 27%|██▋       | 17/63 [00:02<00:05,  8.55it/s]
+ 29%|██▊       | 18/63 [00:02<00:05,  8.58it/s]
+ 30%|███       | 19/63 [00:02<00:05,  8.60it/s]
+ 32%|███▏      | 20/63 [00:02<00:04,  8.62it/s]
+ 33%|███▎      | 21/63 [00:02<00:04,  8.65it/s]
+ 33%|███▎      | 21/63 [00:02<00:05,  8.00it/s]
+2026-09-30 03:25:04.890 | INFO     | fish_speech.models.text2semantic.inference:generate_long:725 - Batch 0: Generated 23 tokens in 3.00 seconds, 7.67 tokens/sec
+2026-09-30 03:25:04.890 | INFO     | fish_speech.models.text2semantic.inference:generate_long:729 - Bandwidth achieved: 35.00 GB/s
+2026-09-30 03:25:04.891 | INFO     | fish_speech.models.text2semantic.inference:generate_long:755 - GPU Memory used: 11.04 GB
+2026-09-30 03:25:04.893 | INFO     | fish_speech.inference_engine.vq_manager:decode_vq_tokens:17 - VQ features: torch.Size([10, 22])
+2026-09-30 03:25:06.356 | INFO     | tools.server.model_manager:warm_up:102 - Models warmed up.
+2026-09-30 03:25:06.356 | INFO     | tools.api_server:initialize_app:101 - Startup done, listening server at http://127.0.0.1:8080
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+INFO:     127.0.0.1:59654 - "GET /v1/health HTTP/1.1" 200 OK
+2026-09-30 03:26:40.337 | WARNING  | fish_speech.inference_engine:inference:64 - set seed: 42
+2026-09-30 03:26:40.339 | INFO     | fish_speech.models.text2semantic.inference:generate_long:635 - Split into 0 turns, grouped into 1 batches
+2026-09-30 03:26:40.339 | INFO     | fish_speech.models.text2semantic.inference:generate_long:647 - --- Sample 0, Batch 0 (20 bytes) ---
+2026-09-30 03:26:40.339 | INFO     | fish_speech.models.text2semantic.inference:generate_long:651 - Batch text: Clean room API test.
+2026-09-30 03:26:40.340 | INFO     | fish_speech.models.text2semantic.inference:generate_long:677 - Visualizing prompt structure:
+2026-09-30 03:26:40.344 | INFO     | fish_speech.models.text2semantic.inference:generate_long:688 - Encoded prompt shape: torch.Size([11, 25])
+[92m<|im_start|>[0m[32msystem[0m[92m
+[0m[32mconvert[0m[92m the[0m[32m provided[0m[92m text[0m[32m to[0m[92m speech[0m[32m<|im_end|>[0m[92m
+[0m[32m<|im_start|>[0m[92muser[0m[32m
+[0m[92mClean[0m[32m room[0m[92m API[0m[32m test[0m[92m.[0m[32m<|im_end|>[0m[92m
+[0m[32m<|im_start|>[0m[92massistant[0m[32m
+[0m[92m<|voice|>[0m
+
+  0%|          | 0/63 [00:00<?, ?it/s]
+  2%|▏         | 1/63 [00:00<00:08,  7.48it/s]
+  3%|▎         | 2/63 [00:00<00:08,  7.48it/s]
+  5%|▍         | 3/63 [00:00<00:07,  7.75it/s]
+  6%|▋         | 4/63 [00:00<00:07,  7.81it/s]
+  8%|▊         | 5/63 [00:00<00:07,  7.41it/s]
+ 10%|▉         | 6/63 [00:00<00:07,  7.39it/s]
+ 11%|█         | 7/63 [00:00<00:07,  7.40it/s]
+ 13%|█▎        | 8/63 [00:01<00:07,  7.43it/s]
+ 14%|█▍        | 9/63 [00:01<00:07,  7.53it/s]
+ 16%|█▌        | 10/63 [00:01<00:06,  7.66it/s]
+ 17%|█▋        | 11/63 [00:01<00:06,  7.53it/s]
+ 19%|█▉        | 12/63 [00:01<00:06,  7.54it/s]
+ 21%|██        | 13/63 [00:01<00:06,  7.67it/s]
+ 22%|██▏       | 14/63 [00:01<00:06,  7.20it/s]
+ 24%|██▍       | 15/63 [00:02<00:06,  7.42it/s]
+ 25%|██▌       | 16/63 [00:02<00:06,  7.61it/s]
+ 27%|██▋       | 17/63 [00:02<00:05,  7.73it/s]
+ 29%|██▊       | 18/63 [00:02<00:05,  7.84it/s]
+ 30%|███       | 19/63 [00:02<00:05,  7.93it/s]
+ 32%|███▏      | 20/63 [00:02<00:05,  8.00it/s]
+ 33%|███▎      | 21/63 [00:02<00:05,  7.99it/s]
+ 35%|███▍      | 22/63 [00:02<00:05,  7.29it/s]
+ 37%|███▋      | 23/63 [00:03<00:05,  7.10it/s]
+ 38%|███▊      | 24/63 [00:03<00:05,  7.21it/s]
+ 40%|███▉      | 25/63 [00:03<00:05,  7.32it/s]
+ 41%|████▏     | 26/63 [00:03<00:04,  7.45it/s]
+ 43%|████▎     | 27/63 [00:03<00:04,  7.58it/s]
+ 44%|████▍     | 28/63 [00:03<00:04,  7.64it/s]
+ 46%|████▌     | 29/63 [00:03<00:04,  7.71it/s]
+ 48%|████▊     | 30/63 [00:03<00:04,  7.78it/s]
+ 49%|████▉     | 31/63 [00:04<00:04,  7.85it/s]
+ 51%|█████     | 32/63 [00:04<00:03,  7.87it/s]
+ 52%|█████▏    | 33/63 [00:04<00:03,  7.92it/s]
+ 54%|█████▍    | 34/63 [00:04<00:03,  7.97it/s]
+ 56%|█████▌    | 35/63 [00:04<00:03,  8.01it/s]
+ 57%|█████▋    | 36/63 [00:04<00:03,  8.03it/s]
+ 59%|█████▊    | 37/63 [00:04<00:03,  8.07it/s]
+ 60%|██████    | 38/63 [00:04<00:03,  7.78it/s]
+ 62%|██████▏   | 39/63 [00:05<00:03,  7.52it/s]
+ 63%|██████▎   | 40/63 [00:05<00:03,  7.49it/s]
+ 65%|██████▌   | 41/63 [00:05<00:02,  7.48it/s]
+ 67%|██████▋   | 42/63 [00:05<00:02,  7.55it/s]
+ 68%|██████▊   | 43/63 [00:05<00:02,  7.62it/s]
+ 68%|██████▊   | 43/63 [00:05<00:02,  7.46it/s]
+2026-09-30 03:26:46.250 | INFO     | fish_speech.models.text2semantic.inference:generate_long:725 - Batch 0: Generated 45 tokens in 5.91 seconds, 7.61 tokens/sec
+2026-09-30 03:26:46.250 | INFO     | fish_speech.models.text2semantic.inference:generate_long:729 - Bandwidth achieved: 34.73 GB/s
+2026-09-30 03:26:46.251 | INFO     | fish_speech.models.text2semantic.inference:generate_long:755 - GPU Memory used: 11.04 GB
+2026-09-30 03:26:46.253 | INFO     | fish_speech.inference_engine.vq_manager:decode_vq_tokens:17 - VQ features: torch.Size([10, 44])
+INFO:     127.0.0.1:48264 - "POST /v1/tts HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [8391]
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

@@ -2,7 +2,7 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 UPSTREAM_DIR="${UPSTREAM_DIR:-/kaggle/working/fish-speech-upstream}"
-PATCH="$ROOT/patches/dual-gpu/0001-dual-gpu-decoder-and-seq-len.patch"
+PATCH="$ROOT/patches/api-dual-gpu/0002-api-dual-gpu-cumulative.patch"
 cd "$UPSTREAM_DIR"
 if git apply --check "$PATCH" >/dev/null 2>&1; then
   git apply "$PATCH"

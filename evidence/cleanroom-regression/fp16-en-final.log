@@ -1,0 +1,118 @@
+2026-09-30 04:04:19.930 | INFO     | __main__:main:893 - Device topology: semantic=cuda:0, decoder=cuda:1
+2026-09-30 04:04:19.930 | INFO     | __main__:main:908 - Loading model ...
+2026-09-30 04:04:20.906 | INFO     | fish_speech.models.text2semantic.llama:from_pretrained:524 - Injected Semantic IDs into Config: 151678-155773
+2026-09-30 04:04:20.907 | INFO     | fish_speech.models.text2semantic.llama:from_pretrained:540 - Loading model from /kaggle/input/models/dangkhoa2016/fishaudio-s2-pro/pytorch/default/1, config: DualARModelArgs(model_type='dual_ar', vocab_size=155776, n_layer=36, n_head=32, dim=2560, intermediate_size=9728, n_local_heads=8, head_dim=128, rope_base=1000000, norm_eps=1e-06, max_seq_len=32768, dropout=0.0, tie_word_embeddings=True, attention_qkv_bias=False, attention_o_bias=False, attention_qk_norm=True, codebook_size=4096, num_codebooks=10, semantic_begin_id=151678, semantic_end_id=155773, use_gradient_checkpointing=True, initializer_range=0.01976423537605237, is_reward_model=False, scale_codebook_embeddings=True, audio_embed_dim=2560, n_fast_layer=4, fast_dim=2560, fast_n_head=32, fast_n_local_heads=8, fast_head_dim=128, fast_intermediate_size=9728, fast_attention_qkv_bias=False, fast_attention_qk_norm=False, fast_attention_o_bias=False, norm_fastlayer_input=True)
+2026-09-30 04:05:24.698 | INFO     | fish_speech.models.text2semantic.llama:from_pretrained:572 - Loading sharded safetensors weights
+2026-09-30 04:05:26.007 | INFO     | fish_speech.models.text2semantic.llama:from_pretrained:608 - Model weights loaded - Status: <All keys matched successfully>
+2026-09-30 04:05:26.008 | INFO     | __main__:init_model:387 - Overriding max_seq_len: 32768 -> 4096
+2026-09-30 04:05:59.025 | INFO     | __main__:init_model:391 - Restored model from checkpoint
+2026-09-30 04:05:59.025 | INFO     | __main__:init_model:396 - Using DualARTransformer
+2026-09-30 04:05:59.044 | INFO     | __main__:main:922 - Time to load model: 99.11 seconds
+2026-09-30 04:05:59.047 | INFO     | __main__:generate_long:635 - Split into 0 turns, grouped into 1 batches
+2026-09-30 04:05:59.047 | INFO     | __main__:generate_long:647 - --- Sample 0, Batch 0 (51 bytes) ---
+2026-09-30 04:05:59.048 | INFO     | __main__:generate_long:651 - Batch text: Phase thirteen final English clean room regression.
+2026-09-30 04:05:59.048 | INFO     | __main__:generate_long:677 - Visualizing prompt structure:
+2026-09-30 04:05:59.052 | INFO     | __main__:generate_long:688 - Encoded prompt shape: torch.Size([11, 28])
+[92m<|im_start|>[0m[32msystem[0m[92m
+[0m[32mconvert[0m[92m the[0m[32m provided[0m[92m text[0m[32m to[0m[92m speech[0m[32m<|im_end|>[0m[92m
+[0m[32m<|im_start|>[0m[92muser[0m[32m
+[0m[92mPhase[0m[32m thirteen[0m[92m final[0m[32m English[0m[92m clean[0m[32m room[0m[92m regression[0m[32m.[0m[92m<|im_end|>[0m[32m
+[0m[92m<|im_start|>[0m[32massistant[0m[92m
+[0m[32m<|voice|>[0m
+
+  0%|          | 0/4067 [00:00<?, ?it/s]
+  0%|          | 1/4067 [00:00<09:15,  7.31it/s]
+  0%|          | 2/4067 [00:00<08:42,  7.78it/s]
+  0%|          | 3/4067 [00:00<09:01,  7.51it/s]
+  0%|          | 4/4067 [00:00<09:16,  7.30it/s]
+  0%|          | 5/4067 [00:00<09:07,  7.42it/s]
+  0%|          | 6/4067 [00:00<08:56,  7.57it/s]
+  0%|          | 7/4067 [00:00<08:46,  7.71it/s]
+  0%|          | 8/4067 [00:01<08:38,  7.83it/s]
+  0%|          | 9/4067 [00:01<08:33,  7.90it/s]
+  0%|          | 10/4067 [00:01<08:30,  7.94it/s]
+  0%|          | 11/4067 [00:01<08:33,  7.90it/s]
+  0%|          | 12/4067 [00:01<08:28,  7.98it/s]
+  0%|          | 13/4067 [00:01<08:26,  8.01it/s]
+  0%|          | 14/4067 [00:01<08:21,  8.08it/s]
+  0%|          | 15/4067 [00:01<08:22,  8.06it/s]
+  0%|          | 16/4067 [00:02<08:20,  8.09it/s]
+  0%|          | 17/4067 [00:02<08:18,  8.12it/s]
+  0%|          | 18/4067 [00:02<08:12,  8.23it/s]
+  0%|          | 19/4067 [00:02<08:12,  8.23it/s]
+  0%|          | 20/4067 [00:02<08:30,  7.93it/s]
+  1%|          | 21/4067 [00:02<08:44,  7.72it/s]
+  1%|          | 22/4067 [00:02<08:49,  7.64it/s]
+  1%|          | 23/4067 [00:02<09:28,  7.11it/s]
+  1%|          | 24/4067 [00:03<09:12,  7.32it/s]
+  1%|          | 25/4067 [00:03<08:57,  7.51it/s]
+  1%|          | 26/4067 [00:03<08:42,  7.73it/s]
+  1%|          | 27/4067 [00:03<08:31,  7.89it/s]
+  1%|          | 28/4067 [00:03<08:23,  8.02it/s]
+  1%|          | 29/4067 [00:03<08:16,  8.14it/s]
+  1%|          | 30/4067 [00:03<08:09,  8.25it/s]
+  1%|          | 31/4067 [00:03<08:08,  8.27it/s]
+  1%|          | 32/4067 [00:04<08:06,  8.29it/s]
+  1%|          | 33/4067 [00:04<08:05,  8.30it/s]
+  1%|          | 34/4067 [00:04<08:03,  8.34it/s]
+  1%|          | 35/4067 [00:04<08:01,  8.38it/s]
+  1%|          | 36/4067 [00:04<08:00,  8.39it/s]
+  1%|          | 37/4067 [00:04<08:02,  8.34it/s]
+  1%|          | 38/4067 [00:04<08:25,  7.97it/s]
+  1%|          | 39/4067 [00:04<08:36,  7.80it/s]
+  1%|          | 40/4067 [00:05<08:34,  7.82it/s]
+  1%|          | 41/4067 [00:05<08:35,  7.80it/s]
+  1%|          | 42/4067 [00:05<08:34,  7.83it/s]
+  1%|          | 43/4067 [00:05<08:29,  7.90it/s]
+  1%|          | 44/4067 [00:05<08:33,  7.83it/s]
+  1%|          | 45/4067 [00:05<08:30,  7.88it/s]
+  1%|          | 46/4067 [00:05<08:25,  7.95it/s]
+  1%|          | 47/4067 [00:05<08:24,  7.98it/s]
+  1%|          | 48/4067 [00:06<08:20,  8.02it/s]
+  1%|          | 49/4067 [00:06<08:17,  8.07it/s]
+  1%|          | 50/4067 [00:06<08:14,  8.12it/s]
+  1%|▏         | 51/4067 [00:06<08:11,  8.17it/s]
+  1%|▏         | 52/4067 [00:06<08:12,  8.16it/s]
+  1%|▏         | 53/4067 [00:06<08:12,  8.16it/s]
+  1%|▏         | 54/4067 [00:06<08:13,  8.13it/s]
+  1%|▏         | 55/4067 [00:06<08:24,  7.95it/s]
+  1%|▏         | 56/4067 [00:07<08:47,  7.61it/s]
+  1%|▏         | 57/4067 [00:07<08:46,  7.61it/s]
+  1%|▏         | 58/4067 [00:07<08:40,  7.70it/s]
+  1%|▏         | 59/4067 [00:07<08:35,  7.78it/s]
+  1%|▏         | 60/4067 [00:07<08:37,  7.75it/s]
+  1%|▏         | 61/4067 [00:07<08:33,  7.80it/s]
+  2%|▏         | 62/4067 [00:07<08:31,  7.84it/s]
+  2%|▏         | 63/4067 [00:07<08:31,  7.83it/s]
+  2%|▏         | 64/4067 [00:08<08:26,  7.91it/s]
+  2%|▏         | 65/4067 [00:08<08:22,  7.96it/s]
+  2%|▏         | 66/4067 [00:08<08:17,  8.04it/s]
+  2%|▏         | 67/4067 [00:08<08:15,  8.08it/s]
+  2%|▏         | 68/4067 [00:08<08:16,  8.06it/s]
+  2%|▏         | 69/4067 [00:08<08:12,  8.11it/s]
+  2%|▏         | 70/4067 [00:08<08:13,  8.10it/s]
+  2%|▏         | 71/4067 [00:08<08:10,  8.15it/s]
+  2%|▏         | 72/4067 [00:09<08:11,  8.12it/s]
+  2%|▏         | 73/4067 [00:09<08:35,  7.75it/s]
+  2%|▏         | 74/4067 [00:09<08:44,  7.61it/s]
+  2%|▏         | 75/4067 [00:09<08:38,  7.70it/s]
+  2%|▏         | 76/4067 [00:09<08:38,  7.70it/s]
+  2%|▏         | 77/4067 [00:09<08:32,  7.78it/s]
+  2%|▏         | 78/4067 [00:09<08:26,  7.87it/s]
+  2%|▏         | 79/4067 [00:09<08:23,  7.93it/s]
+  2%|▏         | 80/4067 [00:10<08:19,  7.98it/s]
+  2%|▏         | 81/4067 [00:10<08:15,  8.04it/s]
+  2%|▏         | 82/4067 [00:10<08:15,  8.04it/s]
+  2%|▏         | 83/4067 [00:10<08:09,  8.14it/s]
+  2%|▏         | 83/4067 [00:10<08:28,  7.83it/s]
+2026-09-30 04:06:10.032 | INFO     | __main__:generate_long:725 - Batch 0: Generated 85 tokens in 10.98 seconds, 7.74 tokens/sec
+2026-09-30 04:06:10.032 | INFO     | __main__:generate_long:729 - Bandwidth achieved: 35.30 GB/s
+2026-09-30 04:06:10.032 | INFO     | __main__:main:967 - Sampled text: Phase thirteen final English clean room regression.
+2026-09-30 04:06:10.033 | INFO     | __main__:generate_long:755 - GPU Memory used: 11.04 GB
+2026-09-30 04:06:10.033 | INFO     | __main__:main:973 - Saved codes to /kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/cleanroom-regression/codes_0.npy
+2026-09-30 04:06:10.033 | INFO     | __main__:main:978 - Loading codec model for audio decoding...
+/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+2026-09-30 04:06:25.669 | INFO     | __main__:main:989 - Saved audio to /kaggle/working/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU/results/cleanroom-regression/fp16-en-final.wav
+2026-09-30 04:06:25.669 | INFO     | __main__:main:991 - Next sample
+DUAL_GPU_FP16=PASS
