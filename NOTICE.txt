@@ -1,0 +1,14 @@
+This model is licensed under the Fish Audio Research License, Copyright © 39 AI, INC. All Rights Reserved.
+
+Built with Fish Audio.
+
+This repository contains Kaggle integration, qualification, benchmark, documentation, and patch artifacts for Fish Audio S2 Pro / Fish Speech.
+
+The retained patch artifacts modify the pinned Fish Speech source for explicit dual-GPU device placement, configurable maximum sequence length, split semantic/decoder device handling, decoder dtype handling, API support for the split-device topology, and explicit VQ-code transfer to the decoder device.
+
+Fish Audio S2 Pro model weights, upstream Fish Speech source, upstream source reproduced in patch context, and patch artifacts derived from Fish Speech are not relicensed under the repository MIT License.
+
+See:
+- THIRD_PARTY_LICENSES/FISH-AUDIO-RESEARCH-LICENSE
+- LICENSE-NOTES.md
+- patches/README.md
