@@ -1,0 +1,21 @@
+{
+  "id": "en-m01",
+  "language": "en",
+  "description": "A young adult man with an energetic, clear tenor voice, crisp consonants, moderately fast pace",
+  "transcript": "This synthetic speaker is reading a controlled English reference passage for repeatable voice cloning tests. The delivery is energetic but natural, with crisp consonants, balanced rhythm, and enough variation to capture a recognizable speaking identity.",
+  "generator": "VoxCPM2",
+  "cfg_value": 2.0,
+  "inference_timesteps": 10,
+  "generation_s": 30.41660475730896,
+  "wav": "en-m01.wav",
+  "wav_bytes": 1259564,
+  "wav_sha256": "1318e6565176dafe0fddcb8038ccbae61215af6e47b8984ef42a97035ef74841",
+  "sample_rate": 48000,
+  "channels": 1,
+  "frames": 629760,
+  "duration_s": 13.12,
+  "peak_abs": 0.7008056640625,
+  "rms": 0.1071033850312233,
+  "clipping_ratio_ge_0_999": 0.0,
+  "silence_ratio_lt_1e_4": 0.01673018292682927
+}

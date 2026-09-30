@@ -1,0 +1,21 @@
+{
+  "id": "vi-m01",
+  "language": "vi",
+  "description": "Một nam thanh niên có giọng tenor rõ, năng động, phụ âm sắc nét, tốc độ hơi nhanh nhưng tự nhiên",
+  "transcript": "Mẫu giọng tổng hợp này đọc một đoạn tiếng Việt có kiểm soát để phục vụ bài kiểm thử sao chép giọng lặp lại được. Cách nói năng động nhưng tự nhiên, nhịp cân bằng và phát âm rõ giúp tạo ra đặc trưng giọng dễ nhận biết.",
+  "generator": "VoxCPM2",
+  "cfg_value": 2.0,
+  "inference_timesteps": 10,
+  "generation_s": 33.53353953361511,
+  "wav": "vi-m01.wav",
+  "wav_bytes": 1382444,
+  "wav_sha256": "70816ceeab885eec0fd39a314fa3e25e3de2426dfa00c8c1a63b49e74dea2321",
+  "sample_rate": 48000,
+  "channels": 1,
+  "frames": 691200,
+  "duration_s": 14.4,
+  "peak_abs": 0.6287841796875,
+  "rms": 0.09879375249147415,
+  "clipping_ratio_ge_0_999": 0.0,
+  "silence_ratio_lt_1e_4": 0.13768952546296295
+}

@@ -1,0 +1,21 @@
+{
+  "id": "en-f01",
+  "language": "en",
+  "description": "A young adult woman with a bright, warm, friendly voice, clear articulation, natural conversational pace",
+  "transcript": "Today I am recording a clean synthetic reference for a reproducible speech cloning benchmark. I speak at a comfortable pace with clear pronunciation and a relaxed, friendly tone so that the reference contains enough natural vocal detail.",
+  "generator": "VoxCPM2",
+  "cfg_value": 2.0,
+  "inference_timesteps": 10,
+  "generation_s": 31.78772211074829,
+  "wav": "en-f01.wav",
+  "wav_bytes": 1367084,
+  "wav_sha256": "6a28d7d5db25f9617cd7b41612460684cf0a6eb253ee5535c121b2f916615a08",
+  "sample_rate": 48000,
+  "channels": 1,
+  "frames": 683520,
+  "duration_s": 14.24,
+  "peak_abs": 0.7420654296875,
+  "rms": 0.1024029403924942,
+  "clipping_ratio_ge_0_999": 0.0,
+  "silence_ratio_lt_1e_4": 0.12773876404494383
+}

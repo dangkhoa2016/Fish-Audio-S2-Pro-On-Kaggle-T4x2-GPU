@@ -1,0 +1,21 @@
+{
+  "id": "en-m02",
+  "language": "en",
+  "description": "A middle-aged man with a deep, resonant baritone voice, calm and deliberate pace, professional narration",
+  "transcript": "For this benchmark I am providing a stable synthetic reference with a deep and measured speaking style. The passage is long enough to capture timbre, rhythm, and pronunciation while remaining clean, controlled, and easy to reproduce.",
+  "generator": "VoxCPM2",
+  "cfg_value": 2.0,
+  "inference_timesteps": 10,
+  "generation_s": 36.56815528869629,
+  "wav": "en-m02.wav",
+  "wav_bytes": 1536044,
+  "wav_sha256": "df059e54c70e4d4e5006c977b82f26ae0c2d0bc789a36afc7694c45bd517abe8",
+  "sample_rate": 48000,
+  "channels": 1,
+  "frames": 768000,
+  "duration_s": 16.0,
+  "peak_abs": 0.6390380859375,
+  "rms": 0.09746004641056061,
+  "clipping_ratio_ge_0_999": 0.0,
+  "silence_ratio_lt_1e_4": 0.22759375
+}

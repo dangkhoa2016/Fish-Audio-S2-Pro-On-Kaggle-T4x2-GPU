@@ -1,0 +1,21 @@
+{
+  "id": "vi-m02",
+  "language": "vi",
+  "description": "Một người đàn ông trung niên có giọng nam trầm sâu, vang, bình tĩnh, nhịp nói chậm rãi và phong cách dẫn chuyện chuyên nghiệp",
+  "transcript": "Trong bài kiểm thử này tôi cung cấp một mẫu tham chiếu tổng hợp ổn định với giọng trầm và nhịp nói chậm rãi. Đoạn đọc đủ dài để thể hiện âm sắc, nhịp điệu và cách phát âm nhưng vẫn sạch và dễ tái tạo.",
+  "generator": "VoxCPM2",
+  "cfg_value": 2.0,
+  "inference_timesteps": 10,
+  "generation_s": 33.10988163948059,
+  "wav": "vi-m02.wav",
+  "wav_bytes": 1367084,
+  "wav_sha256": "732086fee0e64a93dfc7e7efb50671d49069d4db57ff17d0b264f6b0b25db58e",
+  "sample_rate": 48000,
+  "channels": 1,
+  "frames": 683520,
+  "duration_s": 14.24,
+  "peak_abs": 0.66064453125,
+  "rms": 0.09844063222408295,
+  "clipping_ratio_ge_0_999": 0.0,
+  "silence_ratio_lt_1e_4": 0.15391356507490636
+}
