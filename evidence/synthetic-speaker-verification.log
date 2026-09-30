@@ -1,0 +1,28 @@
+Fetching 1 files:   0%|          | 0/1 [00:00<?, ?it/s]Fetching 1 files: 100%|██████████| 1/1 [00:00<00:00, 18808.54it/s]
+/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/torchaudio/_backend/utils.py:213: UserWarning: In 2.9, this function's implementation will be changed to use torchaudio.load_with_torchcodec` under the hood. Some parameters like ``normalize``, ``format``, ``buffer_size``, and ``backend`` will be ignored. We recommend that you port your code to rely directly on TorchCodec's decoder instead: https://docs.pytorch.org/torchcodec/stable/generated/torchcodec.decoders.AudioDecoder.html#torchcodec.decoders.AudioDecoder.
+  warnings.warn(
+/kaggle/working/fish-speech-upstream/.venv/lib/python3.12/site-packages/torchaudio/_backend/ffmpeg.py:88: UserWarning: torio.io._streaming_media_decoder.StreamingMediaDecoder has been deprecated. This deprecation is part of a large refactoring effort to transition TorchAudio into a maintenance phase. The decoding and encoding capabilities of PyTorch for both audio and video are being consolidated into TorchCodec. Please see https://github.com/pytorch/audio/issues/3902 for more information. It will be removed from the 2.9 release.
+  s = torchaudio.io.StreamReader(src, format, None, buffer_size)
+REFERENCE_EMBED en-f01
+REFERENCE_EMBED en-f02
+REFERENCE_EMBED en-m01
+REFERENCE_EMBED en-m02
+REFERENCE_EMBED vi-f01
+REFERENCE_EMBED vi-f02
+REFERENCE_EMBED vi-m01
+REFERENCE_EMBED vi-m02
+CASE en-f01-same rank 1 correct 0.98852 margin 0.28783
+CASE en-f01-cross-vi rank 1 correct 0.98179 margin 0.30015
+CASE en-f02-same rank 1 correct 0.9902 margin 0.15405
+CASE en-m01-same rank 1 correct 0.98982 margin 0.15455
+CASE en-m02-same rank 1 correct 0.99097 margin 0.32262
+CASE en-m02-cross-vi rank 1 correct 0.92919 margin 0.2125
+CASE vi-f01-same rank 1 correct 0.98959 margin 0.07956
+CASE vi-f01-cross-en rank 1 correct 0.9338 margin 0.03966
+CASE vi-f02-same rank 1 correct 0.99372 margin 0.04482
+CASE vi-m01-same rank 1 correct 0.98337 margin 0.03552
+CASE vi-m02-same rank 1 correct 0.97426 margin 0.05813
+CASE vi-m02-cross-en rank 1 correct 0.88478 margin 0.03186
+SPEAKER_TOP1 12 / 12
+SAME_TOP1 8 / 8
+CROSS_TOP1 4 / 4
