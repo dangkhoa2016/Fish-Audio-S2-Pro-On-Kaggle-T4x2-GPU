@@ -1,0 +1,555 @@
+{
+  "status": "PASS",
+  "qualification_type": "independent synthetic multi-speaker voice-cloning acceptance",
+  "reference_generator": "VoxCPM2",
+  "speaker_count": 8,
+  "case_count": 12,
+  "passed": 12,
+  "same_language_cases": 8,
+  "cross_language_cases": 4,
+  "semantic_load_s": 103.15511723300006,
+  "codec_load_s": 22.446789118000197,
+  "cases": [
+    {
+      "id": "en-f01-same",
+      "speaker_id": "en-f01",
+      "source_lang": "en",
+      "target_lang": "en",
+      "mode": "same",
+      "status": "PASS",
+      "seed": 20260930,
+      "target_text": "The cloned speaker is now reading a completely new English sentence. This sample tests whether vocal identity remains stable when the words and rhythm differ from the reference recording.",
+      "reference": {
+        "path": "results/synthetic-speaker-bank/en-f01.wav",
+        "sha256": "6a28d7d5db25f9617cd7b41612460684cf0a6eb253ee5535c121b2f916615a08",
+        "transcript": "Today I am recording a clean synthetic reference for a reproducible speech cloning benchmark. I speak at a comfortable pace with clear pronunciation and a relaxed, friendly tone so that the reference contains enough natural vocal detail.",
+        "duration_s": 14.24,
+        "generator": "VoxCPM2",
+        "description": "A young adult woman with a bright, warm, friendly voice, clear articulation, natural conversational pace",
+        "vq_shape": [
+          10,
+          307
+        ]
+      },
+      "output": {
+        "path": "results/synthetic-multispeaker-acceptance/en-f01-same.wav",
+        "bytes": 856108,
+        "sha256": "23303c68f264d4f341a628433cc5d2ebf46f16b73883775070d85b00c3775505",
+        "sample_rate": 44100,
+        "frames": 428032,
+        "duration_s": 9.7059410430839,
+        "peak_abs": 0.66162109375,
+        "rms": 0.10916806757450104,
+        "silence_ratio_lt_1e_4": 0.07436827153110048,
+        "clipping_ratio_ge_0_999": 0.0
+      },
+      "timing": {
+        "reference_encode_s": 3.1017281489994275,
+        "semantic_s": 25.60003588499967,
+        "decode_s": 0.7593900040001245,
+        "total_s": 26.359425888999795,
+        "rtf": 2.7158032149579725
+      },
+      "peak_allocated_bytes": {
+        "gpu0": 10944562176,
+        "gpu1": 4721148416
+      }
+    },
+    {
+      "id": "en-f01-cross-vi",
+      "speaker_id": "en-f01",
+      "source_lang": "en",
+      "target_lang": "vi",
+      "mode": "cross",
+      "status": "PASS",
+      "seed": 20260931,
+      "target_text": "Cùng một giọng tổng hợp đang nói tiếng Việt trong bài kiểm thử sao chép xuyên ngôn ngữ. Nội dung câu này hoàn toàn khác với đoạn tham chiếu ban đầu.",
+      "reference": {
+        "path": "results/synthetic-speaker-bank/en-f01.wav",
+        "sha256": "6a28d7d5db25f9617cd7b41612460684cf0a6eb253ee5535c121b2f916615a08",
+        "transcript": "Today I am recording a clean synthetic reference for a reproducible speech cloning benchmark. I speak at a comfortable pace with clear pronunciation and a relaxed, friendly tone so that the reference contains enough natural vocal detail.",
+        "duration_s": 14.24,
+        "generator": "VoxCPM2",
+        "description": "A young adult woman with a bright, warm, friendly voice, clear articulation, natural conversational pace",
+        "vq_shape": [
+          10,
+          307
+        ]
+      },
+      "output": {
+        "path": "results/synthetic-multispeaker-acceptance/en-f01-cross-vi.wav",
+        "bytes": 729132,
+        "sha256": "4b40e3735317165fef08f02dc2220b7d32665308554d54008a08ceb7bf462e42",
+        "sample_rate": 44100,
+        "frames": 364544,
+        "duration_s": 8.266303854875284,
+        "peak_abs": 0.76171875,
+        "rms": 0.11927448213100433,
+        "silence_ratio_lt_1e_4": 0.10157072945926966,
+        "clipping_ratio_ge_0_999": 0.0
+      },
+      "timing": {
+        "reference_encode_s": 3.1017281489994275,
+        "semantic_s": 21.614487990999805,
+        "decode_s": 0.7108081340002173,
+        "total_s": 22.325296125000023,
+        "rtf": 2.7007591926146115
+      },
+      "peak_allocated_bytes": {
+        "gpu0": 10945068544,
+        "gpu1": 4636174336
+      }
+    },
+    {
+      "id": "en-f02-same",
+      "speaker_id": "en-f02",
+      "source_lang": "en",
+      "target_lang": "en",
+      "mode": "same",
+      "status": "PASS",
+      "seed": 20260932,
+      "target_text": "The cloned speaker is now reading a completely new English sentence. This sample tests whether vocal identity remains stable when the words and rhythm differ from the reference recording.",
+      "reference": {
+        "path": "results/synthetic-speaker-bank/en-f02.wav",
+        "sha256": "d02a033d23e7acacbbf67de8b636b081be7426d5d5ace999266b169c2905e2c1",
+        "transcript": "This reference sample is designed to represent a calm and mature speaking style. The recording uses complete sentences, steady pacing, and clear articulation so another speech model can be evaluated against a consistent synthetic speaker identity.",
+        "duration_s": 14.72,
+        "generator": "VoxCPM2",
+        "description": "A mature woman with a low, calm, slightly husky voice, measured pace, confident documentary style",
+        "vq_shape": [
+          10,
+          317
+        ]
+      },
+      "output": {
+        "path": "results/synthetic-multispeaker-acceptance/en-f02-same.wav",
+        "bytes": 876588,
+        "sha256": "b52efae8f448bf89d4519990c7ef11c26d4ad9bceac3e506f8e49d4676c332a0",
+        "sample_rate": 44100,
+        "frames": 438272,
+        "duration_s": 9.93814058956916,
+        "peak_abs": 0.5791015625,
+        "rms": 0.1200409084558487,
+        "silence_ratio_lt_1e_4": 0.08395243136682243,
+        "clipping_ratio_ge_0_999": 0.0
+      },
+      "timing": {
+        "reference_encode_s": 0.9743567440000334,
+        "semantic_s": 26.137509166999735,
+        "decode_s": 0.7525164810003844,
+        "total_s": 26.89002564800012,
+        "rtf": 2.7057401136207773
+      },
+      "peak_allocated_bytes": {
+        "gpu0": 10945275904,
+        "gpu1": 4735599616
+      }
+    },
+    {
+      "id": "en-m01-same",
+      "speaker_id": "en-m01",
+      "source_lang": "en",
+      "target_lang": "en",
+      "mode": "same",
+      "status": "PASS",
+      "seed": 20260933,
+      "target_text": "The cloned speaker is now reading a completely new English sentence. This sample tests whether vocal identity remains stable when the words and rhythm differ from the reference recording.",
+      "reference": {
+        "path": "results/synthetic-speaker-bank/en-m01.wav",
+        "sha256": "1318e6565176dafe0fddcb8038ccbae61215af6e47b8984ef42a97035ef74841",
+        "transcript": "This synthetic speaker is reading a controlled English reference passage for repeatable voice cloning tests. The delivery is energetic but natural, with crisp consonants, balanced rhythm, and enough variation to capture a recognizable speaking identity.",
+        "duration_s": 13.12,
+        "generator": "VoxCPM2",
+        "description": "A young adult man with an energetic, clear tenor voice, crisp consonants, moderately fast pace",
+        "vq_shape": [
+          10,
+          283
+        ]
+      },
+      "output": {
+        "path": "results/synthetic-multispeaker-acceptance/en-m01-same.wav",
+        "bytes": 868396,
+        "sha256": "ef71d969890c547e696f61e9f0bae4900af22b686228b266ac6fc7c3dbee4f29",
+        "sample_rate": 44100,
+        "frames": 434176,
+        "duration_s": 9.845260770975056,
+        "peak_abs": 0.6494140625,
+        "rms": 0.10646789520978928,
+        "silence_ratio_lt_1e_4": 0.015378556161556603,
+        "clipping_ratio_ge_0_999": 0.0
+      },
+      "timing": {
+        "reference_encode_s": 0.9081926269991527,
+        "semantic_s": 26.02423981799984,
+        "decode_s": 0.7600409709993983,
+        "total_s": 26.78428078899924,
+        "rtf": 2.720525277295075
+      },
+      "peak_allocated_bytes": {
+        "gpu0": 10942848512,
+        "gpu1": 4731691520
+      }
+    },
+    {
+      "id": "en-m02-same",
+      "speaker_id": "en-m02",
+      "source_lang": "en",
+      "target_lang": "en",
+      "mode": "same",
+      "status": "PASS",
+      "seed": 20260934,
+      "target_text": "The cloned speaker is now reading a completely new English sentence. This sample tests whether vocal identity remains stable when the words and rhythm differ from the reference recording.",
+      "reference": {
+        "path": "results/synthetic-speaker-bank/en-m02.wav",
+        "sha256": "df059e54c70e4d4e5006c977b82f26ae0c2d0bc789a36afc7694c45bd517abe8",
+        "transcript": "For this benchmark I am providing a stable synthetic reference with a deep and measured speaking style. The passage is long enough to capture timbre, rhythm, and pronunciation while remaining clean, controlled, and easy to reproduce.",
+        "duration_s": 16.0,
+        "generator": "VoxCPM2",
+        "description": "A middle-aged man with a deep, resonant baritone voice, calm and deliberate pace, professional narration",
+        "vq_shape": [
+          10,
+          345
+        ]
+      },
+      "output": {
+        "path": "results/synthetic-multispeaker-acceptance/en-m02-same.wav",
+        "bytes": 1007660,
+        "sha256": "3dea134cf98c176cbd827da68ca735f42e46404577792ef9dfcda6e903899721",
+        "sample_rate": 44100,
+        "frames": 503808,
+        "duration_s": 11.42421768707483,
+        "peak_abs": 0.61962890625,
+        "rms": 0.09156457334756851,
+        "silence_ratio_lt_1e_4": 0.09801948361280488,
+        "clipping_ratio_ge_0_999": 0.0
+      },
+      "timing": {
+        "reference_encode_s": 0.977256175000548,
+        "semantic_s": 30.046156411000084,
+        "decode_s": 0.7496326360005696,
+        "total_s": 30.795789047000653,
+        "rtf": 2.6956584591207937
+      },
+      "peak_allocated_bytes": {
+        "gpu0": 10947868672,
+        "gpu1": 4823920128
+      }
+    },
+    {
+      "id": "en-m02-cross-vi",
+      "speaker_id": "en-m02",
+      "source_lang": "en",
+      "target_lang": "vi",
+      "mode": "cross",
+      "status": "PASS",
+      "seed": 20260935,
+      "target_text": "Cùng một giọng tổng hợp đang nói tiếng Việt trong bài kiểm thử sao chép xuyên ngôn ngữ. Nội dung câu này hoàn toàn khác với đoạn tham chiếu ban đầu.",
+      "reference": {
+        "path": "results/synthetic-speaker-bank/en-m02.wav",
+        "sha256": "df059e54c70e4d4e5006c977b82f26ae0c2d0bc789a36afc7694c45bd517abe8",
+        "transcript": "For this benchmark I am providing a stable synthetic reference with a deep and measured speaking style. The passage is long enough to capture timbre, rhythm, and pronunciation while remaining clean, controlled, and easy to reproduce.",
+        "duration_s": 16.0,
+        "generator": "VoxCPM2",
+        "description": "A middle-aged man with a deep, resonant baritone voice, calm and deliberate pace, professional narration",
+        "vq_shape": [
+          10,
+          345
+        ]
+      },
+      "output": {
+        "path": "results/synthetic-multispeaker-acceptance/en-m02-cross-vi.wav",
+        "bytes": 798764,
+        "sha256": "534f58d06b7ccd1013fdc15522c92bbee022f6daf88baee16e670d3b586c9dba",
+        "sample_rate": 44100,
+        "frames": 399360,
+        "duration_s": 9.05578231292517,
+        "peak_abs": 0.5126953125,
+        "rms": 0.09135209023952484,
+        "silence_ratio_lt_1e_4": 0.13016576522435896,
+        "clipping_ratio_ge_0_999": 0.0
+      },
+      "timing": {
+        "reference_encode_s": 0.977256175000548,
+        "semantic_s": 23.860607603000062,
+        "decode_s": 0.7181309090001378,
+        "total_s": 24.5787385120002,
+        "rtf": 2.7141485586418486
+      },
+      "peak_allocated_bytes": {
+        "gpu0": 10948561408,
+        "gpu1": 4683734528
+      }
+    },
+    {
+      "id": "vi-f01-same",
+      "speaker_id": "vi-f01",
+      "source_lang": "vi",
+      "target_lang": "vi",
+      "mode": "same",
+      "status": "PASS",
+      "seed": 20260936,
+      "target_text": "Giọng được sao chép đang đọc một câu tiếng Việt hoàn toàn mới. Mẫu này kiểm tra xem đặc trưng người nói có được giữ ổn định khi nội dung và nhịp điệu khác với bản tham chiếu hay không.",
+      "reference": {
+        "path": "results/synthetic-speaker-bank/vi-f01.wav",
+        "sha256": "e3b8282b2ca440db2775eea5b8a081704923ff0a0f1c1f1dd263f384a6ff4f90",
+        "transcript": "Hôm nay tôi đọc một đoạn tham chiếu tổng hợp sạch để kiểm thử khả năng sao chép giọng nói có thể tái lập. Tôi nói với tốc độ tự nhiên, phát âm rõ ràng và giữ giọng thân thiện để mẫu âm thanh có đủ đặc trưng nhận dạng.",
+        "duration_s": 13.44,
+        "generator": "VoxCPM2",
+        "description": "Một phụ nữ trẻ có giọng sáng, ấm áp, thân thiện, phát âm rõ ràng, tốc độ hội thoại tự nhiên",
+        "vq_shape": [
+          10,
+          290
+        ]
+      },
+      "output": {
+        "path": "results/synthetic-multispeaker-acceptance/vi-f01-same.wav",
+        "bytes": 884780,
+        "sha256": "83d35204be51cfd659ce1ef458b18d02329414b6adb5a9ca1372aa85bdc2bcf0",
+        "sample_rate": 44100,
+        "frames": 442368,
+        "duration_s": 10.031020408163265,
+        "peak_abs": 0.67578125,
+        "rms": 0.10402572154998779,
+        "silence_ratio_lt_1e_4": 0.06783040364583333,
+        "clipping_ratio_ge_0_999": 0.0
+      },
+      "timing": {
+        "reference_encode_s": 0.9265433450000273,
+        "semantic_s": 26.385880899999393,
+        "decode_s": 0.7246468149996872,
+        "total_s": 27.11052771499908,
+        "rtf": 2.7026689820047096
+      },
+      "peak_allocated_bytes": {
+        "gpu0": 10946116096,
+        "gpu1": 4741157888
+      }
+    },
+    {
+      "id": "vi-f01-cross-en",
+      "speaker_id": "vi-f01",
+      "source_lang": "vi",
+      "target_lang": "en",
+      "mode": "cross",
+      "status": "PASS",
+      "seed": 20260937,
+      "target_text": "The same synthetic speaker is now speaking English in a cross language cloning test. The sentence is intentionally different from every reference passage.",
+      "reference": {
+        "path": "results/synthetic-speaker-bank/vi-f01.wav",
+        "sha256": "e3b8282b2ca440db2775eea5b8a081704923ff0a0f1c1f1dd263f384a6ff4f90",
+        "transcript": "Hôm nay tôi đọc một đoạn tham chiếu tổng hợp sạch để kiểm thử khả năng sao chép giọng nói có thể tái lập. Tôi nói với tốc độ tự nhiên, phát âm rõ ràng và giữ giọng thân thiện để mẫu âm thanh có đủ đặc trưng nhận dạng.",
+        "duration_s": 13.44,
+        "generator": "VoxCPM2",
+        "description": "Một phụ nữ trẻ có giọng sáng, ấm áp, thân thiện, phát âm rõ ràng, tốc độ hội thoại tự nhiên",
+        "vq_shape": [
+          10,
+          290
+        ]
+      },
+      "output": {
+        "path": "results/synthetic-multispeaker-acceptance/vi-f01-cross-en.wav",
+        "bytes": 827436,
+        "sha256": "de5d26200b362d61a0031decd5b9bc6a03f07b81f58ca8a4a8cd8e804bdd7152",
+        "sample_rate": 44100,
+        "frames": 413696,
+        "duration_s": 9.380861678004536,
+        "peak_abs": 0.67138671875,
+        "rms": 0.09819434583187103,
+        "silence_ratio_lt_1e_4": 0.06222201810024752,
+        "clipping_ratio_ge_0_999": 0.0
+      },
+      "timing": {
+        "reference_encode_s": 0.9265433450000273,
+        "semantic_s": 24.54875450399959,
+        "decode_s": 0.713837591999436,
+        "total_s": 25.262592095999025,
+        "rtf": 2.6929927082532994
+      },
+      "peak_allocated_bytes": {
+        "gpu0": 10944300032,
+        "gpu1": 4702822400
+      }
+    },
+    {
+      "id": "vi-f02-same",
+      "speaker_id": "vi-f02",
+      "source_lang": "vi",
+      "target_lang": "vi",
+      "mode": "same",
+      "status": "PASS",
+      "seed": 20260938,
+      "target_text": "Giọng được sao chép đang đọc một câu tiếng Việt hoàn toàn mới. Mẫu này kiểm tra xem đặc trưng người nói có được giữ ổn định khi nội dung và nhịp điệu khác với bản tham chiếu hay không.",
+      "reference": {
+        "path": "results/synthetic-speaker-bank/vi-f02.wav",
+        "sha256": "056e21a20c0e0d0bd7dbc5cf2eb1611a677d5d4e5cfb0cb447b2d3d355b3558b",
+        "transcript": "Đây là mẫu giọng tổng hợp được thiết kế với phong cách trưởng thành và điềm tĩnh. Đoạn đọc sử dụng câu đầy đủ, nhịp nói ổn định và phát âm rõ để một mô hình khác có thể kiểm tra khả năng giữ đặc trưng người nói.",
+        "duration_s": 14.88,
+        "generator": "VoxCPM2",
+        "description": "Một phụ nữ trưởng thành có giọng trầm, bình tĩnh, hơi khàn nhẹ, nhịp nói chậm và phong cách thuyết minh tự tin",
+        "vq_shape": [
+          10,
+          321
+        ]
+      },
+      "output": {
+        "path": "results/synthetic-multispeaker-acceptance/vi-f02-same.wav",
+        "bytes": 958508,
+        "sha256": "796ff77cb65c8425cf3ee3218c4668a7310f99df57f972cd329405cfdd6f192f",
+        "sample_rate": 44100,
+        "frames": 479232,
+        "duration_s": 10.866938775510205,
+        "peak_abs": 0.6669921875,
+        "rms": 0.09754643589258194,
+        "silence_ratio_lt_1e_4": 0.09968866853632478,
+        "clipping_ratio_ge_0_999": 0.0
+      },
+      "timing": {
+        "reference_encode_s": 0.9221576280006047,
+        "semantic_s": 28.71955448099925,
+        "decode_s": 0.7572409140002492,
+        "total_s": 29.4767953949995,
+        "rtf": 2.712520609891405
+      },
+      "peak_allocated_bytes": {
+        "gpu0": 10948754944,
+        "gpu1": 4791134208
+      }
+    },
+    {
+      "id": "vi-m01-same",
+      "speaker_id": "vi-m01",
+      "source_lang": "vi",
+      "target_lang": "vi",
+      "mode": "same",
+      "status": "PASS",
+      "seed": 20260939,
+      "target_text": "Giọng được sao chép đang đọc một câu tiếng Việt hoàn toàn mới. Mẫu này kiểm tra xem đặc trưng người nói có được giữ ổn định khi nội dung và nhịp điệu khác với bản tham chiếu hay không.",
+      "reference": {
+        "path": "results/synthetic-speaker-bank/vi-m01.wav",
+        "sha256": "70816ceeab885eec0fd39a314fa3e25e3de2426dfa00c8c1a63b49e74dea2321",
+        "transcript": "Mẫu giọng tổng hợp này đọc một đoạn tiếng Việt có kiểm soát để phục vụ bài kiểm thử sao chép giọng lặp lại được. Cách nói năng động nhưng tự nhiên, nhịp cân bằng và phát âm rõ giúp tạo ra đặc trưng giọng dễ nhận biết.",
+        "duration_s": 14.4,
+        "generator": "VoxCPM2",
+        "description": "Một nam thanh niên có giọng tenor rõ, năng động, phụ âm sắc nét, tốc độ hơi nhanh nhưng tự nhiên",
+        "vq_shape": [
+          10,
+          311
+        ]
+      },
+      "output": {
+        "path": "results/synthetic-multispeaker-acceptance/vi-m01-same.wav",
+        "bytes": 1011756,
+        "sha256": "5fb3ba37cf038384a2ef867022574393021645bd67ecd324390ac250dd20be66",
+        "sample_rate": 44100,
+        "frames": 505856,
+        "duration_s": 11.470657596371883,
+        "peak_abs": 0.54248046875,
+        "rms": 0.09637019783258438,
+        "silence_ratio_lt_1e_4": 0.12406099759615384,
+        "clipping_ratio_ge_0_999": 0.0
+      },
+      "timing": {
+        "reference_encode_s": 0.9315135930000906,
+        "semantic_s": 30.136850539999614,
+        "decode_s": 0.754721958999653,
+        "total_s": 30.891572498999267,
+        "rtf": 2.6930951638526923
+      },
+      "peak_allocated_bytes": {
+        "gpu0": 10947870208,
+        "gpu1": 4826770944
+      }
+    },
+    {
+      "id": "vi-m02-same",
+      "speaker_id": "vi-m02",
+      "source_lang": "vi",
+      "target_lang": "vi",
+      "mode": "same",
+      "status": "PASS",
+      "seed": 20260940,
+      "target_text": "Giọng được sao chép đang đọc một câu tiếng Việt hoàn toàn mới. Mẫu này kiểm tra xem đặc trưng người nói có được giữ ổn định khi nội dung và nhịp điệu khác với bản tham chiếu hay không.",
+      "reference": {
+        "path": "results/synthetic-speaker-bank/vi-m02.wav",
+        "sha256": "732086fee0e64a93dfc7e7efb50671d49069d4db57ff17d0b264f6b0b25db58e",
+        "transcript": "Trong bài kiểm thử này tôi cung cấp một mẫu tham chiếu tổng hợp ổn định với giọng trầm và nhịp nói chậm rãi. Đoạn đọc đủ dài để thể hiện âm sắc, nhịp điệu và cách phát âm nhưng vẫn sạch và dễ tái tạo.",
+        "duration_s": 14.24,
+        "generator": "VoxCPM2",
+        "description": "Một người đàn ông trung niên có giọng nam trầm sâu, vang, bình tĩnh, nhịp nói chậm rãi và phong cách dẫn chuyện chuyên nghiệp",
+        "vq_shape": [
+          10,
+          307
+        ]
+      },
+      "output": {
+        "path": "results/synthetic-multispeaker-acceptance/vi-m02-same.wav",
+        "bytes": 987180,
+        "sha256": "d8ec088ee76a7b576bed712f51f0525d81cf91c3c0bee3cee4216e28b12fcad2",
+        "sample_rate": 44100,
+        "frames": 493568,
+        "duration_s": 11.19201814058957,
+        "peak_abs": 0.51025390625,
+        "rms": 0.09143906831741333,
+        "silence_ratio_lt_1e_4": 0.05649677450726141,
+        "clipping_ratio_ge_0_999": 0.0
+      },
+      "timing": {
+        "reference_encode_s": 0.18617466799969407,
+        "semantic_s": 29.42778697599988,
+        "decode_s": 0.7715914400005204,
+        "total_s": 30.1993784160004,
+        "rtf": 2.698296056765466
+      },
+      "peak_allocated_bytes": {
+        "gpu0": 10947378176,
+        "gpu1": 4810259456
+      }
+    },
+    {
+      "id": "vi-m02-cross-en",
+      "speaker_id": "vi-m02",
+      "source_lang": "vi",
+      "target_lang": "en",
+      "mode": "cross",
+      "status": "PASS",
+      "seed": 20260941,
+      "target_text": "The same synthetic speaker is now speaking English in a cross language cloning test. The sentence is intentionally different from every reference passage.",
+      "reference": {
+        "path": "results/synthetic-speaker-bank/vi-m02.wav",
+        "sha256": "732086fee0e64a93dfc7e7efb50671d49069d4db57ff17d0b264f6b0b25db58e",
+        "transcript": "Trong bài kiểm thử này tôi cung cấp một mẫu tham chiếu tổng hợp ổn định với giọng trầm và nhịp nói chậm rãi. Đoạn đọc đủ dài để thể hiện âm sắc, nhịp điệu và cách phát âm nhưng vẫn sạch và dễ tái tạo.",
+        "duration_s": 14.24,
+        "generator": "VoxCPM2",
+        "description": "Một người đàn ông trung niên có giọng nam trầm sâu, vang, bình tĩnh, nhịp nói chậm rãi và phong cách dẫn chuyện chuyên nghiệp",
+        "vq_shape": [
+          10,
+          307
+        ]
+      },
+      "output": {
+        "path": "results/synthetic-multispeaker-acceptance/vi-m02-cross-en.wav",
+        "bytes": 749612,
+        "sha256": "6e05fa6808763b4f681184451d6909b782e645612f6562fc72ba211876004a5c",
+        "sample_rate": 44100,
+        "frames": 374784,
+        "duration_s": 8.498503401360544,
+        "peak_abs": 0.517578125,
+        "rms": 0.09006449580192566,
+        "silence_ratio_lt_1e_4": 0.08325061902322405,
+        "clipping_ratio_ge_0_999": 0.0
+      },
+      "timing": {
+        "reference_encode_s": 0.18617466799969407,
+        "semantic_s": 22.849310708999838,
+        "decode_s": 0.7258835169996019,
+        "total_s": 23.57519422599944,
+        "rtf": 2.7740406884140607
+      },
+      "peak_allocated_bytes": {
+        "gpu0": 10945211392,
+        "gpu1": 4650109440
+      }
+    }
+  ],
+  "speaker_similarity_status": "PENDING_OBJECTIVE_SCORING_AND_HUMAN_SPOT_CHECK"
+}
