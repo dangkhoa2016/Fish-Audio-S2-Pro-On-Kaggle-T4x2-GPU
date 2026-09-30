@@ -1,9 +1,7 @@
-# Reference audio
+# Optional private reference audio
 
-Place qualification references here only when needed locally. Audio files are ignored by Git.
+Real-human reference audio is optional and is not a release blocker for this repository.
 
-Target baseline:
-- `reference-en.wav`: clean speech, about 10–30 seconds, with exact transcript.
-- `reference-vi.wav`: clean speech, about 10–30 seconds, with exact transcript.
+If you choose to run an additional private evaluation, place `reference-en.wav` and `reference-vi.wav` here and provide exact transcripts in `references/reference-audio-manifest.json`. These WAV paths are Git-ignored to avoid accidental publication of personal voice data.
 
-Do not use background music for baseline voice-cloning qualification.
+Use audio only with appropriate permission. The reproducible public release gate uses the synthetic VoxCPM2 speaker bank under `assets/synthetic-speakers/`.

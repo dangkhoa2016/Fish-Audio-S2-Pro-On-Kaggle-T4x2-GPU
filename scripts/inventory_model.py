@@ -27,11 +27,36 @@ def main():
     ap.add_argument("--workers", type=int, default=4)
     args = ap.parse_args()
     root = Path(args.search_root)
-    files = sorted(p for p in root.rglob("*") if p.is_file() and p.name in IMPORTANT)
-    found = {p.name for p in files}
+    candidate_dirs = []
+    for codec in root.rglob("codec.pth"):
+        parent = codec.parent
+        names = {p.name for p in parent.iterdir() if p.is_file()}
+        if IMPORTANT.issubset(names):
+            candidate_dirs.append(parent)
+
+    candidate_dirs = sorted(set(candidate_dirs))
+    if len(candidate_dirs) > 1:
+        raise RuntimeError(f"Ambiguous model inventory; multiple complete model directories: {candidate_dirs}")
+
+    if candidate_dirs:
+        model_dir = candidate_dirs[0]
+        files = sorted(model_dir / name for name in IMPORTANT)
+        found = {p.name for p in files if p.is_file()}
+    else:
+        model_dir = None
+        files = sorted(p for p in root.rglob("*") if p.is_file() and p.name in IMPORTANT)
+        found = {p.name for p in files}
+
     with ThreadPoolExecutor(max_workers=max(1, args.workers)) as pool:
         records = list(pool.map(record, files))
-    payload = {"search_root": str(root), "status": "PASS" if IMPORTANT.issubset(found) else "INCOMPLETE", "expected_files": sorted(IMPORTANT), "missing_files": sorted(IMPORTANT - found), "files": records}
+    payload = {
+        "search_root": str(root),
+        "model_dir": str(model_dir) if model_dir else None,
+        "status": "PASS" if model_dir and IMPORTANT.issubset(found) else "INCOMPLETE",
+        "expected_files": sorted(IMPORTANT),
+        "missing_files": sorted(IMPORTANT - found),
+        "files": records,
+    }
     out = Path(args.output)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(payload, indent=2) + "\n")

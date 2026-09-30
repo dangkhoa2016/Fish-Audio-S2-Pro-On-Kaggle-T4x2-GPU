@@ -1,5 +1,6 @@
 {
-  "status": "PENDING",
+  "status": "OPTIONAL_PRIVATE_EXTENSION",
+  "required_for_release": false,
   "references": [
     {"id": "reference-en", "language": "en", "path": "assets/reference-audio/reference-en.wav", "transcript": null},
     {"id": "reference-vi", "language": "vi", "path": "assets/reference-audio/reference-vi.wav", "transcript": null}
