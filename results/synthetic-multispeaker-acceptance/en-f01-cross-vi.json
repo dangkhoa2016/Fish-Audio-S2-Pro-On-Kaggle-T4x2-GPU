@@ -1,0 +1,45 @@
+{
+  "id": "en-f01-cross-vi",
+  "speaker_id": "en-f01",
+  "source_lang": "en",
+  "target_lang": "vi",
+  "mode": "cross",
+  "status": "PASS",
+  "seed": 20260931,
+  "target_text": "Cùng một giọng tổng hợp đang nói tiếng Việt trong bài kiểm thử sao chép xuyên ngôn ngữ. Nội dung câu này hoàn toàn khác với đoạn tham chiếu ban đầu.",
+  "reference": {
+    "path": "results/synthetic-speaker-bank/en-f01.wav",
+    "sha256": "6a28d7d5db25f9617cd7b41612460684cf0a6eb253ee5535c121b2f916615a08",
+    "transcript": "Today I am recording a clean synthetic reference for a reproducible speech cloning benchmark. I speak at a comfortable pace with clear pronunciation and a relaxed, friendly tone so that the reference contains enough natural vocal detail.",
+    "duration_s": 14.24,
+    "generator": "VoxCPM2",
+    "description": "A young adult woman with a bright, warm, friendly voice, clear articulation, natural conversational pace",
+    "vq_shape": [
+      10,
+      307
+    ]
+  },
+  "output": {
+    "path": "results/synthetic-multispeaker-acceptance/en-f01-cross-vi.wav",
+    "bytes": 729132,
+    "sha256": "4b40e3735317165fef08f02dc2220b7d32665308554d54008a08ceb7bf462e42",
+    "sample_rate": 44100,
+    "frames": 364544,
+    "duration_s": 8.266303854875284,
+    "peak_abs": 0.76171875,
+    "rms": 0.11927448213100433,
+    "silence_ratio_lt_1e_4": 0.10157072945926966,
+    "clipping_ratio_ge_0_999": 0.0
+  },
+  "timing": {
+    "reference_encode_s": 3.1017281489994275,
+    "semantic_s": 21.614487990999805,
+    "decode_s": 0.7108081340002173,
+    "total_s": 22.325296125000023,
+    "rtf": 2.7007591926146115
+  },
+  "peak_allocated_bytes": {
+    "gpu0": 10945068544,
+    "gpu1": 4636174336
+  }
+}

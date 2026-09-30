@@ -1,0 +1,45 @@
+{
+  "id": "en-m02-cross-vi",
+  "speaker_id": "en-m02",
+  "source_lang": "en",
+  "target_lang": "vi",
+  "mode": "cross",
+  "status": "PASS",
+  "seed": 20260935,
+  "target_text": "Cùng một giọng tổng hợp đang nói tiếng Việt trong bài kiểm thử sao chép xuyên ngôn ngữ. Nội dung câu này hoàn toàn khác với đoạn tham chiếu ban đầu.",
+  "reference": {
+    "path": "results/synthetic-speaker-bank/en-m02.wav",
+    "sha256": "df059e54c70e4d4e5006c977b82f26ae0c2d0bc789a36afc7694c45bd517abe8",
+    "transcript": "For this benchmark I am providing a stable synthetic reference with a deep and measured speaking style. The passage is long enough to capture timbre, rhythm, and pronunciation while remaining clean, controlled, and easy to reproduce.",
+    "duration_s": 16.0,
+    "generator": "VoxCPM2",
+    "description": "A middle-aged man with a deep, resonant baritone voice, calm and deliberate pace, professional narration",
+    "vq_shape": [
+      10,
+      345
+    ]
+  },
+  "output": {
+    "path": "results/synthetic-multispeaker-acceptance/en-m02-cross-vi.wav",
+    "bytes": 798764,
+    "sha256": "534f58d06b7ccd1013fdc15522c92bbee022f6daf88baee16e670d3b586c9dba",
+    "sample_rate": 44100,
+    "frames": 399360,
+    "duration_s": 9.05578231292517,
+    "peak_abs": 0.5126953125,
+    "rms": 0.09135209023952484,
+    "silence_ratio_lt_1e_4": 0.13016576522435896,
+    "clipping_ratio_ge_0_999": 0.0
+  },
+  "timing": {
+    "reference_encode_s": 0.977256175000548,
+    "semantic_s": 23.860607603000062,
+    "decode_s": 0.7181309090001378,
+    "total_s": 24.5787385120002,
+    "rtf": 2.7141485586418486
+  },
+  "peak_allocated_bytes": {
+    "gpu0": 10948561408,
+    "gpu1": 4683734528
+  }
+}

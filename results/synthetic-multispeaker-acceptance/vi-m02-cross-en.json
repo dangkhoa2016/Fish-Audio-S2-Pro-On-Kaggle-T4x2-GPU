@@ -1,0 +1,45 @@
+{
+  "id": "vi-m02-cross-en",
+  "speaker_id": "vi-m02",
+  "source_lang": "vi",
+  "target_lang": "en",
+  "mode": "cross",
+  "status": "PASS",
+  "seed": 20260941,
+  "target_text": "The same synthetic speaker is now speaking English in a cross language cloning test. The sentence is intentionally different from every reference passage.",
+  "reference": {
+    "path": "results/synthetic-speaker-bank/vi-m02.wav",
+    "sha256": "732086fee0e64a93dfc7e7efb50671d49069d4db57ff17d0b264f6b0b25db58e",
+    "transcript": "Trong bài kiểm thử này tôi cung cấp một mẫu tham chiếu tổng hợp ổn định với giọng trầm và nhịp nói chậm rãi. Đoạn đọc đủ dài để thể hiện âm sắc, nhịp điệu và cách phát âm nhưng vẫn sạch và dễ tái tạo.",
+    "duration_s": 14.24,
+    "generator": "VoxCPM2",
+    "description": "Một người đàn ông trung niên có giọng nam trầm sâu, vang, bình tĩnh, nhịp nói chậm rãi và phong cách dẫn chuyện chuyên nghiệp",
+    "vq_shape": [
+      10,
+      307
+    ]
+  },
+  "output": {
+    "path": "results/synthetic-multispeaker-acceptance/vi-m02-cross-en.wav",
+    "bytes": 749612,
+    "sha256": "6e05fa6808763b4f681184451d6909b782e645612f6562fc72ba211876004a5c",
+    "sample_rate": 44100,
+    "frames": 374784,
+    "duration_s": 8.498503401360544,
+    "peak_abs": 0.517578125,
+    "rms": 0.09006449580192566,
+    "silence_ratio_lt_1e_4": 0.08325061902322405,
+    "clipping_ratio_ge_0_999": 0.0
+  },
+  "timing": {
+    "reference_encode_s": 0.18617466799969407,
+    "semantic_s": 22.849310708999838,
+    "decode_s": 0.7258835169996019,
+    "total_s": 23.57519422599944,
+    "rtf": 2.7740406884140607
+  },
+  "peak_allocated_bytes": {
+    "gpu0": 10945211392,
+    "gpu1": 4650109440
+  }
+}

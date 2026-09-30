@@ -1,0 +1,45 @@
+{
+  "id": "vi-f01-cross-en",
+  "speaker_id": "vi-f01",
+  "source_lang": "vi",
+  "target_lang": "en",
+  "mode": "cross",
+  "status": "PASS",
+  "seed": 20260937,
+  "target_text": "The same synthetic speaker is now speaking English in a cross language cloning test. The sentence is intentionally different from every reference passage.",
+  "reference": {
+    "path": "results/synthetic-speaker-bank/vi-f01.wav",
+    "sha256": "e3b8282b2ca440db2775eea5b8a081704923ff0a0f1c1f1dd263f384a6ff4f90",
+    "transcript": "Hôm nay tôi đọc một đoạn tham chiếu tổng hợp sạch để kiểm thử khả năng sao chép giọng nói có thể tái lập. Tôi nói với tốc độ tự nhiên, phát âm rõ ràng và giữ giọng thân thiện để mẫu âm thanh có đủ đặc trưng nhận dạng.",
+    "duration_s": 13.44,
+    "generator": "VoxCPM2",
+    "description": "Một phụ nữ trẻ có giọng sáng, ấm áp, thân thiện, phát âm rõ ràng, tốc độ hội thoại tự nhiên",
+    "vq_shape": [
+      10,
+      290
+    ]
+  },
+  "output": {
+    "path": "results/synthetic-multispeaker-acceptance/vi-f01-cross-en.wav",
+    "bytes": 827436,
+    "sha256": "de5d26200b362d61a0031decd5b9bc6a03f07b81f58ca8a4a8cd8e804bdd7152",
+    "sample_rate": 44100,
+    "frames": 413696,
+    "duration_s": 9.380861678004536,
+    "peak_abs": 0.67138671875,
+    "rms": 0.09819434583187103,
+    "silence_ratio_lt_1e_4": 0.06222201810024752,
+    "clipping_ratio_ge_0_999": 0.0
+  },
+  "timing": {
+    "reference_encode_s": 0.9265433450000273,
+    "semantic_s": 24.54875450399959,
+    "decode_s": 0.713837591999436,
+    "total_s": 25.262592095999025,
+    "rtf": 2.6929927082532994
+  },
+  "peak_allocated_bytes": {
+    "gpu0": 10944300032,
+    "gpu1": 4702822400
+  }
+}
