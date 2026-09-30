@@ -1,0 +1,45 @@
+{
+  "id": "vi-m01-same",
+  "speaker_id": "vi-m01",
+  "source_lang": "vi",
+  "target_lang": "vi",
+  "mode": "same",
+  "status": "PASS",
+  "seed": 20260939,
+  "target_text": "Giọng được sao chép đang đọc một câu tiếng Việt hoàn toàn mới. Mẫu này kiểm tra xem đặc trưng người nói có được giữ ổn định khi nội dung và nhịp điệu khác với bản tham chiếu hay không.",
+  "reference": {
+    "path": "results/synthetic-speaker-bank/vi-m01.wav",
+    "sha256": "70816ceeab885eec0fd39a314fa3e25e3de2426dfa00c8c1a63b49e74dea2321",
+    "transcript": "Mẫu giọng tổng hợp này đọc một đoạn tiếng Việt có kiểm soát để phục vụ bài kiểm thử sao chép giọng lặp lại được. Cách nói năng động nhưng tự nhiên, nhịp cân bằng và phát âm rõ giúp tạo ra đặc trưng giọng dễ nhận biết.",
+    "duration_s": 14.4,
+    "generator": "VoxCPM2",
+    "description": "Một nam thanh niên có giọng tenor rõ, năng động, phụ âm sắc nét, tốc độ hơi nhanh nhưng tự nhiên",
+    "vq_shape": [
+      10,
+      311
+    ]
+  },
+  "output": {
+    "path": "results/synthetic-multispeaker-acceptance/vi-m01-same.wav",
+    "bytes": 1011756,
+    "sha256": "5fb3ba37cf038384a2ef867022574393021645bd67ecd324390ac250dd20be66",
+    "sample_rate": 44100,
+    "frames": 505856,
+    "duration_s": 11.470657596371883,
+    "peak_abs": 0.54248046875,
+    "rms": 0.09637019783258438,
+    "silence_ratio_lt_1e_4": 0.12406099759615384,
+    "clipping_ratio_ge_0_999": 0.0
+  },
+  "timing": {
+    "reference_encode_s": 0.9315135930000906,
+    "semantic_s": 30.136850539999614,
+    "decode_s": 0.754721958999653,
+    "total_s": 30.891572498999267,
+    "rtf": 2.6930951638526923
+  },
+  "peak_allocated_bytes": {
+    "gpu0": 10947870208,
+    "gpu1": 4826770944
+  }
+}

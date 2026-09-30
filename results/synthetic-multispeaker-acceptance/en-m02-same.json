@@ -1,0 +1,45 @@
+{
+  "id": "en-m02-same",
+  "speaker_id": "en-m02",
+  "source_lang": "en",
+  "target_lang": "en",
+  "mode": "same",
+  "status": "PASS",
+  "seed": 20260934,
+  "target_text": "The cloned speaker is now reading a completely new English sentence. This sample tests whether vocal identity remains stable when the words and rhythm differ from the reference recording.",
+  "reference": {
+    "path": "results/synthetic-speaker-bank/en-m02.wav",
+    "sha256": "df059e54c70e4d4e5006c977b82f26ae0c2d0bc789a36afc7694c45bd517abe8",
+    "transcript": "For this benchmark I am providing a stable synthetic reference with a deep and measured speaking style. The passage is long enough to capture timbre, rhythm, and pronunciation while remaining clean, controlled, and easy to reproduce.",
+    "duration_s": 16.0,
+    "generator": "VoxCPM2",
+    "description": "A middle-aged man with a deep, resonant baritone voice, calm and deliberate pace, professional narration",
+    "vq_shape": [
+      10,
+      345
+    ]
+  },
+  "output": {
+    "path": "results/synthetic-multispeaker-acceptance/en-m02-same.wav",
+    "bytes": 1007660,
+    "sha256": "3dea134cf98c176cbd827da68ca735f42e46404577792ef9dfcda6e903899721",
+    "sample_rate": 44100,
+    "frames": 503808,
+    "duration_s": 11.42421768707483,
+    "peak_abs": 0.61962890625,
+    "rms": 0.09156457334756851,
+    "silence_ratio_lt_1e_4": 0.09801948361280488,
+    "clipping_ratio_ge_0_999": 0.0
+  },
+  "timing": {
+    "reference_encode_s": 0.977256175000548,
+    "semantic_s": 30.046156411000084,
+    "decode_s": 0.7496326360005696,
+    "total_s": 30.795789047000653,
+    "rtf": 2.6956584591207937
+  },
+  "peak_allocated_bytes": {
+    "gpu0": 10947868672,
+    "gpu1": 4823920128
+  }
+}

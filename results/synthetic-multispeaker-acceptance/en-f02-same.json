@@ -1,0 +1,45 @@
+{
+  "id": "en-f02-same",
+  "speaker_id": "en-f02",
+  "source_lang": "en",
+  "target_lang": "en",
+  "mode": "same",
+  "status": "PASS",
+  "seed": 20260932,
+  "target_text": "The cloned speaker is now reading a completely new English sentence. This sample tests whether vocal identity remains stable when the words and rhythm differ from the reference recording.",
+  "reference": {
+    "path": "results/synthetic-speaker-bank/en-f02.wav",
+    "sha256": "d02a033d23e7acacbbf67de8b636b081be7426d5d5ace999266b169c2905e2c1",
+    "transcript": "This reference sample is designed to represent a calm and mature speaking style. The recording uses complete sentences, steady pacing, and clear articulation so another speech model can be evaluated against a consistent synthetic speaker identity.",
+    "duration_s": 14.72,
+    "generator": "VoxCPM2",
+    "description": "A mature woman with a low, calm, slightly husky voice, measured pace, confident documentary style",
+    "vq_shape": [
+      10,
+      317
+    ]
+  },
+  "output": {
+    "path": "results/synthetic-multispeaker-acceptance/en-f02-same.wav",
+    "bytes": 876588,
+    "sha256": "b52efae8f448bf89d4519990c7ef11c26d4ad9bceac3e506f8e49d4676c332a0",
+    "sample_rate": 44100,
+    "frames": 438272,
+    "duration_s": 9.93814058956916,
+    "peak_abs": 0.5791015625,
+    "rms": 0.1200409084558487,
+    "silence_ratio_lt_1e_4": 0.08395243136682243,
+    "clipping_ratio_ge_0_999": 0.0
+  },
+  "timing": {
+    "reference_encode_s": 0.9743567440000334,
+    "semantic_s": 26.137509166999735,
+    "decode_s": 0.7525164810003844,
+    "total_s": 26.89002564800012,
+    "rtf": 2.7057401136207773
+  },
+  "peak_allocated_bytes": {
+    "gpu0": 10945275904,
+    "gpu1": 4735599616
+  }
+}

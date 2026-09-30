@@ -1,0 +1,45 @@
+{
+  "id": "vi-f02-same",
+  "speaker_id": "vi-f02",
+  "source_lang": "vi",
+  "target_lang": "vi",
+  "mode": "same",
+  "status": "PASS",
+  "seed": 20260938,
+  "target_text": "Giọng được sao chép đang đọc một câu tiếng Việt hoàn toàn mới. Mẫu này kiểm tra xem đặc trưng người nói có được giữ ổn định khi nội dung và nhịp điệu khác với bản tham chiếu hay không.",
+  "reference": {
+    "path": "results/synthetic-speaker-bank/vi-f02.wav",
+    "sha256": "056e21a20c0e0d0bd7dbc5cf2eb1611a677d5d4e5cfb0cb447b2d3d355b3558b",
+    "transcript": "Đây là mẫu giọng tổng hợp được thiết kế với phong cách trưởng thành và điềm tĩnh. Đoạn đọc sử dụng câu đầy đủ, nhịp nói ổn định và phát âm rõ để một mô hình khác có thể kiểm tra khả năng giữ đặc trưng người nói.",
+    "duration_s": 14.88,
+    "generator": "VoxCPM2",
+    "description": "Một phụ nữ trưởng thành có giọng trầm, bình tĩnh, hơi khàn nhẹ, nhịp nói chậm và phong cách thuyết minh tự tin",
+    "vq_shape": [
+      10,
+      321
+    ]
+  },
+  "output": {
+    "path": "results/synthetic-multispeaker-acceptance/vi-f02-same.wav",
+    "bytes": 958508,
+    "sha256": "796ff77cb65c8425cf3ee3218c4668a7310f99df57f972cd329405cfdd6f192f",
+    "sample_rate": 44100,
+    "frames": 479232,
+    "duration_s": 10.866938775510205,
+    "peak_abs": 0.6669921875,
+    "rms": 0.09754643589258194,
+    "silence_ratio_lt_1e_4": 0.09968866853632478,
+    "clipping_ratio_ge_0_999": 0.0
+  },
+  "timing": {
+    "reference_encode_s": 0.9221576280006047,
+    "semantic_s": 28.71955448099925,
+    "decode_s": 0.7572409140002492,
+    "total_s": 29.4767953949995,
+    "rtf": 2.712520609891405
+  },
+  "peak_allocated_bytes": {
+    "gpu0": 10948754944,
+    "gpu1": 4791134208
+  }
+}

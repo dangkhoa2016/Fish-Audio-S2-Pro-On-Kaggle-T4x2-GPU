@@ -1,0 +1,45 @@
+{
+  "id": "en-m01-same",
+  "speaker_id": "en-m01",
+  "source_lang": "en",
+  "target_lang": "en",
+  "mode": "same",
+  "status": "PASS",
+  "seed": 20260933,
+  "target_text": "The cloned speaker is now reading a completely new English sentence. This sample tests whether vocal identity remains stable when the words and rhythm differ from the reference recording.",
+  "reference": {
+    "path": "results/synthetic-speaker-bank/en-m01.wav",
+    "sha256": "1318e6565176dafe0fddcb8038ccbae61215af6e47b8984ef42a97035ef74841",
+    "transcript": "This synthetic speaker is reading a controlled English reference passage for repeatable voice cloning tests. The delivery is energetic but natural, with crisp consonants, balanced rhythm, and enough variation to capture a recognizable speaking identity.",
+    "duration_s": 13.12,
+    "generator": "VoxCPM2",
+    "description": "A young adult man with an energetic, clear tenor voice, crisp consonants, moderately fast pace",
+    "vq_shape": [
+      10,
+      283
+    ]
+  },
+  "output": {
+    "path": "results/synthetic-multispeaker-acceptance/en-m01-same.wav",
+    "bytes": 868396,
+    "sha256": "ef71d969890c547e696f61e9f0bae4900af22b686228b266ac6fc7c3dbee4f29",
+    "sample_rate": 44100,
+    "frames": 434176,
+    "duration_s": 9.845260770975056,
+    "peak_abs": 0.6494140625,
+    "rms": 0.10646789520978928,
+    "silence_ratio_lt_1e_4": 0.015378556161556603,
+    "clipping_ratio_ge_0_999": 0.0
+  },
+  "timing": {
+    "reference_encode_s": 0.9081926269991527,
+    "semantic_s": 26.02423981799984,
+    "decode_s": 0.7600409709993983,
+    "total_s": 26.78428078899924,
+    "rtf": 2.720525277295075
+  },
+  "peak_allocated_bytes": {
+    "gpu0": 10942848512,
+    "gpu1": 4731691520
+  }
+}

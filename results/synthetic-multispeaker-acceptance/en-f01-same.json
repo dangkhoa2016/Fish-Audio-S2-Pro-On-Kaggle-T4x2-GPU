@@ -1,0 +1,45 @@
+{
+  "id": "en-f01-same",
+  "speaker_id": "en-f01",
+  "source_lang": "en",
+  "target_lang": "en",
+  "mode": "same",
+  "status": "PASS",
+  "seed": 20260930,
+  "target_text": "The cloned speaker is now reading a completely new English sentence. This sample tests whether vocal identity remains stable when the words and rhythm differ from the reference recording.",
+  "reference": {
+    "path": "results/synthetic-speaker-bank/en-f01.wav",
+    "sha256": "6a28d7d5db25f9617cd7b41612460684cf0a6eb253ee5535c121b2f916615a08",
+    "transcript": "Today I am recording a clean synthetic reference for a reproducible speech cloning benchmark. I speak at a comfortable pace with clear pronunciation and a relaxed, friendly tone so that the reference contains enough natural vocal detail.",
+    "duration_s": 14.24,
+    "generator": "VoxCPM2",
+    "description": "A young adult woman with a bright, warm, friendly voice, clear articulation, natural conversational pace",
+    "vq_shape": [
+      10,
+      307
+    ]
+  },
+  "output": {
+    "path": "results/synthetic-multispeaker-acceptance/en-f01-same.wav",
+    "bytes": 856108,
+    "sha256": "23303c68f264d4f341a628433cc5d2ebf46f16b73883775070d85b00c3775505",
+    "sample_rate": 44100,
+    "frames": 428032,
+    "duration_s": 9.7059410430839,
+    "peak_abs": 0.66162109375,
+    "rms": 0.10916806757450104,
+    "silence_ratio_lt_1e_4": 0.07436827153110048,
+    "clipping_ratio_ge_0_999": 0.0
+  },
+  "timing": {
+    "reference_encode_s": 3.1017281489994275,
+    "semantic_s": 25.60003588499967,
+    "decode_s": 0.7593900040001245,
+    "total_s": 26.359425888999795,
+    "rtf": 2.7158032149579725
+  },
+  "peak_allocated_bytes": {
+    "gpu0": 10944562176,
+    "gpu1": 4721148416
+  }
+}

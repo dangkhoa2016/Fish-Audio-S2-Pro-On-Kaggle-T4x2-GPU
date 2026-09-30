@@ -1,0 +1,45 @@
+{
+  "id": "vi-f01-same",
+  "speaker_id": "vi-f01",
+  "source_lang": "vi",
+  "target_lang": "vi",
+  "mode": "same",
+  "status": "PASS",
+  "seed": 20260936,
+  "target_text": "Giọng được sao chép đang đọc một câu tiếng Việt hoàn toàn mới. Mẫu này kiểm tra xem đặc trưng người nói có được giữ ổn định khi nội dung và nhịp điệu khác với bản tham chiếu hay không.",
+  "reference": {
+    "path": "results/synthetic-speaker-bank/vi-f01.wav",
+    "sha256": "e3b8282b2ca440db2775eea5b8a081704923ff0a0f1c1f1dd263f384a6ff4f90",
+    "transcript": "Hôm nay tôi đọc một đoạn tham chiếu tổng hợp sạch để kiểm thử khả năng sao chép giọng nói có thể tái lập. Tôi nói với tốc độ tự nhiên, phát âm rõ ràng và giữ giọng thân thiện để mẫu âm thanh có đủ đặc trưng nhận dạng.",
+    "duration_s": 13.44,
+    "generator": "VoxCPM2",
+    "description": "Một phụ nữ trẻ có giọng sáng, ấm áp, thân thiện, phát âm rõ ràng, tốc độ hội thoại tự nhiên",
+    "vq_shape": [
+      10,
+      290
+    ]
+  },
+  "output": {
+    "path": "results/synthetic-multispeaker-acceptance/vi-f01-same.wav",
+    "bytes": 884780,
+    "sha256": "83d35204be51cfd659ce1ef458b18d02329414b6adb5a9ca1372aa85bdc2bcf0",
+    "sample_rate": 44100,
+    "frames": 442368,
+    "duration_s": 10.031020408163265,
+    "peak_abs": 0.67578125,
+    "rms": 0.10402572154998779,
+    "silence_ratio_lt_1e_4": 0.06783040364583333,
+    "clipping_ratio_ge_0_999": 0.0
+  },
+  "timing": {
+    "reference_encode_s": 0.9265433450000273,
+    "semantic_s": 26.385880899999393,
+    "decode_s": 0.7246468149996872,
+    "total_s": 27.11052771499908,
+    "rtf": 2.7026689820047096
+  },
+  "peak_allocated_bytes": {
+    "gpu0": 10946116096,
+    "gpu1": 4741157888
+  }
+}

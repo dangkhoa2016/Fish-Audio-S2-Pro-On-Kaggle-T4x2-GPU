@@ -1,0 +1,45 @@
+{
+  "id": "vi-m02-same",
+  "speaker_id": "vi-m02",
+  "source_lang": "vi",
+  "target_lang": "vi",
+  "mode": "same",
+  "status": "PASS",
+  "seed": 20260940,
+  "target_text": "Giọng được sao chép đang đọc một câu tiếng Việt hoàn toàn mới. Mẫu này kiểm tra xem đặc trưng người nói có được giữ ổn định khi nội dung và nhịp điệu khác với bản tham chiếu hay không.",
+  "reference": {
+    "path": "results/synthetic-speaker-bank/vi-m02.wav",
+    "sha256": "732086fee0e64a93dfc7e7efb50671d49069d4db57ff17d0b264f6b0b25db58e",
+    "transcript": "Trong bài kiểm thử này tôi cung cấp một mẫu tham chiếu tổng hợp ổn định với giọng trầm và nhịp nói chậm rãi. Đoạn đọc đủ dài để thể hiện âm sắc, nhịp điệu và cách phát âm nhưng vẫn sạch và dễ tái tạo.",
+    "duration_s": 14.24,
+    "generator": "VoxCPM2",
+    "description": "Một người đàn ông trung niên có giọng nam trầm sâu, vang, bình tĩnh, nhịp nói chậm rãi và phong cách dẫn chuyện chuyên nghiệp",
+    "vq_shape": [
+      10,
+      307
+    ]
+  },
+  "output": {
+    "path": "results/synthetic-multispeaker-acceptance/vi-m02-same.wav",
+    "bytes": 987180,
+    "sha256": "d8ec088ee76a7b576bed712f51f0525d81cf91c3c0bee3cee4216e28b12fcad2",
+    "sample_rate": 44100,
+    "frames": 493568,
+    "duration_s": 11.19201814058957,
+    "peak_abs": 0.51025390625,
+    "rms": 0.09143906831741333,
+    "silence_ratio_lt_1e_4": 0.05649677450726141,
+    "clipping_ratio_ge_0_999": 0.0
+  },
+  "timing": {
+    "reference_encode_s": 0.18617466799969407,
+    "semantic_s": 29.42778697599988,
+    "decode_s": 0.7715914400005204,
+    "total_s": 30.1993784160004,
+    "rtf": 2.698296056765466
+  },
+  "peak_allocated_bytes": {
+    "gpu0": 10947378176,
+    "gpu1": 4810259456
+  }
+}
