@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite this software and the upstream Fish Audio work as appropriate."
+title: "Fish Audio S2 Pro on Kaggle T4x2 GPU"
+type: software
+version: 1.0.0
+date-released: 2026-10-01
+authors:
+  - family-names: "dangkhoa2016"
+repository-code: "https://github.com/dangkhoa2016/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU"
+url: "https://github.com/dangkhoa2016/Fish-Audio-S2-Pro-On-Kaggle-T4x2-GPU"
+license: "other"
+keywords:
+  - text-to-speech
+  - voice-cloning
+  - fish-audio
+  - kaggle
+  - tesla-t4
+  - reproducibility
