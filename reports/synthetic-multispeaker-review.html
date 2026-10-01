@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Synthetic Multi-Speaker Voice-Cloning Review</title>
+<style>body{font-family:system-ui,sans-serif;max-width:1200px;margin:auto;padding:24px;line-height:1.5}
+.card{border:1px solid #ccc;border-radius:12px;padding:18px;margin:18px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+audio{width:100%;margin-top:8px}code{background:#eee;padding:2px 5px;border-radius:4px}</style></head>
+<body><h1>Synthetic Multi-Speaker Voice-Cloning Review</h1>
+<p>Reference generator: <b>OpenBMB VoxCPM2</b>. Clone system: <b>Fish Audio S2 Pro</b>. Independent verifier: <b>microsoft/wavlm-base-plus-sv</b>.</p>
+<p>Technical cases: <b>12/12</b>. WavLM top-1: <b>12/12</b>
+(same-language 8/8, cross-language 4/4).
+Deterministic repeat: <b>2/2</b>.</p>
+<p>Use this page for a quick listening spot-check of speaker identity, pronunciation, naturalness, and obvious artifacts. These are synthetic voices, not recordings of real people.</p>
+<section class="card">
+<h2>en-f01 · EN</h2>
+<p>A young adult woman with a bright, warm, friendly voice, clear articulation, natural conversational pace</p>
+<div class="grid">
+<div><b>VoxCPM2 reference</b><br><audio controls preload="none" src="../results/synthetic-speaker-bank/en-f01.wav"></audio><br>14.24s · 48 kHz</div>
+<div><b>S2 Pro same-language clone</b><br><audio controls preload="none" src="../results/synthetic-multispeaker-acceptance/en-f01-same.wav"></audio><br>
+WavLM rank 1/8 · cosine 0.9885 · margin 0.2878</div>
+<div><b>Cross-language clone (VI)</b><br>
+<audio controls preload="none" src="../results/synthetic-multispeaker-acceptance/en-f01-cross-vi.wav"></audio><br>
+WavLM rank 1/8 · cosine 0.9818 · margin 0.3001</div><div><b>Deterministic repeat</b><br>
+<audio controls preload="none" src="../results/synthetic-multispeaker-repeatability/en-f01-same-repeat.wav"></audio><br>
+Exact SHA-256 match: true</div>
+</div>
+<p><b>Reference transcript:</b> Today I am recording a clean synthetic reference for a reproducible speech cloning benchmark. I speak at a comfortable pace with clear pronunciation and a relaxed, friendly tone so that the reference contains enough natural vocal detail.</p>
+<p><b>Clone target:</b> The cloned speaker is now reading a completely new English sentence. This sample tests whether vocal identity remains stable when the words and rhythm differ from the reference recording.</p>
+</section><section class="card">
+<h2>en-f02 · EN</h2>
+<p>A mature woman with a low, calm, slightly husky voice, measured pace, confident documentary style</p>
+<div class="grid">
+<div><b>VoxCPM2 reference</b><br><audio controls preload="none" src="../results/synthetic-speaker-bank/en-f02.wav"></audio><br>14.72s · 48 kHz</div>
+<div><b>S2 Pro same-language clone</b><br><audio controls preload="none" src="../results/synthetic-multispeaker-acceptance/en-f02-same.wav"></audio><br>
+WavLM rank 1/8 · cosine 0.9902 · margin 0.1541</div>
+
+</div>
+<p><b>Reference transcript:</b> This reference sample is designed to represent a calm and mature speaking style. The recording uses complete sentences, steady pacing, and clear articulation so another speech model can be evaluated against a consistent synthetic speaker identity.</p>
+<p><b>Clone target:</b> The cloned speaker is now reading a completely new English sentence. This sample tests whether vocal identity remains stable when the words and rhythm differ from the reference recording.</p>
+</section><section class="card">
+<h2>en-m01 · EN</h2>
+<p>A young adult man with an energetic, clear tenor voice, crisp consonants, moderately fast pace</p>
+<div class="grid">
+<div><b>VoxCPM2 reference</b><br><audio controls preload="none" src="../results/synthetic-speaker-bank/en-m01.wav"></audio><br>13.12s · 48 kHz</div>
+<div><b>S2 Pro same-language clone</b><br><audio controls preload="none" src="../results/synthetic-multispeaker-acceptance/en-m01-same.wav"></audio><br>
+WavLM rank 1/8 · cosine 0.9898 · margin 0.1546</div>
+
+</div>
+<p><b>Reference transcript:</b> This synthetic speaker is reading a controlled English reference passage for repeatable voice cloning tests. The delivery is energetic but natural, with crisp consonants, balanced rhythm, and enough variation to capture a recognizable speaking identity.</p>
+<p><b>Clone target:</b> The cloned speaker is now reading a completely new English sentence. This sample tests whether vocal identity remains stable when the words and rhythm differ from the reference recording.</p>
+</section><section class="card">
+<h2>en-m02 · EN</h2>
+<p>A middle-aged man with a deep, resonant baritone voice, calm and deliberate pace, professional narration</p>
+<div class="grid">
+<div><b>VoxCPM2 reference</b><br><audio controls preload="none" src="../results/synthetic-speaker-bank/en-m02.wav"></audio><br>16.00s · 48 kHz</div>
+<div><b>S2 Pro same-language clone</b><br><audio controls preload="none" src="../results/synthetic-multispeaker-acceptance/en-m02-same.wav"></audio><br>
+WavLM rank 1/8 · cosine 0.9910 · margin 0.3226</div>
+<div><b>Cross-language clone (VI)</b><br>
+<audio controls preload="none" src="../results/synthetic-multispeaker-acceptance/en-m02-cross-vi.wav"></audio><br>
+WavLM rank 1/8 · cosine 0.9292 · margin 0.2125</div>
+</div>
+<p><b>Reference transcript:</b> For this benchmark I am providing a stable synthetic reference with a deep and measured speaking style. The passage is long enough to capture timbre, rhythm, and pronunciation while remaining clean, controlled, and easy to reproduce.</p>
+<p><b>Clone target:</b> The cloned speaker is now reading a completely new English sentence. This sample tests whether vocal identity remains stable when the words and rhythm differ from the reference recording.</p>
+</section><section class="card">
+<h2>vi-f01 · VI</h2>
+<p>Một phụ nữ trẻ có giọng sáng, ấm áp, thân thiện, phát âm rõ ràng, tốc độ hội thoại tự nhiên</p>
+<div class="grid">
+<div><b>VoxCPM2 reference</b><br><audio controls preload="none" src="../results/synthetic-speaker-bank/vi-f01.wav"></audio><br>13.44s · 48 kHz</div>
+<div><b>S2 Pro same-language clone</b><br><audio controls preload="none" src="../results/synthetic-multispeaker-acceptance/vi-f01-same.wav"></audio><br>
+WavLM rank 1/8 · cosine 0.9896 · margin 0.0796</div>
+<div><b>Cross-language clone (EN)</b><br>
+<audio controls preload="none" src="../results/synthetic-multispeaker-acceptance/vi-f01-cross-en.wav"></audio><br>
+WavLM rank 1/8 · cosine 0.9338 · margin 0.0397</div><div><b>Deterministic repeat</b><br>
+<audio controls preload="none" src="../results/synthetic-multispeaker-repeatability/vi-f01-same-repeat.wav"></audio><br>
+Exact SHA-256 match: true</div>
+</div>
+<p><b>Reference transcript:</b> Hôm nay tôi đọc một đoạn tham chiếu tổng hợp sạch để kiểm thử khả năng sao chép giọng nói có thể tái lập. Tôi nói với tốc độ tự nhiên, phát âm rõ ràng và giữ giọng thân thiện để mẫu âm thanh có đủ đặc trưng nhận dạng.</p>
+<p><b>Clone target:</b> Giọng được sao chép đang đọc một câu tiếng Việt hoàn toàn mới. Mẫu này kiểm tra xem đặc trưng người nói có được giữ ổn định khi nội dung và nhịp điệu khác với bản tham chiếu hay không.</p>
+</section><section class="card">
+<h2>vi-f02 · VI</h2>
+<p>Một phụ nữ trưởng thành có giọng trầm, bình tĩnh, hơi khàn nhẹ, nhịp nói chậm và phong cách thuyết minh tự tin</p>
+<div class="grid">
+<div><b>VoxCPM2 reference</b><br><audio controls preload="none" src="../results/synthetic-speaker-bank/vi-f02.wav"></audio><br>14.88s · 48 kHz</div>
+<div><b>S2 Pro same-language clone</b><br><audio controls preload="none" src="../results/synthetic-multispeaker-acceptance/vi-f02-same.wav"></audio><br>
+WavLM rank 1/8 · cosine 0.9937 · margin 0.0448</div>
+
+</div>
+<p><b>Reference transcript:</b> Đây là mẫu giọng tổng hợp được thiết kế với phong cách trưởng thành và điềm tĩnh. Đoạn đọc sử dụng câu đầy đủ, nhịp nói ổn định và phát âm rõ để một mô hình khác có thể kiểm tra khả năng giữ đặc trưng người nói.</p>
+<p><b>Clone target:</b> Giọng được sao chép đang đọc một câu tiếng Việt hoàn toàn mới. Mẫu này kiểm tra xem đặc trưng người nói có được giữ ổn định khi nội dung và nhịp điệu khác với bản tham chiếu hay không.</p>
+</section><section class="card">
+<h2>vi-m01 · VI</h2>
+<p>Một nam thanh niên có giọng tenor rõ, năng động, phụ âm sắc nét, tốc độ hơi nhanh nhưng tự nhiên</p>
+<div class="grid">
+<div><b>VoxCPM2 reference</b><br><audio controls preload="none" src="../results/synthetic-speaker-bank/vi-m01.wav"></audio><br>14.40s · 48 kHz</div>
+<div><b>S2 Pro same-language clone</b><br><audio controls preload="none" src="../results/synthetic-multispeaker-acceptance/vi-m01-same.wav"></audio><br>
+WavLM rank 1/8 · cosine 0.9834 · margin 0.0355</div>
+
+</div>
+<p><b>Reference transcript:</b> Mẫu giọng tổng hợp này đọc một đoạn tiếng Việt có kiểm soát để phục vụ bài kiểm thử sao chép giọng lặp lại được. Cách nói năng động nhưng tự nhiên, nhịp cân bằng và phát âm rõ giúp tạo ra đặc trưng giọng dễ nhận biết.</p>
+<p><b>Clone target:</b> Giọng được sao chép đang đọc một câu tiếng Việt hoàn toàn mới. Mẫu này kiểm tra xem đặc trưng người nói có được giữ ổn định khi nội dung và nhịp điệu khác với bản tham chiếu hay không.</p>
+</section><section class="card">
+<h2>vi-m02 · VI</h2>
+<p>Một người đàn ông trung niên có giọng nam trầm sâu, vang, bình tĩnh, nhịp nói chậm rãi và phong cách dẫn chuyện chuyên nghiệp</p>
+<div class="grid">
+<div><b>VoxCPM2 reference</b><br><audio controls preload="none" src="../results/synthetic-speaker-bank/vi-m02.wav"></audio><br>14.24s · 48 kHz</div>
+<div><b>S2 Pro same-language clone</b><br><audio controls preload="none" src="../results/synthetic-multispeaker-acceptance/vi-m02-same.wav"></audio><br>
+WavLM rank 1/8 · cosine 0.9743 · margin 0.0581</div>
+<div><b>Cross-language clone (EN)</b><br>
+<audio controls preload="none" src="../results/synthetic-multispeaker-acceptance/vi-m02-cross-en.wav"></audio><br>
+WavLM rank 1/8 · cosine 0.8848 · margin 0.0319</div>
+</div>
+<p><b>Reference transcript:</b> Trong bài kiểm thử này tôi cung cấp một mẫu tham chiếu tổng hợp ổn định với giọng trầm và nhịp nói chậm rãi. Đoạn đọc đủ dài để thể hiện âm sắc, nhịp điệu và cách phát âm nhưng vẫn sạch và dễ tái tạo.</p>
+<p><b>Clone target:</b> Giọng được sao chép đang đọc một câu tiếng Việt hoàn toàn mới. Mẫu này kiểm tra xem đặc trưng người nói có được giữ ổn định khi nội dung và nhịp điệu khác với bản tham chiếu hay không.</p>
+</section>
+</body></html>

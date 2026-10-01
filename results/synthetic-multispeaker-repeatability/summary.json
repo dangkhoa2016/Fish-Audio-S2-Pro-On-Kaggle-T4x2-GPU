@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "case_count": 2,
+  "cases": [
+    {
+      "case_id": "en-f01-same",
+      "seed": 20260930,
+      "original_sha256": "23303c68f264d4f341a628433cc5d2ebf46f16b73883775070d85b00c3775505",
+      "repeat_sha256": "23303c68f264d4f341a628433cc5d2ebf46f16b73883775070d85b00c3775505",
+      "exact_sha256_match": true,
+      "original_bytes": 856108,
+      "repeat_bytes": 856108
+    },
+    {
+      "case_id": "vi-f01-same",
+      "seed": 20260936,
+      "original_sha256": "83d35204be51cfd659ce1ef458b18d02329414b6adb5a9ca1372aa85bdc2bcf0",
+      "repeat_sha256": "83d35204be51cfd659ce1ef458b18d02329414b6adb5a9ca1372aa85bdc2bcf0",
+      "exact_sha256_match": true,
+      "original_bytes": 884780,
+      "repeat_bytes": 884780
+    }
+  ]
+}
