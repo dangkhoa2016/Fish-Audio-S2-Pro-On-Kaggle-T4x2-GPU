@@ -1,5 +1,6 @@
 {
   "search_root": "/kaggle/input",
+  "model_dir": "/kaggle/input/models/dangkhoa2016/fishaudio-s2-pro/pytorch/default/1",
   "status": "PASS",
   "expected_files": [
     "codec.pth",
