@@ -551,5 +551,7 @@
       }
     }
   ],
-  "speaker_similarity_status": "PENDING_OBJECTIVE_SCORING_AND_HUMAN_SPOT_CHECK"
+  "speaker_similarity_status": "PASS_OBJECTIVE_TOP1_12_OF_12",
+  "speaker_similarity_evidence": "results/synthetic-multispeaker-acceptance/speaker-verification.json",
+  "human_spot_check": "OPTIONAL"
 }

@@ -2,7 +2,7 @@
 
 > 🌐 Language / Ngôn ngữ: **English** | [Tiếng Việt](bilingual-text-synthesis.vi.md)
 
-Status: **PASS**
+Status: **PASS — technical generation only; native Vietnamese pronunciation not qualified**
 
 ## Runtime
 - Semantic device: `cuda:0` / Tesla T4
@@ -38,4 +38,4 @@ Status: **PASS**
 - Per-case JSON and WAV files under `results/bilingual-text-synthesis/`
 
 ## Conclusion
-The dual-GPU FP16 baseline passed the English/Vietnamese text-only qualification matrix across short, medium, and expressive prompts without OOM. This qualifies the bilingual text-synthesis path and provides the technical references used by the initial voice-cloning qualification.
+The dual-GPU FP16 baseline passed the English/Vietnamese **technical generation** matrix across short, medium, and expressive prompts without OOM. PASS here means successful generation of structurally valid audio under the documented runtime checks. It does not qualify native Vietnamese accent, pronunciation, or tonal naturalness. Human listening in the final pre-public notebook review found Vietnamese noticeably non-native, including after same-language VoxCPM2 conditioning; native Vietnamese pronunciation is therefore NOT QUALIFIED in v1.0.0.

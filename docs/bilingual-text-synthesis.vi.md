@@ -2,7 +2,7 @@
 
 > 🌐 Language / Ngôn ngữ: [English](bilingual-text-synthesis.md) | **Tiếng Việt**
 
-Status: **PASS**
+Status: **PASS — technical generation only; native Vietnamese pronunciation not qualified**
 
 ## Runtime
 
@@ -43,4 +43,4 @@ Status: **PASS**
 
 ## Kết luận
 
-Dual-GPU FP16 baseline PASS toàn bộ ma trận text-only English/Vietnamese cho short, medium và expressive prompts mà không OOM. Kết quả này qualification đường chạy bilingual text synthesis và cung cấp technical references cho initial voice-cloning qualification.
+Dual-GPU FP16 baseline PASS toàn bộ ma trận **technical generation** English/Vietnamese cho short, medium và expressive prompts mà không OOM. PASS ở đây nghĩa là sinh audio hợp lệ về cấu trúc dưới các runtime checks đã ghi; nó không qualification native Vietnamese accent, pronunciation hoặc tonal naturalness. Human listening ở final pre-public notebook review cho thấy tiếng Việt vẫn rõ ràng chưa tự nhiên, kể cả sau same-language VoxCPM2 conditioning; vì vậy native Vietnamese pronunciation là NOT QUALIFIED trong v1.0.0.

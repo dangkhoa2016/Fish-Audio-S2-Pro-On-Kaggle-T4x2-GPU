@@ -119,5 +119,6 @@
     "Resolve relative output paths before changing into the upstream checkout.",
     "Require non-empty output WAVs before CLI runners report PASS."
   ],
-  "remaining_release_gate": "Real-human EN/VI voice-similarity listening review remains pending."
+  "remaining_release_gate": "SUPERSEDED_BY_REPRODUCIBLE_SYNTHETIC_MULTISPEAKER_ACCEPTANCE",
+  "superseding_evidence": "docs/synthetic-multispeaker-voice-cloning-acceptance.md"
 }

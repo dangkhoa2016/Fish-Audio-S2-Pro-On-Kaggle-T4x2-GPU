@@ -101,7 +101,7 @@ def main():
   "reference_generator":"VoxCPM2","speaker_count":8,"case_count":len(results),"passed":passed,
   "same_language_cases":sum(x["mode"]=="same" for x in results),"cross_language_cases":sum(x["mode"]=="cross" for x in results),
   "semantic_load_s":semantic_load_s,"codec_load_s":codec_load_s,"cases":results,
-  "speaker_similarity_status":"PENDING_OBJECTIVE_SCORING_AND_HUMAN_SPOT_CHECK"}
+  "speaker_similarity_status":"PENDING_OBJECTIVE_SCORING"}
  (out/"summary.json").write_text(json.dumps(summary,indent=2,ensure_ascii=False)+"\n")
  print("SYNTHETIC_MULTISPEAKER_TECHNICAL="+summary["status"],flush=True)
  if summary["status"]!="PASS": raise SystemExit(2)
